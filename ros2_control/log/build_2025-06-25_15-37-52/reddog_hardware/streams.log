@@ -1,0 +1,49 @@
+[0.993s] Invoking command in '/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/reddog_hardware': PYTHONPATH=/home/csl/reddog_ws/ros2_control/build/reddog_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/reddog_hardware build --build-base /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build install --record /home/csl/reddog_ws/ros2_control/build/reddog_hardware/install.log --single-version-externally-managed install_data
+[1.164s] running egg_info
+[1.165s] creating ../../../../build/reddog_hardware/reddog_hardware.egg-info
+[1.165s] writing ../../../../build/reddog_hardware/reddog_hardware.egg-info/PKG-INFO
+[1.165s] writing dependency_links to ../../../../build/reddog_hardware/reddog_hardware.egg-info/dependency_links.txt
+[1.165s] writing entry points to ../../../../build/reddog_hardware/reddog_hardware.egg-info/entry_points.txt
+[1.165s] writing requirements to ../../../../build/reddog_hardware/reddog_hardware.egg-info/requires.txt
+[1.165s] writing top-level names to ../../../../build/reddog_hardware/reddog_hardware.egg-info/top_level.txt
+[1.166s] writing manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+[1.167s] reading manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+[1.167s] adding license file 'LICENSE'
+[1.168s] writing manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+[1.168s] running build
+[1.168s] running build_py
+[1.168s] creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build
+[1.168s] creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib
+[1.168s] creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+[1.168s] copying reddog_hardware/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+[1.168s] copying reddog_hardware/motor_manager.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+[1.169s] copying reddog_hardware/__init__.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+[1.169s] copying reddog_hardware/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+[1.169s] running install
+[1.169s] running install_lib
+[1.170s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+[1.170s] copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+[1.170s] copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/motor_manager.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+[1.170s] copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/__init__.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+[1.170s] copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+[1.171s] byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/Motor_Manager_origin.py to Motor_Manager_origin.cpython-310.pyc
+[1.173s] byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/motor_manager.py to motor_manager.cpython-310.pyc
+[1.175s] byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/__init__.py to __init__.cpython-310.pyc
+[1.175s] byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/DM_CAN.py to DM_CAN.cpython-310.pyc
+[1.179s] running install_data
+[1.179s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/config
+[1.179s] copying reddog_hardware/config/motor_config.yaml -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/config
+[1.179s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index
+[1.179s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index
+[1.179s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index/packages
+[1.179s] copying resource/reddog_hardware -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index/packages
+[1.179s] copying package.xml -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware
+[1.180s] creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+[1.180s] copying launch/bringup.launch.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+[1.180s] copying launch/without_motor.launch.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+[1.180s] running install_egg_info
+[1.181s] Copying ../../../../build/reddog_hardware/reddog_hardware.egg-info to /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware-0.0.0-py3.10.egg-info
+[1.182s] running install_scripts
+[1.201s] Installing motor_manager script to /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/reddog_hardware
+[1.201s] writing list of installed files to '/home/csl/reddog_ws/ros2_control/build/reddog_hardware/install.log'
+[1.231s] Invoked command in '/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/reddog_hardware' returned '0': PYTHONPATH=/home/csl/reddog_ws/ros2_control/build/reddog_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/reddog_hardware build --build-base /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build install --record /home/csl/reddog_ws/ros2_control/build/reddog_hardware/install.log --single-version-externally-managed install_data

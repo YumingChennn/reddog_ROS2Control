@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-97b387995af04b5aa706.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rl_quadruped_controller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rl_quadruped_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rl_quadruped_controller-83bbfee99abac5a42dd3.json",
+					"name" : "rl_quadruped_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rl_quadruped_controller_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rl_quadruped_controller_uninstall-bc4a14020a7dacf431df.json",
+					"name" : "rl_quadruped_controller_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-3f61f31a3bbd180071d2.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller",
+		"source" : "/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/controllers/rl_quadruped_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+hardware_manager = hardware_dds_bridge.hardware_manager:main
+

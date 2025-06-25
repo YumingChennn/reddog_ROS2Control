@@ -1,0 +1,75 @@
+[0.318s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/reddog_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/descriptions/reddog_description -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/reddog_description
+[0.480s] -- The C compiler identification is GNU 11.4.0
+[0.480s] -- The CXX compiler identification is GNU 11.4.0
+[0.480s] -- Detecting C compiler ABI info
+[0.480s] -- Detecting C compiler ABI info - done
+[0.481s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.481s] -- Detecting C compile features
+[0.481s] -- Detecting C compile features - done
+[0.482s] -- Detecting CXX compiler ABI info
+[0.531s] -- Detecting CXX compiler ABI info - done
+[0.536s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.536s] -- Detecting CXX compile features
+[0.536s] -- Detecting CXX compile features - done
+[0.538s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.663s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.824s] -- Configuring done
+[0.826s] -- Generating done
+[0.828s] -- Build files have been written to: /home/csl/reddog_ws/ros2_control/build/reddog_description
+[0.831s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/reddog_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/descriptions/reddog_description -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/reddog_description
+[0.833s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/reddog_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/reddog_description -- -j12 -l12
+[0.859s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/reddog_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/reddog_description -- -j12 -l12
+[0.869s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/reddog_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/reddog_description
+[0.876s] -- Install configuration: ""
+[0.876s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes
+[0.876s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FR_hip.STL
+[0.882s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RL_thigh.STL
+[0.887s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FR_foot.STL
+[0.888s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FL_calf.STL
+[0.888s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FL_foot.STL
+[0.888s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RR_hip.STL
+[0.893s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RL_foot.STL
+[0.894s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RL_calf.STL
+[0.894s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RR_calf.STL
+[0.894s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RR_thigh.STL
+[0.899s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FR_thigh.STL
+[0.902s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FL_thigh.STL
+[0.905s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/base.STL
+[0.916s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FL_hip.STL
+[0.919s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RR_foot.STL
+[0.920s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/RL_hip.STL
+[0.922s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//meshes/FR_calf.STL
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//xacro
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//xacro/robot.xacro
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//launch
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//launch/display.launch
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//launch/gazebo.launch
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/legged_gym
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/legged_gym/reddog_him.yaml
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/legged_gym/policy_him2.pt
+[0.923s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/ocs2
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/ocs2/reference.info
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/ocs2/task.info
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/ocs2/gait.info
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/visualize_urdf.rviz
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//config/robot_control.yaml
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//urdf
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//urdf/robot.urdf
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description//urdf/reddog_20250221.csv
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/ament_index/resource_index/package_run_dependencies/reddog_description
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/ament_index/resource_index/parent_prefix_path/reddog_description
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/environment/ament_prefix_path.sh
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/environment/ament_prefix_path.dsv
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/environment/path.sh
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/environment/path.dsv
+[0.924s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/local_setup.bash
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/local_setup.sh
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/local_setup.zsh
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/local_setup.dsv
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/package.dsv
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/ament_index/resource_index/packages/reddog_description
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/cmake/reddog_descriptionConfig.cmake
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/cmake/reddog_descriptionConfig-version.cmake
+[0.925s] -- Installing: /home/csl/reddog_ws/ros2_control/install/reddog_description/share/reddog_description/package.xml
+[0.926s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/reddog_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/reddog_description

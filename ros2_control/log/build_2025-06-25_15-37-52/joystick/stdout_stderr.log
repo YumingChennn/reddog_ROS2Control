@@ -1,0 +1,35 @@
+running egg_info
+creating ../../../../build/joystick/joystick.egg-info
+writing ../../../../build/joystick/joystick.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/joystick/joystick.egg-info/dependency_links.txt
+writing entry points to ../../../../build/joystick/joystick.egg-info/entry_points.txt
+writing requirements to ../../../../build/joystick/joystick.egg-info/requires.txt
+writing top-level names to ../../../../build/joystick/joystick.egg-info/top_level.txt
+writing manifest file '../../../../build/joystick/joystick.egg-info/SOURCES.txt'
+reading manifest file '../../../../build/joystick/joystick.egg-info/SOURCES.txt'
+writing manifest file '../../../../build/joystick/joystick.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csl/reddog_ws/ros2_control/build/joystick/build
+creating /home/csl/reddog_ws/ros2_control/build/joystick/build/lib
+creating /home/csl/reddog_ws/ros2_control/build/joystick/build/lib/joystick
+copying joystick/joy_controller.py -> /home/csl/reddog_ws/ros2_control/build/joystick/build/lib/joystick
+copying joystick/__init__.py -> /home/csl/reddog_ws/ros2_control/build/joystick/build/lib/joystick
+running install
+running install_lib
+creating /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick
+copying /home/csl/reddog_ws/ros2_control/build/joystick/build/lib/joystick/joy_controller.py -> /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick
+copying /home/csl/reddog_ws/ros2_control/build/joystick/build/lib/joystick/__init__.py -> /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick
+byte-compiling /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick/joy_controller.py to joy_controller.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/csl/reddog_ws/ros2_control/install/joystick/share/ament_index
+creating /home/csl/reddog_ws/ros2_control/install/joystick/share/ament_index/resource_index
+creating /home/csl/reddog_ws/ros2_control/install/joystick/share/ament_index/resource_index/packages
+copying resource/joystick -> /home/csl/reddog_ws/ros2_control/install/joystick/share/ament_index/resource_index/packages
+copying package.xml -> /home/csl/reddog_ws/ros2_control/install/joystick/share/joystick
+running install_egg_info
+Copying ../../../../build/joystick/joystick.egg-info to /home/csl/reddog_ws/ros2_control/install/joystick/lib/python3.10/site-packages/joystick-0.0.0-py3.10.egg-info
+running install_scripts
+Installing joy_controller script to /home/csl/reddog_ws/ros2_control/install/joystick/lib/joystick
+writing list of installed files to '/home/csl/reddog_ws/ros2_control/build/joystick/install.log'

@@ -1,0 +1,86 @@
+[0.154s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_unitree_mujoco -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco
+[0.483s] -- The C compiler identification is GNU 11.4.0
+[0.484s] -- The CXX compiler identification is GNU 11.4.0
+[0.484s] -- Detecting C compiler ABI info
+[0.484s] -- Detecting C compiler ABI info - done
+[0.484s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.484s] -- Detecting C compile features
+[0.484s] -- Detecting C compile features - done
+[0.484s] -- Detecting CXX compiler ABI info
+[0.485s] -- Detecting CXX compiler ABI info - done
+[0.485s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.485s] -- Detecting CXX compile features
+[0.485s] -- Detecting CXX compile features - done
+[0.485s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.485s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.571s] -- Looking for pthread.h
+[0.663s] -- Looking for pthread.h - found
+[0.663s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.755s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.755s] -- Found Threads: TRUE  
+[0.759s] -- Found hardware_interface: 2.48.0 (/opt/ros/humble/share/hardware_interface/cmake)
+[0.805s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.811s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.821s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.833s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.851s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.063s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.065s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.084s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.133s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.136s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.150s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.153s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.160s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.170s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.238s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.301s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.301s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_unitree_mujoco/include>;/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_unitree_mujoco/src
+[1.301s] -- Configured cppcheck exclude dirs and/or files: 
+[1.301s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.302s] -- Added test 'lint_cmake' to check CMake code style
+[1.303s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.304s] -- Added test 'uncrustify' to check C / C++ code style
+[1.304s] -- Configured uncrustify additional arguments: 
+[1.304s] -- Added test 'xmllint' to check XML markup files
+[1.306s] -- Configuring done
+[1.323s] -- Generating done
+[1.326s] -- Build files have been written to: /home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco
+[1.333s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_unitree_mujoco -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco
+[1.335s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco -- -j12 -l12
+[1.375s] [ 50%] [32mBuilding CXX object CMakeFiles/hardware_unitree_mujoco.dir/src/HardwareUnitree.cpp.o[0m
+[5.927s] [100%] [32m[1mLinking CXX shared library libhardware_unitree_mujoco.so[0m
+[6.784s] [100%] Built target hardware_unitree_mujoco
+[6.795s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco -- -j12 -l12
+[6.796s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco
+[6.804s] -- Install configuration: ""
+[6.804s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/HardwareUnitree.xml
+[6.804s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/include/hardware_unitree_mujoco
+[6.804s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/include/hardware_unitree_mujoco/hardware_unitree_mujoco
+[6.804s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/include/hardware_unitree_mujoco/hardware_unitree_mujoco/HardwareUnitree.h
+[6.804s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/lib/libhardware_unitree_mujoco.so
+[6.810s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/lib/libhardware_unitree_mujoco.so" to ""
+[6.810s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/library_path.sh
+[6.810s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/library_path.dsv
+[6.810s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco//launch
+[6.810s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco//launch/visualize.launch.py
+[6.810s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/ament_index/resource_index/package_run_dependencies/hardware_unitree_mujoco
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/ament_index/resource_index/parent_prefix_path/hardware_unitree_mujoco
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/ament_prefix_path.sh
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/ament_prefix_path.dsv
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/path.sh
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/environment/path.dsv
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/local_setup.bash
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/local_setup.sh
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/local_setup.zsh
+[6.811s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/local_setup.dsv
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/package.dsv
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/ament_index/resource_index/packages/hardware_unitree_mujoco
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/hardware_unitree_mujoco
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/cmake/export_hardware_unitree_mujocoExport.cmake
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/cmake/export_hardware_unitree_mujocoExport-noconfig.cmake
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/cmake/ament_cmake_export_targets-extras.cmake
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/cmake/hardware_unitree_mujocoConfig.cmake
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/cmake/hardware_unitree_mujocoConfig-version.cmake
+[6.812s] -- Installing: /home/csl/reddog_ws/ros2_control/install/hardware_unitree_mujoco/share/hardware_unitree_mujoco/package.xml
+[6.815s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco

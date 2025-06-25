@@ -1,0 +1,277 @@
+[0.476s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/libraries/xsens_mti_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver
+[0.522s] -- The C compiler identification is GNU 11.4.0
+[0.575s] -- The CXX compiler identification is GNU 11.4.0
+[0.581s] -- Detecting C compiler ABI info
+[0.638s] -- Detecting C compiler ABI info - done
+[0.645s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.645s] -- Detecting C compile features
+[0.645s] -- Detecting C compile features - done
+[0.648s] -- Detecting CXX compiler ABI info
+[0.711s] -- Detecting CXX compiler ABI info - done
+[0.719s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.719s] -- Detecting CXX compile features
+[0.719s] -- Detecting CXX compile features - done
+[0.722s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.844s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.920s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[0.952s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.956s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.962s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.971s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.983s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.013s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.015s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.083s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.114s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.155s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.164s] -- Looking for pthread.h
+[1.222s] -- Looking for pthread.h - found
+[1.223s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.280s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.281s] -- Found Threads: TRUE  
+[1.322s] -- Found tf2: 0.25.12 (/opt/ros/humble/share/tf2/cmake)
+[1.337s] -- Found tf2_ros: 0.25.12 (/opt/ros/humble/share/tf2_ros/cmake)
+[1.394s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.405s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.416s] -- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)
+[1.424s] -- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+[1.453s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.674s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.010s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.138s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.160s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.162s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.186s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.187s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.187s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.187s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.206s] -- Found PythonExtra: .so  
+[2.272s] -- Configuring done
+[2.316s] -- Generating done
+[2.329s] -- Build files have been written to: /home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver
+[2.341s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/libraries/xsens_mti_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver
+[2.342s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver -- -j12 -l12
+[2.378s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.387s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.387s] [  6%] [34m[1mCreating directories for 'xspublic'[0m
+[2.394s] [  6%] Built target ament_cmake_python_copy_xsens_mti_ros2_driver
+[2.453s] [  8%] [34m[1mNo download step for 'xspublic'[0m
+[2.475s] [ 10%] [34m[1mNo update step for 'xspublic'[0m
+[2.496s] [ 13%] [34m[1mNo patch step for 'xspublic'[0m
+[2.517s] [ 15%] [34m[1mNo configure step for 'xspublic'[0m
+[2.540s] [ 17%] [34m[1mPerforming build step for 'xspublic'[0m
+[2.542s] make[3]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[2.655s] running egg_info
+[2.655s] creating xsens_mti_ros2_driver.egg-info
+[2.655s] writing xsens_mti_ros2_driver.egg-info/PKG-INFO
+[2.656s] writing dependency_links to xsens_mti_ros2_driver.egg-info/dependency_links.txt
+[2.656s] writing top-level names to xsens_mti_ros2_driver.egg-info/top_level.txt
+[2.656s] writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'
+[2.658s] reading manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'
+[2.658s] writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'
+[2.662s] [ 19%] [34m[1mNo install step for 'xspublic'[0m
+[2.686s] [ 19%] Built target ament_cmake_python_build_xsens_mti_ros2_driver_egg
+[2.687s] [ 21%] [34m[1mCompleted 'xspublic'[0m
+[2.711s] [ 23%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_c.dir/rosidl_generator_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.c.o[0m
+[2.715s] [ 23%] Built target xsens_mti_ros2_driver__cpp
+[2.716s] [ 23%] Built target xspublic
+[2.726s] [ 30%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.726s] [ 30%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.726s] [ 30%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.760s] [ 32%] [32m[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_generator_c.so[0m
+[2.794s] [ 32%] Built target xsens_mti_ros2_driver__rosidl_generator_c
+[2.803s] [ 39%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.803s] [ 39%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.804s] [ 39%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.027s] [ 41%] [32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o[0m
+[3.045s] [ 43%] [32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.cpp.o[0m
+[3.059s] [ 45%] [32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_mti_ros2_driver/msg/detail/dds_fastrtps/xs_status_word__type_support.cpp.o[0m
+[3.110s] [ 47%] [32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o[0m
+[3.136s] [ 50%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.c.o[0m
+[3.141s] [ 52%] [32m[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_c.so[0m
+[3.145s] [ 54%] [32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support_c.cpp.o[0m
+[3.170s] [ 56%] [32m[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so[0m
+[3.183s] [ 56%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c
+[3.201s] [ 56%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c
+[3.298s] [ 58%] [32m[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so[0m
+[3.337s] [ 58%] Built target xsens_mti_ros2_driver__rosidl_typesupport_cpp
+[3.424s] [ 60%] [32m[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so[0m
+[3.459s] [ 63%] [32m[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.461s] [ 63%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp
+[3.475s] [ 65%] [32m[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so[0m
+[3.533s] [ 65%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp
+[3.548s] [ 65%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c
+[3.565s] [ 65%] Built target xsens_mti_ros2_driver
+[3.583s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o[0m
+[3.583s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o[0m
+[3.583s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o[0m
+[3.584s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o[0m
+[3.584s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o[0m
+[3.584s] [ 80%] [32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o[0m
+[3.584s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.106s] [ 80%] Built target xsens_mti_ros2_driver__py
+[4.129s] [ 82%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_py.dir/rosidl_generator_py/xsens_mti_ros2_driver/msg/_xs_status_word_s.c.o[0m
+[4.253s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/libxsens_mti_ros2_driver__rosidl_generator_py.so[0m
+[4.299s] [ 84%] Built target xsens_mti_ros2_driver__rosidl_generator_py
+[4.318s] [ 86%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.318s] [ 89%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.322s] [ 91%] [32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_c.c.o[0m
+[4.386s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.419s] [ 93%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c__pyext
+[4.425s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.426s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.453s] [ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext
+[4.466s] [ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext
+[13.546s] [100%] [32m[1mLinking CXX executable xsens_mti_node[0m
+[14.269s] [100%] Built target xsens_mti_node
+[14.279s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver -- -j12 -l12
+[14.280s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver
+[14.287s] -- Install configuration: ""
+[14.287s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/ament_index/resource_index/rosidl_interfaces/xsens_mti_ros2_driver
+[14.287s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__struct.h
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.h
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.h
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.c
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_generator_c__visibility_control.h
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/xs_status_word.h
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/library_path.sh
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/library_path.dsv
+[14.288s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_c.so
+[14.288s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_c.so" to ""
+[14.288s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.288s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[14.289s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_fastrtps_c.h
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so
+[14.289s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so" to ""
+[14.289s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.289s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.289s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__builder.hpp
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__traits.hpp
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__struct.hpp
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.hpp
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/xs_status_word.hpp
+[14.289s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_generator_cpp__visibility_control.hpp
+[14.289s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.290s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.290s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/dds_fastrtps
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_fastrtps_cpp.hpp
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so
+[14.290s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so" to ""
+[14.290s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.290s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.290s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.c
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_introspection_c.h
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.290s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so
+[14.290s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so" to ""
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_c.so
+[14.291s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_c.so" to ""
+[14.291s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver
+[14.291s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg
+[14.291s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.cpp
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_introspection_cpp.hpp
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so
+[14.291s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so" to ""
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so
+[14.291s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so" to ""
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/pythonpath.sh
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/pythonpath.dsv
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/PKG-INFO
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/dependency_links.txt
+[14.291s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/SOURCES.txt
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/top_level.txt
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_c.c
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word.py
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/__init__.py
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word_s.c
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/libxsens_mti_ros2_driver__rosidl_generator_py.so
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_fastrtps_c.c
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/__init__.py
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_introspection_c.c
+[14.292s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[14.315s] Listing '/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver'...
+[14.315s] Compiling '/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/__init__.py'...
+[14.315s] Listing '/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg'...
+[14.315s] Compiling '/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/__init__.py'...
+[14.315s] Compiling '/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word.py'...
+[14.318s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[14.319s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[14.319s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[14.319s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[14.319s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[14.319s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[14.319s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_py.so
+[14.319s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_py.so" to ""
+[14.320s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/msg/XsStatusWord.idl
+[14.320s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/msg/XsStatusWord.msg
+[14.320s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/xsens_mti_ros2_driver/xsens_mti_node
+[14.325s] -- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/lib/xsens_mti_ros2_driver/xsens_mti_node" to ""
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch/display.launch.py
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch/xsens_mti_node.launch.py
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/param
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/param/xsens_mti_node.yaml
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/rviz
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/rviz/display.rviz
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf
+[14.326s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_1.stl
+[14.327s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_6xx.urdf
+[14.327s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_1.urdf
+[14.327s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_10.stl
+[14.331s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_10.urdf
+[14.331s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_6xx.stl
+[14.333s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/ament_index/resource_index/package_run_dependencies/xsens_mti_ros2_driver
+[14.333s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/ament_index/resource_index/parent_prefix_path/xsens_mti_ros2_driver
+[14.333s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/ament_prefix_path.sh
+[14.333s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/ament_prefix_path.dsv
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/path.sh
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/path.dsv
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.bash
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.sh
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.zsh
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.dsv
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/ament_index/resource_index/packages/xsens_mti_ros2_driver
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cExport.cmake
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cExport-noconfig.cmake
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cExport.cmake
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cppExport.cmake
+[14.334s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cppExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cppExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cppExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cppExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_pyExport.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_pyExport-noconfig.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake-extras.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[14.335s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_targets-extras.cmake
+[14.336s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[14.336s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[14.336s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driverConfig.cmake
+[14.336s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driverConfig-version.cmake
+[14.336s] -- Installing: /home/csl/reddog_ws/ros2_control/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.xml
+[14.337s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver

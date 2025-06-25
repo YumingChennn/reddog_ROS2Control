@@ -1,0 +1,251 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3145d6bc695c51cfa7e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "xsens_mti_ros2_driver__py",
+					"jsonFile" : "directory-xsens_mti_ros2_driver__py-c5c35d7d5dfb2f4988f7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver/xsens_mti_ros2_driver__py",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "xsens_mti_ros2_driver",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_xsens_mti_ros2_driver_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_xsens_mti_ros2_driver_egg-b508138118f7cb386dbd.json",
+					"name" : "ament_cmake_python_build_xsens_mti_ros2_driver_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_xsens_mti_ros2_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_xsens_mti_ros2_driver-7330562599ac403110ef.json",
+					"name" : "ament_cmake_python_copy_xsens_mti_ros2_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-fb1bd4969fb1061d8630.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_node-c4b3b7bb3838196a88c8.json",
+					"name" : "xsens_mti_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver-a3af1024e3f65c55ee98.json",
+					"name" : "xsens_mti_ros2_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__cpp-44ea8c16b97c22fa54d8.json",
+					"name" : "xsens_mti_ros2_driver__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "xsens_mti_ros2_driver__py::@e95b0415a5b5fe654b55",
+					"jsonFile" : "target-xsens_mti_ros2_driver__py-0aee4d87a10c382406ee.json",
+					"name" : "xsens_mti_ros2_driver__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_generator_c-7b4d9e352764a789f6ad.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_generator_py-6ba78431176fba602058.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_c-a3310c32465e311ec301.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_c__pyext-49aaae56adfd5d6b2d62.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_cpp-94e6acc9ef28ad311354.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c-f6e3a1d80ebf1fa6adba.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext-21f6f016cd5090ba8f31.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp-a42fa3f7e970c2686a48.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_introspection_c-7b4dde700527859ccf53.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext-27f80f2ab08e800eb9aa.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp-245804394de0ee65bdab.json",
+					"name" : "xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xsens_mti_ros2_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xsens_mti_ros2_driver_uninstall-e39070a8ce6692b1ed20.json",
+					"name" : "xsens_mti_ros2_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "xspublic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-xspublic-65208a59d30e3b7fa941.json",
+					"name" : "xspublic",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver",
+		"source" : "/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/libraries/xsens_mti_ros2_driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

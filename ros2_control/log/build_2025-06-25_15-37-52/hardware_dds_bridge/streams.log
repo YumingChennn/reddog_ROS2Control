@@ -1,0 +1,45 @@
+[0.825s] Invoking command in '/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_dds_bridge': PYTHONPATH=/home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/hardware_dds_bridge build --build-base /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build install --record /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/install.log --single-version-externally-managed install_data
+[1.060s] running egg_info
+[1.061s] creating ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info
+[1.061s] writing ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/PKG-INFO
+[1.061s] writing dependency_links to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/dependency_links.txt
+[1.062s] writing entry points to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/entry_points.txt
+[1.062s] writing requirements to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/requires.txt
+[1.062s] writing top-level names to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/top_level.txt
+[1.062s] writing manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+[1.064s] reading manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+[1.065s] writing manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+[1.065s] running build
+[1.065s] running build_py
+[1.065s] creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build
+[1.065s] creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib
+[1.065s] creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+[1.065s] copying hardware_dds_bridge/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+[1.065s] copying hardware_dds_bridge/__init__.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+[1.065s] copying hardware_dds_bridge/hardware_manager.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+[1.065s] copying hardware_dds_bridge/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+[1.066s] running install
+[1.066s] running install_lib
+[1.067s] creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+[1.067s] copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+[1.067s] copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/__init__.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+[1.067s] copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/hardware_manager.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+[1.067s] copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+[1.068s] byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/Motor_Manager_origin.py to Motor_Manager_origin.cpython-310.pyc
+[1.070s] byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/__init__.py to __init__.cpython-310.pyc
+[1.070s] byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/hardware_manager.py to hardware_manager.cpython-310.pyc
+[1.072s] byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/DM_CAN.py to DM_CAN.cpython-310.pyc
+[1.076s] running install_data
+[1.076s] creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index
+[1.076s] creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index
+[1.076s] creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index/packages
+[1.076s] copying resource/hardware_dds_bridge -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index/packages
+[1.076s] copying package.xml -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge
+[1.076s] creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge/launch
+[1.076s] copying launch/bringup.launch.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge/launch
+[1.076s] running install_egg_info
+[1.078s] Copying ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info to /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge-0.0.0-py3.10.egg-info
+[1.079s] running install_scripts
+[1.101s] Installing hardware_manager script to /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/hardware_dds_bridge
+[1.101s] writing list of installed files to '/home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/install.log'
+[1.125s] Invoked command in '/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_dds_bridge' returned '0': PYTHONPATH=/home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/hardware_dds_bridge build --build-base /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build install --record /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/install.log --single-version-externally-managed install_data

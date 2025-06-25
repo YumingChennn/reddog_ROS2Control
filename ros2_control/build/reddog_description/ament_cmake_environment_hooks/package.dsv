@@ -1,0 +1,4 @@
+source;share/reddog_description/local_setup.bash
+source;share/reddog_description/local_setup.dsv
+source;share/reddog_description/local_setup.sh
+source;share/reddog_description/local_setup.zsh

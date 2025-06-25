@@ -1,0 +1,3 @@
+[console_scripts]
+motor_manager = reddog_hardware.motor_manager:main
+

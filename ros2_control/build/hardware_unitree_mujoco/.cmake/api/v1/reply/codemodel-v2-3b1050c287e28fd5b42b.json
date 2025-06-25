@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ec13cb756724f3b28bd7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "hardware_unitree_mujoco",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "hardware_unitree_mujoco::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hardware_unitree_mujoco-9eb9ed2964d504d51aa9.json",
+					"name" : "hardware_unitree_mujoco",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hardware_unitree_mujoco_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hardware_unitree_mujoco_uninstall-f2262a51d7a1cbae2568.json",
+					"name" : "hardware_unitree_mujoco_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-da3f0c9789f9d7e1d379.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/csl/reddog_ws/ros2_control/build/hardware_unitree_mujoco",
+		"source" : "/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/hardwares/hardware_unitree_mujoco"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

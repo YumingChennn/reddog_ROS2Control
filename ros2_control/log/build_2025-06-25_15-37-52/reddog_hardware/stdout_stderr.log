@@ -1,0 +1,47 @@
+running egg_info
+creating ../../../../build/reddog_hardware/reddog_hardware.egg-info
+writing ../../../../build/reddog_hardware/reddog_hardware.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/reddog_hardware/reddog_hardware.egg-info/dependency_links.txt
+writing entry points to ../../../../build/reddog_hardware/reddog_hardware.egg-info/entry_points.txt
+writing requirements to ../../../../build/reddog_hardware/reddog_hardware.egg-info/requires.txt
+writing top-level names to ../../../../build/reddog_hardware/reddog_hardware.egg-info/top_level.txt
+writing manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+reading manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../../build/reddog_hardware/reddog_hardware.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build
+creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib
+creating /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+copying reddog_hardware/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+copying reddog_hardware/motor_manager.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+copying reddog_hardware/__init__.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+copying reddog_hardware/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware
+running install
+running install_lib
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/motor_manager.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/__init__.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+copying /home/csl/reddog_ws/ros2_control/build/reddog_hardware/build/lib/reddog_hardware/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware
+byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/Motor_Manager_origin.py to Motor_Manager_origin.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/motor_manager.py to motor_manager.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware/DM_CAN.py to DM_CAN.cpython-310.pyc
+running install_data
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/config
+copying reddog_hardware/config/motor_config.yaml -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/config
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index/packages
+copying resource/reddog_hardware -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/ament_index/resource_index/packages
+copying package.xml -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware
+creating /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+copying launch/bringup.launch.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+copying launch/without_motor.launch.py -> /home/csl/reddog_ws/ros2_control/install/reddog_hardware/share/reddog_hardware/launch
+running install_egg_info
+Copying ../../../../build/reddog_hardware/reddog_hardware.egg-info to /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/python3.10/site-packages/reddog_hardware-0.0.0-py3.10.egg-info
+running install_scripts
+Installing motor_manager script to /home/csl/reddog_ws/ros2_control/install/reddog_hardware/lib/reddog_hardware
+writing list of installed files to '/home/csl/reddog_ws/ros2_control/build/reddog_hardware/install.log'

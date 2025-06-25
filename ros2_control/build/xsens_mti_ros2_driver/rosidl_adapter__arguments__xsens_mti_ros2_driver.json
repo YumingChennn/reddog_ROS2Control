@@ -1,0 +1,6 @@
+{
+  "package_name": "xsens_mti_ros2_driver",
+  "non_idl_tuples": [
+    "/home/csl/reddog_ws/ros2_control/src/reddog_ROS2Control/libraries/xsens_mti_ros2_driver:msg/XsStatusWord.msg"
+  ]
+}

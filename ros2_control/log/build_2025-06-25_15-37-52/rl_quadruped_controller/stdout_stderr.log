@@ -1,0 +1,65 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found controller_interface: 2.48.0 (/opt/ros/humble/share/controller_interface/cmake)
+-- Found Torch: /home/csl/rdog/libtorch/lib/libtorch.so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller
+[ 50%] [32mBuilding CXX object CMakeFiles/rl_quadruped_controller.dir/src/rl_quadruped_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library librl_quadruped_controller.so[0m
+[100%] Built target rl_quadruped_controller
+-- Install configuration: ""
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/lib/librl_quadruped_controller.so
+-- Set runtime path of "/home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/lib/librl_quadruped_controller.so" to ""
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include/
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include//rl_quadruped_controller
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include//rl_quadruped_controller/rl_quadruped_controller.hpp
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/rl_quadruped_controller.xml
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/launch
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/launch/bringup.launch.py
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.xml
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/resource/rl_quadruped_controller.xml
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/package_run_dependencies/rl_quadruped_controller
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/parent_prefix_path/rl_quadruped_controller
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/ament_prefix_path.sh
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/ament_prefix_path.dsv
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/path.sh
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/path.dsv
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.bash
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.sh
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.zsh
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.dsv
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.dsv
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/packages/rl_quadruped_controller
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rl_quadruped_controller
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/cmake/rl_quadruped_controllerConfig.cmake
+-- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/cmake/rl_quadruped_controllerConfig-version.cmake
+-- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.xml

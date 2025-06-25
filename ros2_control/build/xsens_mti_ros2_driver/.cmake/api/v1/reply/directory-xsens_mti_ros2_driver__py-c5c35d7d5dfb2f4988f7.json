@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "xsens_mti_ros2_driver__py",
+		"source" : "/home/csl/reddog_ws/ros2_control/build/xsens_mti_ros2_driver/xsens_mti_ros2_driver__py"
+	}
+}

@@ -1,0 +1,43 @@
+running egg_info
+creating ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info
+writing ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/dependency_links.txt
+writing entry points to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/entry_points.txt
+writing requirements to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/requires.txt
+writing top-level names to ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/top_level.txt
+writing manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+reading manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build
+creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib
+creating /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+copying hardware_dds_bridge/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+copying hardware_dds_bridge/__init__.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+copying hardware_dds_bridge/hardware_manager.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+copying hardware_dds_bridge/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge
+running install
+running install_lib
+creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/Motor_Manager_origin.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/__init__.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/hardware_manager.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+copying /home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/build/lib/hardware_dds_bridge/DM_CAN.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge
+byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/Motor_Manager_origin.py to Motor_Manager_origin.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/hardware_manager.py to hardware_manager.cpython-310.pyc
+byte-compiling /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge/DM_CAN.py to DM_CAN.cpython-310.pyc
+running install_data
+creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index
+creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index
+creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index/packages
+copying resource/hardware_dds_bridge -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge
+creating /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge/launch
+copying launch/bringup.launch.py -> /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/share/hardware_dds_bridge/launch
+running install_egg_info
+Copying ../../../../build/hardware_dds_bridge/hardware_dds_bridge.egg-info to /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/python3.10/site-packages/hardware_dds_bridge-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hardware_manager script to /home/csl/reddog_ws/ros2_control/install/hardware_dds_bridge/lib/hardware_dds_bridge
+writing list of installed files to '/home/csl/reddog_ws/ros2_control/build/hardware_dds_bridge/install.log'
