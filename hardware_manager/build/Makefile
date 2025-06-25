@@ -129,6 +129,43 @@ can_node_motor_imu/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/build
 .PHONY : can_node_motor_imu/fast
 
+#=============================================================================
+# Target rules for targets named example_mti_reddog
+
+# Build rule for target.
+example_mti_reddog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_mti_reddog
+.PHONY : example_mti_reddog
+
+# fast build rule for target.
+example_mti_reddog/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/build
+.PHONY : example_mti_reddog/fast
+
+src/callback_handler.o: src/callback_handler.cpp.o
+.PHONY : src/callback_handler.o
+
+# target to build an object file
+src/callback_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o
+.PHONY : src/callback_handler.cpp.o
+
+src/callback_handler.i: src/callback_handler.cpp.i
+.PHONY : src/callback_handler.i
+
+# target to preprocess a source file
+src/callback_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.i
+.PHONY : src/callback_handler.cpp.i
+
+src/callback_handler.s: src/callback_handler.cpp.s
+.PHONY : src/callback_handler.s
+
+# target to generate assembly for a file
+src/callback_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.s
+.PHONY : src/callback_handler.cpp.s
+
 src/can_node_motor_imu.o: src/can_node_motor_imu.cpp.o
 .PHONY : src/can_node_motor_imu.o
 
@@ -152,6 +189,30 @@ src/can_node_motor_imu.s: src/can_node_motor_imu.cpp.s
 src/can_node_motor_imu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.s
 .PHONY : src/can_node_motor_imu.cpp.s
+
+src/example_mti_reddog.o: src/example_mti_reddog.cpp.o
+.PHONY : src/example_mti_reddog.o
+
+# target to build an object file
+src/example_mti_reddog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o
+.PHONY : src/example_mti_reddog.cpp.o
+
+src/example_mti_reddog.i: src/example_mti_reddog.cpp.i
+.PHONY : src/example_mti_reddog.i
+
+# target to preprocess a source file
+src/example_mti_reddog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.i
+.PHONY : src/example_mti_reddog.cpp.i
+
+src/example_mti_reddog.s: src/example_mti_reddog.cpp.s
+.PHONY : src/example_mti_reddog.s
+
+# target to generate assembly for a file
+src/example_mti_reddog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.s
+.PHONY : src/example_mti_reddog.cpp.s
 
 src/usb2can_motor_imu.o: src/usb2can_motor_imu.cpp.o
 .PHONY : src/usb2can_motor_imu.o
@@ -186,9 +247,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... can_node_motor_imu"
+	@echo "... example_mti_reddog"
+	@echo "... src/callback_handler.o"
+	@echo "... src/callback_handler.i"
+	@echo "... src/callback_handler.s"
 	@echo "... src/can_node_motor_imu.o"
 	@echo "... src/can_node_motor_imu.i"
 	@echo "... src/can_node_motor_imu.s"
+	@echo "... src/example_mti_reddog.o"
+	@echo "... src/example_mti_reddog.i"
+	@echo "... src/example_mti_reddog.s"
 	@echo "... src/usb2can_motor_imu.o"
 	@echo "... src/usb2can_motor_imu.i"
 	@echo "... src/usb2can_motor_imu.s"

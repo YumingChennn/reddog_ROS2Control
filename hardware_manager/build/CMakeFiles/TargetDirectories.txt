@@ -1,3 +1,4 @@
 /home/csl/reddog_ws/hardware_manager/build/CMakeFiles/can_node_motor_imu.dir
+/home/csl/reddog_ws/hardware_manager/build/CMakeFiles/example_mti_reddog.dir
 /home/csl/reddog_ws/hardware_manager/build/CMakeFiles/edit_cache.dir
 /home/csl/reddog_ws/hardware_manager/build/CMakeFiles/rebuild_cache.dir

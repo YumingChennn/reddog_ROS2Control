@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o -o example_mti_reddog   -L/usr/local/xsens/lib  -L/home/csl/reddog_ws/hardware_manager/can  -Wl,-rpath,/usr/local/xsens/lib:/home/csl/reddog_ws/hardware_manager/can -lxsensdeviceapi -lxstypes -lpthread -lm 

@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/csl/reddog_ws/hardware_manager/build
 
 # The main recursive "all" target.
 all: CMakeFiles/can_node_motor_imu.dir/all
+all: CMakeFiles/example_mti_reddog.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/can_node_motor_imu.dir/clean
+clean: CMakeFiles/example_mti_reddog.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/rule
 CMakeFiles/can_node_motor_imu.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/clean
 .PHONY : CMakeFiles/can_node_motor_imu.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/example_mti_reddog.dir
+
+# All Build rule for target.
+CMakeFiles/example_mti_reddog.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=4,5,6 "Built target example_mti_reddog"
+.PHONY : CMakeFiles/example_mti_reddog.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/example_mti_reddog.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csl/reddog_ws/hardware_manager/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/example_mti_reddog.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csl/reddog_ws/hardware_manager/build/CMakeFiles 0
+.PHONY : CMakeFiles/example_mti_reddog.dir/rule
+
+# Convenience name for target.
+example_mti_reddog: CMakeFiles/example_mti_reddog.dir/rule
+.PHONY : example_mti_reddog
+
+# clean rule for target.
+CMakeFiles/example_mti_reddog.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/clean
+.PHONY : CMakeFiles/example_mti_reddog.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
