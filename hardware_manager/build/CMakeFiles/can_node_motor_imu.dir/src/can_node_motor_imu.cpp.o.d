@@ -1,7 +1,7 @@
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: \
- /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/can_node_motor_imu.cpp \
+ /home/csl/reddog_ws/hardware_manager/src/can_node_motor_imu.cpp \
  /usr/include/stdc-predef.h \
- /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/include/Tangair_usb2can_motor_imu.h \
+ /home/csl/reddog_ws/hardware_manager/include/Tangair_usb2can_motor_imu.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -228,7 +228,7 @@ CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/can/usb_can.h \
+ /home/csl/reddog_ws/hardware_manager/can/usb_can.h \
  /usr/include/c++/11/math.h \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_factory.hpp \

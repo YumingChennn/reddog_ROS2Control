@@ -1,4 +1,4 @@
-# Install script for directory: /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager
+# Install script for directory: /home/csl/reddog_ws/hardware_manager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/csl/reddog_ws/hardware_manager/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

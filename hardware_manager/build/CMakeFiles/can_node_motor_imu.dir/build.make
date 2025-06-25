@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager
+CMAKE_SOURCE_DIR = /home/csl/reddog_ws/hardware_manager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build
+CMAKE_BINARY_DIR = /home/csl/reddog_ws/hardware_manager/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/can_node_motor_imu.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/can_node_motor_imu.dir/flags.make
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: CMakeFiles/can_node_motor_imu.dir/flags.make
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: ../src/can_node_motor_imu.cpp
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: CMakeFiles/can_node_motor_imu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o -MF CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o.d -o CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o -c /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/can_node_motor_imu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o -MF CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o.d -o CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o -c /home/csl/reddog_ws/hardware_manager/src/can_node_motor_imu.cpp
 
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/can_node_motor_imu.cpp > CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csl/reddog_ws/hardware_manager/src/can_node_motor_imu.cpp > CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.i
 
 CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/can_node_motor_imu.cpp -o CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csl/reddog_ws/hardware_manager/src/can_node_motor_imu.cpp -o CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.s
 
 CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: CMakeFiles/can_node_motor_imu.dir/flags.make
 CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_motor_imu.cpp
 CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: CMakeFiles/can_node_motor_imu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o -MF CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o.d -o CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o -c /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/usb2can_motor_imu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o -MF CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o.d -o CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o -c /home/csl/reddog_ws/hardware_manager/src/usb2can_motor_imu.cpp
 
 CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/usb2can_motor_imu.cpp > CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/csl/reddog_ws/hardware_manager/src/usb2can_motor_imu.cpp > CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.i
 
 CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/src/usb2can_motor_imu.cpp -o CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/csl/reddog_ws/hardware_manager/src/usb2can_motor_imu.cpp -o CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.s
 
 # Object files for target can_node_motor_imu
 can_node_motor_imu_OBJECTS = \
@@ -112,7 +112,7 @@ can_node_motor_imu: /opt/unitree_robotics/lib/libunitree_sdk2.a
 can_node_motor_imu: /opt/unitree_robotics/lib/libddsc.so
 can_node_motor_imu: /opt/unitree_robotics/lib/libddscxx.so
 can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable can_node_motor_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable can_node_motor_imu"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/can_node_motor_imu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/can_node_motor_imu.dir/clean:
 .PHONY : CMakeFiles/can_node_motor_imu.dir/clean
 
 CMakeFiles/can_node_motor_imu.dir/depend:
-	cd /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build /home/csl/rdog/reddog_ros2_ws/src/redDog_RL_Him/hardware_manager/build/CMakeFiles/can_node_motor_imu.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/csl/reddog_ws/hardware_manager/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/csl/reddog_ws/hardware_manager /home/csl/reddog_ws/hardware_manager /home/csl/reddog_ws/hardware_manager/build /home/csl/reddog_ws/hardware_manager/build /home/csl/reddog_ws/hardware_manager/build/CMakeFiles/can_node_motor_imu.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/can_node_motor_imu.dir/depend
 
