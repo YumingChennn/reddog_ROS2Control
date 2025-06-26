@@ -213,15 +213,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 XSENS_INSTALL_PREFIX:PATH=/usr/local/xsens
 
 //Value Computed by CMake
-can_test_BINARY_DIR:STATIC=/home/csl/reddog_ws/hardware_manager/build
-
-//Value Computed by CMake
-can_test_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-can_test_SOURCE_DIR:STATIC=/home/csl/reddog_ws/hardware_manager
-
-//Value Computed by CMake
 reddog_hardware_BINARY_DIR:STATIC=/home/csl/reddog_ws/hardware_manager/build
 
 //Value Computed by CMake

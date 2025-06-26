@@ -83,12 +83,12 @@ clean: CMakeFiles/example_mti_reddog.dir/clean
 CMakeFiles/can_node_motor_imu.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=1,2,3 "Built target can_node_motor_imu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=1,2,3,4 "Built target can_node_motor_imu"
 .PHONY : CMakeFiles/can_node_motor_imu.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/can_node_motor_imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/csl/reddog_ws/hardware_manager/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/csl/reddog_ws/hardware_manager/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/can_node_motor_imu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/csl/reddog_ws/hardware_manager/build/CMakeFiles 0
 .PHONY : CMakeFiles/can_node_motor_imu.dir/rule
@@ -109,7 +109,7 @@ CMakeFiles/can_node_motor_imu.dir/clean:
 CMakeFiles/example_mti_reddog.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=4,5,6 "Built target example_mti_reddog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/csl/reddog_ws/hardware_manager/build/CMakeFiles --progress-num=5,6,7 "Built target example_mti_reddog"
 .PHONY : CMakeFiles/example_mti_reddog.dir/all
 
 # Build rule for subdir invocation for target.

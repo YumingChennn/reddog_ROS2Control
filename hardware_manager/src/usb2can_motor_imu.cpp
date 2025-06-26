@@ -10,15 +10,28 @@
 #include <mutex>
 #include <thread> 
 
+#include "callback_handler.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cassert>
+#include <thread>
+
 using namespace std::chrono;
+using namespace std;
 
 using std::chrono::milliseconds;
+
+XsControl* control = nullptr;
+XsDevice* device = nullptr;
+XsPortInfo mtPort;
+CallbackHandler callback;
+SensorData sensorData;  // ✅ 僅儲存一筆當前資料
 
 /// @brief 构造函数，初始化
 /// @return
 Tangair_usb2can::Tangair_usb2can() 
 {
-    // std::cout << "begin " << running_.load();
 
     USB2CAN0_ = openUSBCAN("/dev/ttyRedDog");
     if (USB2CAN0_ == -1)
@@ -50,60 +63,177 @@ Tangair_usb2can::~Tangair_usb2can()
 
 // /*********************************       *** IMU 相关***      ***********************************************/
 
-// void Tangair_usb2can::IMU_Init()
-// {
-//     auto node = std::make_shared<rclcpp::Node>("xsens_driver");
-//     exec_.add_node(node);
-//     std::cout << "Stop11\n";
-//     auto xdaInterface = std::make_shared<XdaInterface>(node);
-//     RCLCPP_INFO(node->get_logger(), "✅ XdaInterface has been initialized");
-//     std::cout << "Stop12\n";
-//     if (!xdaInterface->connectDevice()) {
-//         RCLCPP_ERROR(node->get_logger(), "Failed to connect device");
-//         return;
-//     }
-//     std::cout << "Stop13\n";
-// }
+int Tangair_usb2can::IMU_Init()
+{
+    cout << "Creating XsControl object..." << endl;
+    control = XsControl::construct();
+    assert(control != nullptr);
 
+    XsVersion version;
+    xdaVersion(&version);
+    cout << "Using XDA version: " << version.toString().toStdString() << endl;
 
-// void Tangair_usb2can::StartIMUThread()
-// {
-//     std::cout << "Stop14\n";
-//     if (imu_running_) return; // 避免重複啟動
-//     std::cout << "Stop14\n";
-//     imu_running_ = true;
-//     imu_thread_ = std::thread([this]() {
-//         while (rclcpp::ok() && imu_running_) {
-//             auto data = xda_interface_->spinForReddog(std::chrono::milliseconds(10));
-//             if (data.empty()) {
-//                 continue;
-//             }
-//             std::cout << "Stop15\n";
-//             RCLCPP_INFO(node_->get_logger(), "📡 IMU Data: [%.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f, %.3f]",
-//                 data[0], data[1], data[2], data[3],
-//                 data[4], data[5], data[6],
-//                 data[7], data[8], data[9]
-//             );  
-//             std::cout << "Stop16\n";
+    cout << "Scanning for devices..." << endl;
+    XsPortInfoArray portInfoArray = XsScanner::scanPorts();
 
-//             exec_.spin_some(); // 若有 ROS callback
-//             std::cout << "Stop17\n";
-//         }
+    for (auto const &portInfo : portInfoArray) {
+        if (portInfo.deviceId().isMti() || portInfo.deviceId().isMtig()) {
+            mtPort = portInfo;
+            break;
+        }
+    }
 
+    if (mtPort.empty()) {
+        cerr << "No MTi device found. Aborting." << endl;
+        return -1;
+    }
 
-//     });
-// }
+    cout << "Found device @ port: " << mtPort.portName().toStdString() << endl;
 
-// void Tangair_usb2can::IMU_Shutdown()
-// {
-//     imu_running_ = false;
+    if (!control->openPort(mtPort.portName().toStdString(), mtPort.baudrate())) {
+        cerr << "Could not open port. Aborting." << endl;
+        return -1;
+    }
 
-//     if (imu_thread_.joinable()) {
-//         imu_thread_.join();
-//     }
-//     xda_interface_.reset();
-//     rclcpp::shutdown();
-// }
+    device = control->device(mtPort.deviceId());
+    assert(device != nullptr);
+    device->addCallbackHandler(&callback);
+
+    if (!device->gotoConfig()) {
+        cerr << "Failed to enter config mode." << endl;
+        return -1;
+    }
+
+    XsOutputConfigurationArray configArray;
+    configArray.push_back(XsOutputConfiguration(XDI_PacketCounter, 0));
+    configArray.push_back(XsOutputConfiguration(XDI_SampleTimeFine, 0));
+
+    if (device->deviceId().isImu()) {
+        configArray.push_back(XsOutputConfiguration(XDI_Acceleration, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_RateOfTurn, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_MagneticField, 100));
+    } else if (device->deviceId().isVru() || device->deviceId().isAhrs()) {
+        configArray.push_back(XsOutputConfiguration(XDI_Quaternion, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_Acceleration, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_RateOfTurn, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_MagneticField, 100));
+    } else if (device->deviceId().isGnss()) {
+        configArray.push_back(XsOutputConfiguration(XDI_Quaternion, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_LatLon, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_AltitudeEllipsoid, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_VelocityXYZ, 100));
+    }
+
+    if (!device->setOutputConfiguration(configArray)) {
+        cerr << "Failed to configure device." << endl;
+        return -1;
+    }
+
+    if (device->createLogFile("logfile.mtb") != XRV_OK) {
+        cerr << "Failed to create log file." << endl;
+        return -1;
+    }
+
+    return 0;
+}
+
+void Tangair_usb2can::StartIMUThread()
+{   
+    imu_running_ = true;
+    sensorThread = std::thread(&Tangair_usb2can::startThreadedMeasurement, this);
+}
+
+void Tangair_usb2can::startThreadedMeasurement()
+{   
+    if (!device->gotoMeasurement()) {
+        cerr << "Failed to enter measurement mode." << endl;
+        return;
+    }
+
+    if (!device->startRecording()) {
+        cerr << "Failed to start recording." << endl;
+        return;
+    }
+
+    while (imu_running_) // 不再限制時間，只依照 imu_running_ 控制
+    {
+        if (callback.packetAvailable())
+        {
+            XsDataPacket packet = callback.getNextPacket();
+            cout << setw(5) << fixed << setprecision(2);
+            if (packet.containsCalibratedData())
+            {   
+                sensorData.acc = packet.calibratedAcceleration();
+                sensorData.gyr = packet.calibratedGyroscopeData();
+                sensorData.mag = packet.calibratedMagneticField();
+                // cout << " Acc1 " << endl;
+				// cout << "Acc X:" << sensorData.acc[0]
+				// 	<< ", Acc Y:" << sensorData.acc[1]
+				// 	<< ", Acc Z:" << sensorData.acc[2];
+
+				// cout << " |Gyr X:" << sensorData.gyr[0]
+				// 	<< ", Gyr Y:" << sensorData.gyr[1]
+				// 	<< ", Gyr Z:" << sensorData.gyr[2];
+
+				// cout << " |Mag X:" << sensorData.mag[0]
+				// 	<< ", Mag Y:" << sensorData.mag[1]
+				// 	<< ", Mag Z:" << sensorData.mag[2];
+            }
+
+            if (packet.containsOrientation())
+            {
+                sensorData.quat = packet.orientationQuaternion();
+                sensorData.euler = packet.orientationEuler();
+
+				// cout << "q0:" << sensorData.quat.w()
+				// 	<< ", q1:" << sensorData.quat.x()
+				// 	<< ", q2:" << sensorData.quat.y()
+				// 	<< ", q3:" << sensorData.quat.z();
+
+				// cout << " |Roll:" << sensorData.euler.roll()
+				// 	<< ", Pitch:" << sensorData.euler.pitch()
+				// 	<< ", Yaw:" << sensorData.euler.yaw();
+            }
+
+            if (packet.containsLatitudeLongitude())
+            {
+                sensorData.latlon = packet.latitudeLongitude();
+                // cout << " |Lat:" << sensorData.latlon[0]
+                //      << ", Lon:" << sensorData.latlon[1];
+            }
+
+            if (packet.containsAltitude())
+                sensorData.altitude = packet.altitude();
+                // cout << " |Alt:" << sensorData.altitude;
+
+            if (packet.containsVelocity())
+            {
+                sensorData.velocity = packet.velocity(XDI_CoordSysEnu);
+                // cout << " |E:" << sensorData.velocity[0]
+                //      << ", N:" << sensorData.velocity[1]
+                //      << ", U:" << sensorData.velocity[2];
+            }
+
+        }
+
+        XsTime::msleep(1);  // 避免 CPU 過度負載
+    }
+
+    cout << "\n[INFO] Measurement thread finished." << endl;
+}
+
+void Tangair_usb2can::IMU_Shutdown()
+{
+    imu_running_ = false;
+
+    if (sensorThread.joinable())
+    sensorThread.join();
+
+    device->stopRecording();
+    device->closeLogFile();
+    control->closePort(mtPort.portName().toStdString());
+    control->destruct();
+}
 
 /*********************************       *** DDS 相关***      ***********************************************/
 
@@ -140,7 +270,19 @@ void PrintMatrix(const std::string& name, const std::array<std::array<double, 4>
 }
 
 void Tangair_usb2can::LowCmdMessageHandler(const void *msg)
-{
+{   
+    // low_cmd_call_count_++;  // 每次呼叫都加一
+
+    // auto low_cmd_now = std::chrono::steady_clock::now();
+    // std::chrono::duration<double> low_cmd_elapsed = low_cmd_now - low_cmd_last_freq;
+
+    // if (low_cmd_elapsed.count() >= 1.0)  // 每秒統計一次
+    // {
+    //     std::cout << "[Actual LowCmd Frequency] " << low_cmd_call_count_ / low_cmd_elapsed.count() << " Hz" << std::endl;
+    //     low_cmd_call_count_ = 0;
+    //     low_cmd_last_freq = low_cmd_now;
+    // }
+
     const unitree_go::msg::dds_::LowCmd_ *cmd = static_cast<const unitree_go::msg::dds_::LowCmd_ *>(msg);
     if (!cmd) {
         std::cerr << "[ERROR] Received null pointer\n";
@@ -192,6 +334,8 @@ void Tangair_usb2can::StopAllThreads() {
     if (!running_) return;
 
     running_ = false;
+    
+    IMU_Shutdown();
 
     if (_CAN_TX_position_thread.joinable()) _CAN_TX_position_thread.join();
     if (_CAN_RX_device_0_thread.joinable()) _CAN_RX_device_0_thread.join();
@@ -252,7 +396,7 @@ void Tangair_usb2can::CAN_TX_position_thread()
     auto last_time_tx = high_resolution_clock::now();
     int count_tx = 0;
 
-    ENABLE_ALL_MOTOR(130);
+    ENABLE_ALL_MOTOR(150);
     ResetPositionToZero();
 
     while (running_) {
@@ -260,13 +404,13 @@ void Tangair_usb2can::CAN_TX_position_thread()
 
         target_pos = real_angles_;
 
-        // PrintMatrix("target_pos", target_pos);
-        // PrintMatrix("kp_array_ (as kp)", kp_array_);
-        // PrintMatrix("kd_array_ (as kd)", kd_array_);
+        PrintMatrix("target_pos", target_pos);
+        PrintMatrix("kp_array_ (as kp)", kp_array_);
+        PrintMatrix("kd_array_ (as kd)", kd_array_);
 
         SetTargetPosition(target_pos, kp_array_, kd_array_);
 
-        CAN_TX_ALL_MOTOR(130);
+        CAN_TX_ALL_MOTOR(120);
 
         /////////////////////////////////////////////////////// TX Finish
 
@@ -319,7 +463,7 @@ void Tangair_usb2can::CAN_TX_position_thread()
         auto now_tx = high_resolution_clock::now();
         auto duration_tx = duration_cast<seconds>(now_tx - last_time_tx).count();
         if (duration_tx >= 1) {
-            std::cout << "[Frequency] CAN TX = " << count_tx << " Hz" << std::endl;
+            // std::cout << "[Frequency] CAN TX = " << count_tx << " Hz" << std::endl;
             count_tx = 0;
             last_time_tx = now_tx;
         }
@@ -330,11 +474,26 @@ void Tangair_usb2can::CAN_TX_position_thread()
 
 void Tangair_usb2can::PublishLowState()
 {   
-    using namespace std::chrono;
+    // pub_low_state_call_count_++;  // 每次呼叫都加一
 
-    if (motor_positions.empty() || motor_velocity.empty()) {
-        // std::cerr << "[WARN] motor_positions 或 motor_velocity 尚未初始化，跳過 PublishLowState()" << std::endl;
+    // auto pub_low_state_now = std::chrono::steady_clock::now();
+    // std::chrono::duration<double> pub_low_state_elapsed = pub_low_state_now - pub_low_state_last_freq;
+
+    // if (pub_low_state_elapsed.count() >= 1.0)  // 每秒統計一次
+    // {
+    //     std::cout << "[Actual Pub LowState Frequency] " << pub_low_state_call_count_ / pub_low_state_elapsed.count() << " Hz" << std::endl;
+    //     pub_low_state_call_count_ = 0;
+    //     pub_low_state_last_freq = pub_low_state_now;
+    // }
+    
+
+    if ((int)motor_positions.size() < num_motor_ || (int)motor_velocity.size() < num_motor_) {
+        // std::cerr << "[ERROR] motor_positions or motor_velocity size too small!" << std::endl;
         return;
+    }
+    if (!isSensorDataValid(sensorData)) {
+        // std::cout << "[WARN] SensorData 無效，跳過此次處理。" << std::endl;
+        return;  // 提早結束這次處理（通常在迴圈中）
     }
 
     // std::cout << "[DEBUG] motor_positions: ";
@@ -355,32 +514,16 @@ void Tangair_usb2can::PublishLowState()
         low_state_go_.motor_state()[i].tau_est() = 0;
     }
 
-    // std::cout << "[CHECK] motor_state size = " << low_state_go_.motor_state().size() << std::endl;
+    std::cout << "[CHECK] motor_state size = " << low_state_go_.motor_state().size() << std::endl;
 
-    // if (have_frame_sensor_)
-    // {
-    //     low_state_go_.imu_state().quaternion()[0] = 1;
-    //     low_state_go_.imu_state().quaternion()[1] = 0;
-    //     low_state_go_.imu_state().quaternion()[2] = 0;
-    //     low_state_go_.imu_state().quaternion()[3] = 0;
+    low_state_go_.imu_state().quaternion()[0] = sensorData.quat.w();
+    low_state_go_.imu_state().quaternion()[1] = sensorData.quat.x();
+    low_state_go_.imu_state().quaternion()[2] = sensorData.quat.y();
+    low_state_go_.imu_state().quaternion()[3] = sensorData.quat.z();
 
-    //     double w = low_state_go_.imu_state().quaternion()[0];
-    //     double x = low_state_go_.imu_state().quaternion()[1];
-    //     double y = low_state_go_.imu_state().quaternion()[2];
-    //     double z = low_state_go_.imu_state().quaternion()[3];
-
-    //     low_state_go_.imu_state().rpy()[0] = atan2(2 * (w * x + y * z), 1 - 2 * (x * x + y * y));
-    //     low_state_go_.imu_state().rpy()[1] = asin(2 * (w * y - z * x));
-    //     low_state_go_.imu_state().rpy()[2] = atan2(2 * (w * z + x * y), 1 - 2 * (y * y + z * z));
-
-    //     low_state_go_.imu_state().gyroscope()[0] = 0;
-    //     low_state_go_.imu_state().gyroscope()[1] = 0;
-    //     low_state_go_.imu_state().gyroscope()[2] = -1;
-
-    //     low_state_go_.imu_state().accelerometer()[0] = 0;
-    //     low_state_go_.imu_state().accelerometer()[1] = 0;
-    //     low_state_go_.imu_state().accelerometer()[2] = 0;
-    // }
+    low_state_go_.imu_state().gyroscope()[0] = sensorData.gyr[0];
+    low_state_go_.imu_state().gyroscope()[1] = sensorData.gyr[1];
+    low_state_go_.imu_state().gyroscope()[2] = sensorData.gyr[2];
 
     lowstate_publisher->Write(low_state_go_);
 
@@ -523,7 +666,7 @@ void Tangair_usb2can::CAN_RX_device_0_thread()
             auto now_rx = high_resolution_clock::now();
             auto duration_rx = duration_cast<seconds>(now_rx - last_time_rx).count();
             if (duration_rx >= 1) {
-            std::cout << "[Frequency] CAN RX = " << count_rx / 12 << " Hz" << std::endl;
+            // std::cout << "[Frequency] CAN RX = " << count_rx / 12 << " Hz" << std::endl;
             count_rx = 0;
             last_time_rx = now_rx;
             }
@@ -856,47 +999,46 @@ void Tangair_usb2can::CAN_TX_ALL_MOTOR(int delay_us)
     CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_1_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
-    //FRT
-    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_2_motor_send);
+    //FLH
+    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_1_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
-    //FRC
-    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_3_motor_send);
+    //RRH
+    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_5_motor_send);
+    t += std::chrono::microseconds(delay_us);
+    std::this_thread::sleep_until(t);
+    //RLH
+    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_5_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
 
-    //FLH
-    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_1_motor_send);
+    //FRT
+    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_2_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
     //FLT
     CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_2_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
-    //FLC
-    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_3_motor_send);
-    t += std::chrono::microseconds(delay_us);
-    std::this_thread::sleep_until(t);
-
-    //RRH
-    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_5_motor_send);
-    t += std::chrono::microseconds(delay_us);
-    std::this_thread::sleep_until(t);
     //RRT
     CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_6_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
-    //RRC
-    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_7_motor_send);
+    //RLT
+    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_6_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
 
-    //RLH
-    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_5_motor_send);
+    //FRC
+    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_3_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
-    //RLT
-    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_6_motor_send);
+    //FLC
+    CAN_Send_Control(USB2CAN0_, 1, &USB2CAN0_CAN_Bus_1.ID_3_motor_send);
+    t += std::chrono::microseconds(delay_us);
+    std::this_thread::sleep_until(t);
+    //RRC
+    CAN_Send_Control(USB2CAN0_, 2, &USB2CAN0_CAN_Bus_2.ID_7_motor_send);
     t += std::chrono::microseconds(delay_us);
     std::this_thread::sleep_until(t);
     //RLC
@@ -998,3 +1140,26 @@ float uint_to_float(int x_int, float x_min, float x_max, int bits)
     float offset = x_min;
     return ((float)x_int) * span / ((float)((1 << bits) - 1)) + offset;
 }
+
+bool isSensorDataValid(const SensorData& data)
+{
+    if (!data.acc.empty() && (data.acc[0] != 0 || data.acc[1] != 0 || data.acc[2] != 0))
+        return true;
+    if (!data.gyr.empty() && (data.gyr[0] != 0 || data.gyr[1] != 0 || data.gyr[2] != 0))
+        return true;
+    if (!data.mag.empty() && (data.mag[0] != 0 || data.mag[1] != 0 || data.mag[2] != 0))
+        return true;
+    if (data.quat.w() != 0 || data.quat.x() != 0 || data.quat.y() != 0 || data.quat.z() != 0)
+        return true;
+    if (data.euler.roll() != 0 || data.euler.pitch() != 0 || data.euler.yaw() != 0)
+        return true;
+    if (!data.latlon.empty() && (data.latlon[0] != 0 || data.latlon[1] != 0))
+        return true;
+    if (data.altitude != 0)
+        return true;
+    if (!data.velocity.empty() && (data.velocity[0] != 0 || data.velocity[1] != 0 || data.velocity[2] != 0))
+        return true;
+
+    return false;
+}
+

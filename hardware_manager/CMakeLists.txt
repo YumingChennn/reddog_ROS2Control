@@ -36,13 +36,16 @@ set(COMMON_LIBS
 add_executable(can_node_motor_imu
     src/can_node_motor_imu.cpp   
     src/usb2can_motor_imu.cpp
+    src/callback_handler.cpp
 )
 
+target_include_directories(can_node_motor_imu PRIVATE include)
 target_link_libraries(can_node_motor_imu
     pthread
     rt
     usb_can
     unitree_sdk2
+    ${COMMON_LIBS}
 )
 
 add_executable(example_mti_reddog

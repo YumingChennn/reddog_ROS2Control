@@ -245,15 +245,15 @@ void RLQuadrupedController::sit(int step, std::vector<float> current_pos)
     {
       float target_pos = current_pos[i] * float(1 - phase) + sit_angles_[i] * phase;
       ctrl_interfaces_.joint_position_command_interface_[i].get().set_value(target_pos);
-      ctrl_interfaces_.joint_kp_command_interface_[i].get().set_value(13.0);
-      ctrl_interfaces_.joint_kd_command_interface_[i].get().set_value(0.4);
+      ctrl_interfaces_.joint_kp_command_interface_[i].get().set_value(5.0);
+      ctrl_interfaces_.joint_kd_command_interface_[i].get().set_value(0.1);
     }
   } else {
     for (int i = 0; i < 12; ++i)
     {
       ctrl_interfaces_.joint_position_command_interface_[i].get().set_value(sit_angles_[i]);
-      ctrl_interfaces_.joint_kp_command_interface_[i].get().set_value(13.0);
-      ctrl_interfaces_.joint_kd_command_interface_[i].get().set_value(0.4);
+      ctrl_interfaces_.joint_kp_command_interface_[i].get().set_value(5.0);
+      ctrl_interfaces_.joint_kd_command_interface_[i].get().set_value(0.1);
     }
   }
 }

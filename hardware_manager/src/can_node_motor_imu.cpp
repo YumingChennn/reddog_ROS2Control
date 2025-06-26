@@ -10,19 +10,12 @@
 #include <functional>
 #include <unordered_map>
 
-// #include <rclcpp/rclcpp.hpp>
-// #include "xdainterface.h"
-// #include <mavros_msgs/msg/rtcm.hpp>
-// #include <string>
-
 using std::chrono::milliseconds;
 
 std::shared_ptr<Tangair_usb2can> CAN_ptr;
 
-// 中斷旗標
 volatile sig_atomic_t shutdown_requested = 0;
 
-// 訊號處理函式
 void signal_callback_handler(int signum) {
     shutdown_requested = 1;
 }
@@ -51,8 +44,8 @@ int main(int argc, const char **argv) {
     constexpr int kDefaultDelayUs = 237;
 
     CAN_ptr->DDS_Init();
-    // CAN_ptr->IMU_Init();
-    // CAN_ptr->StartIMUThread();
+    CAN_ptr->IMU_Init();
+    CAN_ptr->StartIMUThread();
 
     std::unordered_map<std::string, std::function<void()>> command_map = {
         {"enable", []() {

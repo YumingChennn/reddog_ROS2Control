@@ -147,6 +147,7 @@ src/callback_handler.o: src/callback_handler.cpp.o
 
 # target to build an object file
 src/callback_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o
 .PHONY : src/callback_handler.cpp.o
 
@@ -155,6 +156,7 @@ src/callback_handler.i: src/callback_handler.cpp.i
 
 # target to preprocess a source file
 src/callback_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.i
 .PHONY : src/callback_handler.cpp.i
 
@@ -163,6 +165,7 @@ src/callback_handler.s: src/callback_handler.cpp.s
 
 # target to generate assembly for a file
 src/callback_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/can_node_motor_imu.dir/build.make CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example_mti_reddog.dir/build.make CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.s
 .PHONY : src/callback_handler.cpp.s
 

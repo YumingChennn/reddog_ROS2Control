@@ -17,6 +17,8 @@ struct SensorData {
     XsVector velocity;
 };
 
+bool isSensorDataValid(const SensorData& data); 
+
 class CallbackHandler : public XsCallback
 {
 public:

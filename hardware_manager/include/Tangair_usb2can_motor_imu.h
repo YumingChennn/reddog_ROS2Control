@@ -136,12 +136,16 @@ public:
 	~Tangair_usb2can();
 
 	// std::thread imu_thread_;
-	// std::atomic<bool> imu_running_{false};
+	std::atomic<bool> imu_running_{false};
 
-	// void IMU_Init();
+	int IMU_Init();
 
-    // void StartIMUThread();
-    // void IMU_Shutdown();
+    void StartIMUThread();
+
+	std::thread sensorThread;
+	void startThreadedMeasurement();
+	
+    void IMU_Shutdown();
 
 	// DDS 
 	void DDS_Init();
@@ -263,6 +267,15 @@ private:
 
     /*LowCmd write thread*/
     ThreadPtr lowStatePuberThreadPtr;
+
+	// class member 變數
+	int low_cmd_call_count_ = 0;
+	std::chrono::steady_clock::time_point low_cmd_last_freq = std::chrono::steady_clock::now();
+
+	// class member 變數
+	int pub_low_state_call_count_ = 0;
+	std::chrono::steady_clock::time_point pub_low_state_last_freq = std::chrono::steady_clock::now();
+
 
 };
 

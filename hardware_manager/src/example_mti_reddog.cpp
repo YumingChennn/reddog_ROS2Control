@@ -62,6 +62,9 @@ int init() {
         configArray.push_back(XsOutputConfiguration(XDI_MagneticField, 100));
     } else if (device->deviceId().isVru() || device->deviceId().isAhrs()) {
         configArray.push_back(XsOutputConfiguration(XDI_Quaternion, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_Acceleration, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_RateOfTurn, 100));
+        configArray.push_back(XsOutputConfiguration(XDI_MagneticField, 100));
     } else if (device->deviceId().isGnss()) {
         configArray.push_back(XsOutputConfiguration(XDI_Quaternion, 100));
         configArray.push_back(XsOutputConfiguration(XDI_LatLon, 100));
@@ -110,40 +113,38 @@ int start() {
                 sensorData.gyr = packet.calibratedGyroscopeData();
                 sensorData.mag = packet.calibratedMagneticField();
 
-				cout << "\r"
-					<< "Acc X:" << sensorData.acc[0]
-					<< ", Acc Y:" << sensorData.acc[1]
-					<< ", Acc Z:" << sensorData.acc[2];
+				// cout << "Acc X:" << sensorData.acc[0]
+				// 	<< ", Acc Y:" << sensorData.acc[1]
+				// 	<< ", Acc Z:" << sensorData.acc[2];
 
-				cout << " |Gyr X:" << sensorData.gyr[0]
-					<< ", Gyr Y:" << sensorData.gyr[1]
-					<< ", Gyr Z:" << sensorData.gyr[2];
+				// cout << " |Gyr X:" << sensorData.gyr[0]
+				// 	<< ", Gyr Y:" << sensorData.gyr[1]
+				// 	<< ", Gyr Z:" << sensorData.gyr[2];
 
-				cout << " |Mag X:" << sensorData.mag[0]
-					<< ", Mag Y:" << sensorData.mag[1]
-					<< ", Mag Z:" << sensorData.mag[2];
+				// cout << " |Mag X:" << sensorData.mag[0]
+				// 	<< ", Mag Y:" << sensorData.mag[1]
+				// 	<< ", Mag Z:" << sensorData.mag[2];
 			}
 
 			if (packet.containsOrientation())
 			{
 				sensorData.quat = packet.orientationQuaternion();
                 sensorData.euler = packet.orientationEuler();
-				cout << "\r"
-					<< "q0:" << sensorData.quat.w()
-					<< ", q1:" << sensorData.quat.x()
-					<< ", q2:" << sensorData.quat.y()
-					<< ", q3:" << sensorData.quat.z();
+				// cout << "q0:" << sensorData.quat.w()
+				// 	<< ", q1:" << sensorData.quat.x()
+				// 	<< ", q2:" << sensorData.quat.y()
+				// 	<< ", q3:" << sensorData.quat.z();
 
-				cout << " |Roll:" << sensorData.euler.roll()
-					<< ", Pitch:" << sensorData.euler.pitch()
-					<< ", Yaw:" << sensorData.euler.yaw();
+				// cout << " |Roll:" << sensorData.euler.roll()
+				// 	<< ", Pitch:" << sensorData.euler.pitch()
+				// 	<< ", Yaw:" << sensorData.euler.yaw();
 			}
 
 			if (packet.containsLatitudeLongitude())
 			{
 				sensorData.latlon = packet.latitudeLongitude();
-				cout << " |Lat:" << sensorData.latlon[0]
-					<< ", Lon:" << sensorData.latlon[1];
+				// cout << " |Lat:" << sensorData.latlon[0]
+				// 	<< ", Lon:" << sensorData.latlon[1];
 			}
 
 			if (packet.containsAltitude())
@@ -153,9 +154,9 @@ int start() {
 			if (packet.containsVelocity())
 			{   
                 sensorData.velocity = packet.velocity(XDI_CoordSysEnu);
-				cout << " |E:" << sensorData.velocity[0]
-					<< ", N:" << sensorData.velocity[1]
-					<< ", U:" << sensorData.velocity[2];
+				// cout << " |E:" << sensorData.velocity[0]
+				// 	<< ", N:" << sensorData.velocity[1]
+				// 	<< ", U:" << sensorData.velocity[2];
 			}
 
 			cout << flush;
