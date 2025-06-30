@@ -5,17 +5,15 @@
 #include <cmath>
 #include <array> 
 #include <iostream>
-#include <algorithm> // for std::find
-#include <stdexcept> // for std::runtime_error
+#include <algorithm>
+#include <stdexcept>
 #include <mutex>
 #include <thread> 
 
 #include "callback_handler.h"
-#include <iostream>
 #include <iomanip>
 #include <string>
 #include <cassert>
-#include <thread>
 
 using namespace std::chrono;
 using namespace std;
@@ -26,7 +24,7 @@ XsControl* control = nullptr;
 XsDevice* device = nullptr;
 XsPortInfo mtPort;
 CallbackHandler callback;
-SensorData sensorData;  // ✅ 僅儲存一筆當前資料
+SensorData sensorData;
 
 /// @brief 构造函数，初始化
 /// @return
@@ -258,31 +256,8 @@ void Tangair_usb2can::DDS_Init()
     lowStatePuberThreadPtr = CreateRecurrentThreadEx("lowstate", UT_CPU_ID_NONE, 2000, &Tangair_usb2can::PublishLowState, this);
 }
 
-void PrintMatrix(const std::string& name, const std::array<std::array<double, 4>, 3>& matrix)
-{
-    std::cout << name << " = \n";
-    for (const auto& row : matrix) {
-        for (double val : row) {
-            std::cout << val << '\t';
-        }
-        std::cout << '\n';
-    }
-}
-
 void Tangair_usb2can::LowCmdMessageHandler(const void *msg)
 {   
-    // low_cmd_call_count_++;  // 每次呼叫都加一
-
-    // auto low_cmd_now = std::chrono::steady_clock::now();
-    // std::chrono::duration<double> low_cmd_elapsed = low_cmd_now - low_cmd_last_freq;
-
-    // if (low_cmd_elapsed.count() >= 1.0)  // 每秒統計一次
-    // {
-    //     std::cout << "[Actual LowCmd Frequency] " << low_cmd_call_count_ / low_cmd_elapsed.count() << " Hz" << std::endl;
-    //     low_cmd_call_count_ = 0;
-    //     low_cmd_last_freq = low_cmd_now;
-    // }
-
     const unitree_go::msg::dds_::LowCmd_ *cmd = static_cast<const unitree_go::msg::dds_::LowCmd_ *>(msg);
     if (!cmd) {
         std::cerr << "[ERROR] Received null pointer\n";
@@ -296,8 +271,8 @@ void Tangair_usb2can::LowCmdMessageHandler(const void *msg)
     }
 
     dof_pos.clear();
-    std::array<std::array<double, 4>, 3> kp_temp{};
-    std::array<std::array<double, 4>, 3> kd_temp{};
+    Matrix3x4d kp_temp = Matrix3x4d::Zero();
+    Matrix3x4d kd_temp = Matrix3x4d::Zero();
 
     for (int i = 0; i < 12; ++i) {
         int leg = i / 4;
@@ -311,16 +286,50 @@ void Tangair_usb2can::LowCmdMessageHandler(const void *msg)
         // std::cout << "[DEBUG] motor[" << i << "] q=" << q << " kp=" << kp << " kd=" << kd << std::endl;
 
         dof_pos.push_back(q);
-        kp_temp[leg][joint] = kp;
-        kd_temp[leg][joint] = kd;
+        kp_temp(leg, joint) = kp;
+        kd_temp(leg, joint) = kd;
     }
-    auto temp = mujoco_ang2real_ang(dof_pos);
+    Matrix3x4d temp = mujoco_ang2real_ang(dof_pos);
+    real_angles_ = temp;
+
     kp_array_ = kp_temp;
     kd_array_ = kd_temp;
-    for (size_t i = 0; i < 3; ++i)
-        for (size_t j = 0; j < 4; ++j)
-            real_angles_[i][j] = temp[i][j];
 }
+
+void Tangair_usb2can::PublishLowState()
+{   
+    std::vector<double> pos = GetMotorPositions();
+    std::vector<double> vel = GetMotorVelocity();
+
+    if ((int)pos.size() < num_motor_ || (int)vel.size() < num_motor_) {
+        return;
+    }
+
+    unitree_go::msg::dds_::LowState_ low_state_go_{};
+
+    for (int i = 0; i < num_motor_; ++i) {
+        low_state_go_.motor_state()[i].q() = pos[i];
+        low_state_go_.motor_state()[i].dq() = vel[i];
+        low_state_go_.motor_state()[i].tau_est() = 0;
+    }
+
+    // std::cout << "[CHECK] motor_state size = " << low_state_go_.motor_state().size() << std::endl;
+
+    low_state_go_.imu_state().quaternion()[0] = sensorData.quat.w();
+    low_state_go_.imu_state().quaternion()[1] = sensorData.quat.x();
+    low_state_go_.imu_state().quaternion()[2] = sensorData.quat.y();
+    low_state_go_.imu_state().quaternion()[3] = sensorData.quat.z();
+
+    low_state_go_.imu_state().gyroscope()[0] = sensorData.gyr[0];
+    low_state_go_.imu_state().gyroscope()[1] = sensorData.gyr[1];
+    low_state_go_.imu_state().gyroscope()[2] = sensorData.gyr[2];
+
+    lowstate_publisher->Write(low_state_go_);
+}
+
+/*****************************************************************************************************/
+/*********************************       ***测试相关***      ***********************************************/
+/*****************************************************************************************************/
 
 void Tangair_usb2can::StartPositionLoop() {
     if (running_) return;
@@ -332,7 +341,6 @@ void Tangair_usb2can::StartPositionLoop() {
 
 void Tangair_usb2can::StopAllThreads() {
     if (!running_) return;
-
     running_ = false;
     
     IMU_Shutdown();
@@ -344,10 +352,6 @@ void Tangair_usb2can::StopAllThreads() {
     std::cout << "[Tangair] 所有執行緒已安全停止。\n";
 }
 
-/*****************************************************************************************************/
-/*********************************       ***测试相关***      ***********************************************/
-/*****************************************************************************************************/
-
 void Tangair_usb2can::SetMotorTarget(Motor_CAN_Send_Struct &motor, double pos, double kp, double kd) {
     motor.position = pos;
     motor.speed = 0;
@@ -356,36 +360,57 @@ void Tangair_usb2can::SetMotorTarget(Motor_CAN_Send_Struct &motor, double pos, d
     motor.kd = kd;
 }
 
-void Tangair_usb2can::SetTargetPosition(const std::array<std::array<double, 4>, 3> &positions, 
-                                        const std::array<std::array<double, 4>, 3> &kp_array, 
-                                        const std::array<std::array<double, 4>, 3> &kd_array) {
-        // FR
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_1_motor_send, positions[2][0], kp_array[2][0], kd_array[2][0]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_2_motor_send, positions[1][0], kp_array[1][0], kd_array[1][0]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_3_motor_send, positions[0][0], kp_array[0][0], kd_array[0][0]);
-    
+void Tangair_usb2can::SetTargetPosition(const Matrix3x4d &positions, 
+                                        const Matrix3x4d &kp_array, 
+                                        const Matrix3x4d &kd_array) {
+    // FR
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_1_motor_send, positions(2, 0), kp_array(2, 0), kd_array(2, 0));
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_2_motor_send, positions(1, 0), kp_array(1, 0), kd_array(1, 0));
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_3_motor_send, positions(0, 0), kp_array(0, 0), kd_array(0, 0));
+
     // FL
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_1_motor_send, positions[2][1], kp_array[2][1], kd_array[2][1]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_2_motor_send, positions[1][1], kp_array[1][1], kd_array[1][1]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_3_motor_send, positions[0][1], kp_array[0][1], kd_array[0][1]);
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_1_motor_send, positions(2, 1), kp_array(2, 1), kd_array(2, 1));
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_2_motor_send, positions(1, 1), kp_array(1, 1), kd_array(1, 1));
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_3_motor_send, positions(0, 1), kp_array(0, 1), kd_array(0, 1));
 
     // RR
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_5_motor_send, positions[2][2], kp_array[2][2], kd_array[2][2]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_6_motor_send, positions[1][2], kp_array[1][2], kd_array[1][2]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_7_motor_send, positions[0][2], kp_array[0][2], kd_array[0][2]);
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_5_motor_send, positions(2, 2), kp_array(2, 2), kd_array(2, 2));
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_6_motor_send, positions(1, 2), kp_array(1, 2), kd_array(1, 2));
+    SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_7_motor_send, positions(0, 2), kp_array(0, 2), kd_array(0, 2));
 
     // RL
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_5_motor_send, positions[2][3], kp_array[2][3], kd_array[2][3]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_6_motor_send, positions[1][3], kp_array[1][3], kd_array[1][3]);
-    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_7_motor_send, positions[0][3], kp_array[0][3], kd_array[0][3]);
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_5_motor_send, positions(2, 3), kp_array(2, 3), kd_array(2, 3));
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_6_motor_send, positions(1, 3), kp_array(1, 3), kd_array(1, 3));
+    SetMotorTarget(USB2CAN0_CAN_Bus_1.ID_7_motor_send, positions(0, 3), kp_array(0, 3), kd_array(0, 3));
 }
 
 void Tangair_usb2can::ResetPositionToZero()
-{
-    SetTargetPosition({{ {  3.0, -3.0, -3.0,  3.0}, 
-                        { -1.6,  1.6,  1.6, -1.6},
-                        {  0.0,  0.0,  0.0,  0.0}}}, kp, kd);
+{   
+    Matrix3x4d pos;
+    pos <<  3.0, -3.0, -3.0,  3.0,
+           -1.6,  1.6,  1.6, -1.6,
+            0.0,  0.0,  0.0,  0.0;
+
+    Matrix3x4d kp = Matrix3x4d::Constant(3.0);
+    Matrix3x4d kd = Matrix3x4d::Constant(0.1);
+
+    SetTargetPosition(pos, kp, kd);
     CAN_TX_ALL_MOTOR(130);
+}
+
+std::vector<double> Tangair_usb2can::GetMotorPositions() {
+    std::lock_guard<std::mutex> lock(motor_state_mutex);
+    return motor_state_.position;
+}
+
+std::vector<double> Tangair_usb2can::GetMotorVelocity() {
+    std::lock_guard<std::mutex> lock(motor_state_mutex);
+    return motor_state_.velocity;
+}
+
+std::vector<double> Tangair_usb2can::GetMotorTorque() {
+    std::lock_guard<std::mutex> lock(motor_state_mutex);
+    return motor_state_.torque;
 }
 
 
@@ -402,19 +427,18 @@ void Tangair_usb2can::CAN_TX_position_thread()
     while (running_) {
         count_tx++;
 
-        target_pos = real_angles_;
-
-        PrintMatrix("target_pos", target_pos);
+        PrintMatrix("real_angles_", real_angles_);
         PrintMatrix("kp_array_ (as kp)", kp_array_);
         PrintMatrix("kd_array_ (as kd)", kd_array_);
-
-        SetTargetPosition(target_pos, kp_array_, kd_array_);
+        SetTargetPosition(real_angles_, kp_array_, kd_array_);
 
         CAN_TX_ALL_MOTOR(120);
 
-        /////////////////////////////////////////////////////// TX Finish
+        //////////////////////////// TX Finish ///////////////////////////
 
-        this->motor_positions = {
+        std::lock_guard<std::mutex> lock(motor_state_mutex);
+
+        motor_state_.position = {
             USB2CAN0_CAN_Bus_2.ID_1_motor_recieve.current_position_f,
             -USB2CAN0_CAN_Bus_2.ID_2_motor_recieve.current_position_f,
             -USB2CAN0_CAN_Bus_2.ID_3_motor_recieve.current_position_f,
@@ -429,7 +453,7 @@ void Tangair_usb2can::CAN_TX_position_thread()
             USB2CAN0_CAN_Bus_1.ID_7_motor_recieve.current_position_f,
         };
 
-        this->motor_velocity = {
+        motor_state_.velocity = {
             USB2CAN0_CAN_Bus_2.ID_1_motor_recieve.current_speed_f,
             -USB2CAN0_CAN_Bus_2.ID_2_motor_recieve.current_speed_f,
             -USB2CAN0_CAN_Bus_2.ID_3_motor_recieve.current_speed_f,
@@ -444,7 +468,7 @@ void Tangair_usb2can::CAN_TX_position_thread()
             USB2CAN0_CAN_Bus_1.ID_7_motor_recieve.current_speed_f,
         };
 
-        this->motor_torque = {
+        motor_state_.torque = {
             USB2CAN0_CAN_Bus_2.ID_1_motor_recieve.current_torque_f,
             -USB2CAN0_CAN_Bus_2.ID_2_motor_recieve.current_torque_f,
             -USB2CAN0_CAN_Bus_2.ID_3_motor_recieve.current_torque_f,
@@ -472,76 +496,9 @@ void Tangair_usb2can::CAN_TX_position_thread()
     std::cout << "CAN_TX_position_thread Exit~~" << std::endl;
 }
 
-void Tangair_usb2can::PublishLowState()
-{   
-    // pub_low_state_call_count_++;  // 每次呼叫都加一
-
-    // auto pub_low_state_now = std::chrono::steady_clock::now();
-    // std::chrono::duration<double> pub_low_state_elapsed = pub_low_state_now - pub_low_state_last_freq;
-
-    // if (pub_low_state_elapsed.count() >= 1.0)  // 每秒統計一次
-    // {
-    //     std::cout << "[Actual Pub LowState Frequency] " << pub_low_state_call_count_ / pub_low_state_elapsed.count() << " Hz" << std::endl;
-    //     pub_low_state_call_count_ = 0;
-    //     pub_low_state_last_freq = pub_low_state_now;
-    // }
-    
-
-    if ((int)motor_positions.size() < num_motor_ || (int)motor_velocity.size() < num_motor_) {
-        // std::cerr << "[ERROR] motor_positions or motor_velocity size too small!" << std::endl;
-        return;
-    }
-    if (!isSensorDataValid(sensorData)) {
-        // std::cout << "[WARN] SensorData 無效，跳過此次處理。" << std::endl;
-        return;  // 提早結束這次處理（通常在迴圈中）
-    }
-
-    // std::cout << "[DEBUG] motor_positions: ";
-    // for (double q : motor_positions)
-    //     std::cout << q << " ";
-    // std::cout << std::endl;
-
-    // std::cout << "[DEBUG] motor_velocity: ";
-    // for (double dq : motor_velocity)
-    //     std::cout << dq << " ";
-    // std::cout << std::endl;
-
-    unitree_go::msg::dds_::LowState_ low_state_go_{};
-
-    for (int i = 0; i < num_motor_; ++i) {
-        low_state_go_.motor_state()[i].q() = motor_positions[i];
-        low_state_go_.motor_state()[i].dq() = motor_velocity[i];
-        low_state_go_.motor_state()[i].tau_est() = 0;
-    }
-
-    std::cout << "[CHECK] motor_state size = " << low_state_go_.motor_state().size() << std::endl;
-
-    low_state_go_.imu_state().quaternion()[0] = sensorData.quat.w();
-    low_state_go_.imu_state().quaternion()[1] = sensorData.quat.x();
-    low_state_go_.imu_state().quaternion()[2] = sensorData.quat.y();
-    low_state_go_.imu_state().quaternion()[3] = sensorData.quat.z();
-
-    low_state_go_.imu_state().gyroscope()[0] = sensorData.gyr[0];
-    low_state_go_.imu_state().gyroscope()[1] = sensorData.gyr[1];
-    low_state_go_.imu_state().gyroscope()[2] = sensorData.gyr[2];
-
-    lowstate_publisher->Write(low_state_go_);
-
-    // 印出各階段耗時（微秒）
-    // std::cout << "[TIMER] Setup           = " << duration_cast<microseconds>(t1 - t0).count() << " us\n";
-    // std::cout << "[TIMER] TX              = " << duration_cast<microseconds>(t2 - t1).count() << " us\n";
-    // std::cout << "[TIMER] RX              = " << duration_cast<microseconds>(t3 - t2).count() << " us\n";
-    // std::cout << "[TIMER] Build msg loop  = " << duration_cast<microseconds>(t5 - t4).count() << " us\n";
-    // std::cout << "[TIMER] DDS Write       = " << duration_cast<microseconds>(t6 - t5).count() << " us\n";
-    // std::cout << "[TIMER] Total           = " << duration_cast<microseconds>(t6 - t0).count() << " us\n";
-}
-
 /// @brief can设备0，接收线程函数
 void Tangair_usb2can::CAN_RX_device_0_thread()
 {
-    can_dev0_rx_count = 0;
-    can_dev0_rx_count_thread=0;
-
     auto last_time_rx = high_resolution_clock::now();
     int count_rx = 0;
 
@@ -551,16 +508,12 @@ void Tangair_usb2can::CAN_RX_device_0_thread()
         FrameInfo info_rx;
         uint8_t data_rx[8] = {0};
 
-        can_dev0_rx_count_thread++;
-
         // 阻塞1s接收
         int recieve_re = readUSBCAN(USB2CAN0_, &channel, &info_rx, data_rx, 1e6);
         // 接收到数据
         if (recieve_re != -1)
         {   
             count_rx++;
-
-            can_dev0_rx_count++;
             // 解码
             CAN_DEV0_RX.ERR = data_rx[0]>>4&0X0F;
             
@@ -1048,7 +1001,7 @@ void Tangair_usb2can::CAN_TX_ALL_MOTOR(int delay_us)
 }
 
 /// @brief 辅助函数
-std::vector<std::vector<double>> mujoco_ang2real_ang(const std::vector<double>& dof_pos) {
+Matrix3x4d mujoco_ang2real_ang(const std::vector<double>& dof_pos) {
     std::vector<std::string> motor_order = {
         "frd", "fld", "rrd", "rld",  // Lower legs
         "fru", "flu", "rru", "rlu",  // Upper legs
@@ -1076,12 +1029,11 @@ std::vector<std::vector<double>> mujoco_ang2real_ang(const std::vector<double>& 
         reordered_dof_pos.push_back(dof_pos[i]);
     }
 
-    std::vector<std::vector<double>> result = {
-        { -reordered_dof_pos[0],  reordered_dof_pos[1],  -reordered_dof_pos[2],  reordered_dof_pos[3] },
-        { -reordered_dof_pos[4],  reordered_dof_pos[5],  -reordered_dof_pos[6],  reordered_dof_pos[7] },
-        {  reordered_dof_pos[8],  reordered_dof_pos[9],  -reordered_dof_pos[10], -reordered_dof_pos[11] }
-    };
-
+    Matrix3x4d result;
+    result << 
+        -reordered_dof_pos[0],  reordered_dof_pos[1],  -reordered_dof_pos[2],  reordered_dof_pos[3],
+        -reordered_dof_pos[4],  reordered_dof_pos[5],  -reordered_dof_pos[6],  reordered_dof_pos[7],
+        reordered_dof_pos[8],  reordered_dof_pos[9],  -reordered_dof_pos[10], -reordered_dof_pos[11];
     return result;
 }
 
@@ -1122,6 +1074,18 @@ std::vector<double> real_ang2mujoco_ang(const std::vector<double>& dof_pos) {
     return reordered_dof_pos;
 }
 
+void PrintMatrix(const std::string& name, const Eigen::Matrix<double, 3, 4>& matrix) {
+    std::cout << name << ":\n" << matrix << "\n";
+}
+
+float uint_to_float(int x_int, float x_min, float x_max, int bits)
+{
+    /// converts unsigned int to float, given range and number of bits ///
+    float span = x_max - x_min;
+    float offset = x_min;
+    return ((float)x_int) * span / ((float)((1 << bits) - 1)) + offset;
+}
+
 int float_to_uint(float x, float x_min, float x_max, int bits)
 {
     float span = x_max - x_min;
@@ -1131,14 +1095,6 @@ int float_to_uint(float x, float x_min, float x_max, int bits)
     else if (x < x_min)
         x = x_min;
     return (int)((x - offset) * ((float)((1 << bits) - 1)) / span);
-}
-
-float uint_to_float(int x_int, float x_min, float x_max, int bits)
-{
-    /// converts unsigned int to float, given range and number of bits ///
-    float span = x_max - x_min;
-    float offset = x_min;
-    return ((float)x_int) * span / ((float)((1 << bits) - 1)) + offset;
 }
 
 bool isSensorDataValid(const SensorData& data)

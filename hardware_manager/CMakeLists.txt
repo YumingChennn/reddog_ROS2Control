@@ -11,6 +11,7 @@ set(XSENS_INSTALL_PREFIX "/usr/local/xsens" CACHE PATH "Path to Xsens SDK")
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/can
+    /usr/include/eigen3
 )
 
 # include 與 lib 路徑

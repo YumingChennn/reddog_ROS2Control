@@ -30,9 +30,15 @@
 #include <unitree/common/thread/thread.hpp>
 
 
+#include <Eigen/Dense>
+
+using Matrix3x4d = Eigen::Matrix<double, 3, 4>;
+
 // 辅助函数
-std::vector<std::vector<double>> mujoco_ang2real_ang(const std::vector<double>& dof_pos);
+Matrix3x4d mujoco_ang2real_ang(const std::vector<double>& dof_pos);
 std::vector<double> real_ang2mujoco_ang(const std::vector<double>& dof_pos);
+
+void PrintMatrix(const std::string& name, const Eigen::Matrix<double, 3, 4>& matrix);
 
 float uint_to_float(int x_int, float x_min, float x_max, int bits);
 int float_to_uint(float x, float x_min, float x_max, int bits);
@@ -116,54 +122,43 @@ typedef struct
 
 class Tangair_usb2can
 {
-public:
-	
-	std::atomic<bool> all_thread_done_{false};
-	std::atomic<bool> running_{false};
-  
-	// CAN设备0
+public:  
+	// CAN0
 	int USB2CAN0_;
-
-	// CAN设备1
-	int USB2CAN1_;
-
-    int can_dev0_rx_count;
-	int can_dev0_rx_count_thread;
-	int can_dev1_rx_count;
-	int can_dev1_rx_count_thread;
 
 	Tangair_usb2can();
 	~Tangair_usb2can();
 
-	// std::thread imu_thread_;
+	std::atomic<bool> running_{false};
 	std::atomic<bool> imu_running_{false};
 
+	// IMU 
 	int IMU_Init();
-
     void StartIMUThread();
 
 	std::thread sensorThread;
 	void startThreadedMeasurement();
-	
     void IMU_Shutdown();
 
 	// DDS 
 	void DDS_Init();
-
-	void InitLowCmd();
-    
 	void LowCmdMessageHandler(const void *messages);
-    
 	void PublishLowState();
 
+	// TEST
 	void StartPositionLoop();
 	void StopAllThreads();
 	
 	void SetMotorTarget(Motor_CAN_Send_Struct &motor, double pos, double kp = 3.0, double kd = 0.1);
-	void SetTargetPosition(const std::array<std::array<double, 4>, 3> &positions, 
-							const std::array<std::array<double, 4>, 3> &kp_array, 
-							const std::array<std::array<double, 4>, 3> &kd_array);
-	void ResetPositionToZero(); // 設定位置
+	void SetTargetPosition(const Matrix3x4d& positions, 
+							const Matrix3x4d& kp_array, 
+							const Matrix3x4d& kd_array);
+
+	void ResetPositionToZero();
+
+	std::vector<double> GetMotorPositions();
+    std::vector<double> GetMotorVelocity();
+    std::vector<double> GetMotorTorque();
 
 	std::thread _CAN_TX_position_thread;
 	void CAN_TX_position_thread();  // 不要帶參數
@@ -220,43 +215,21 @@ public:
 
 
 private:
-	int print_counter_ = 0; // 宣告在 .h 檔的 private 或 public 區域
-
-	bool is_motor_data_valid = false;
-
-	bool have_frame_sensor_ = false;
-	bool js_ = false;
 	int num_motor_ = 12; // ex: 12
-	bool dds_inited_ = false;
 
+	struct MotorState {
+        std::vector<double> position;
+        std::vector<double> velocity;
+        std::vector<double> torque;
+    };
 
-	std::vector<double> motor_positions;
-    std::vector<double> motor_velocity;
-    std::vector<double> motor_torque;
-
-	std::array<std::array<double, 4>, 3> target_pos;
-	std::array<std::array<double, 4>, 3> real_angles_;
-	std::array<std::array<double, 4>, 3> kp_array_;
-    std::array<std::array<double, 4>, 3> kd_array_;
+    MotorState motor_state_;           // 包裝後的資料
+    std::mutex motor_state_mutex;      // 保護 MotorState 的 mutex
 
 	std::vector<double> dof_pos;
-	std::array<std::array<double, 4>, 3> kp_temp;
-    std::array<std::array<double, 4>, 3> kd_temp;
-
-	std::array<std::array<double, 4>, 3> kp = {{{ 5, 5, 5, 5},
-                                            { 5, 5, 5, 5},
-                                            { 5, 5, 5, 5}}};
-	std::array<std::array<double, 4>, 3> kd = {{{0.1, 0.1, 0.1, 0.1},
-												{0.1, 0.1, 0.1, 0.1},
-												{0.1, 0.1, 0.1, 0.1}}};
-
-	double stand_up_joint_pos[12] = {0.00571868, 0.608813, -1.21763, -0.00571868, 0.608813, -1.21763,
-                                     0.00571868, 0.608813, -1.21763, -0.00571868, 0.608813, -1.21763};
-    double stand_down_joint_pos[12] = {0.0473455, 1.22187, -2.44375, -0.0473455, 1.22187, -2.44375, 0.0473455,
-                                       1.22187, -2.44375, -0.0473455, 1.22187, -2.44375};
-    double dt = 0.002;
-    double runing_time = 0.0;
-    double phase = 0.0;
+	Matrix3x4d kp_array_;
+	Matrix3x4d kd_array_;
+	Matrix3x4d real_angles_;
 
     unitree_go::msg::dds_::LowCmd_ low_cmd{};     // default init
 
@@ -267,16 +240,6 @@ private:
 
     /*LowCmd write thread*/
     ThreadPtr lowStatePuberThreadPtr;
-
-	// class member 變數
-	int low_cmd_call_count_ = 0;
-	std::chrono::steady_clock::time_point low_cmd_last_freq = std::chrono::steady_clock::now();
-
-	// class member 變數
-	int pub_low_state_call_count_ = 0;
-	std::chrono::steady_clock::time_point pub_low_state_last_freq = std::chrono::steady_clock::now();
-
-
 };
 
 #endif
