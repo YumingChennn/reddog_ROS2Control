@@ -224,6 +224,9 @@ reddog_hardware_SOURCE_DIR:STATIC=/home/csl/reddog_ws/hardware_manager
 //The directory containing a CMake configuration file for unitree_sdk2.
 unitree_sdk2_DIR:PATH=/opt/unitree_robotics/lib/cmake/unitree_sdk2
 
+//The directory containing a CMake configuration file for yaml-cpp.
+yaml-cpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp
+
 
 ########################
 # INTERNAL cache entries

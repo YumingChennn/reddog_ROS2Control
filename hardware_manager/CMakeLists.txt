@@ -24,6 +24,7 @@ link_directories(${PROJECT_SOURCE_DIR}/can)
 
 list(APPEND CMAKE_PREFIX_PATH "/opt/unitree_robotics/lib/cmake")
 find_package(unitree_sdk2 REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 # 共用的 linker flags
 set(COMMON_LIBS
@@ -46,6 +47,7 @@ target_link_libraries(can_node_motor_imu
     rt
     usb_can
     unitree_sdk2
+    yaml-cpp
     ${COMMON_LIBS}
 )
 

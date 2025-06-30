@@ -1,0 +1,4 @@
+Invoking command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller -- -j12 -l12
+Invoked command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller -- -j12 -l12
+Invoking command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller
+Invoked command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller

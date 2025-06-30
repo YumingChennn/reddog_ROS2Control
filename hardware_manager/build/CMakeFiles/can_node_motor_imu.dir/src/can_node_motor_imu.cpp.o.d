@@ -229,6 +229,7 @@ CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /home/csl/reddog_ws/hardware_manager/can/usb_can.h \
+ /home/csl/reddog_ws/hardware_manager/include/config_loader.h \
  /usr/include/c++/11/math.h \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_factory.hpp \

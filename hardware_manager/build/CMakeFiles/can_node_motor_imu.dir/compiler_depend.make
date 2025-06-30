@@ -756,6 +756,7 @@ CMakeFiles/can_node_motor_imu.dir/src/can_node_motor_imu.cpp.o: ../src/can_node_
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   ../can/usb_can.h \
+  ../include/config_loader.h \
   /usr/include/c++/11/math.h \
   /opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp \
   /opt/unitree_robotics/include/unitree/robot/channel/channel_factory.hpp \
@@ -1795,6 +1796,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
   /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
   ../can/usb_can.h \
+  ../include/config_loader.h \
   /usr/include/c++/11/math.h \
   /opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp \
   /opt/unitree_robotics/include/unitree/robot/channel/channel_factory.hpp \
@@ -2737,8 +2739,79 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
   /usr/local/xsens/include/xstypes/xstime.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h
+  /usr/local/xsens/include/xstypes/xstimestamp.h \
+  /usr/include/yaml-cpp/yaml.h \
+  /usr/include/yaml-cpp/parser.h \
+  /usr/include/yaml-cpp/dll.h \
+  /usr/include/yaml-cpp/emitter.h \
+  /usr/include/yaml-cpp/binary.h \
+  /usr/include/yaml-cpp/emitterdef.h \
+  /usr/include/yaml-cpp/emittermanip.h \
+  /usr/include/yaml-cpp/null.h \
+  /usr/include/yaml-cpp/ostream_wrapper.h \
+  /usr/include/yaml-cpp/emitterstyle.h \
+  /usr/include/yaml-cpp/stlemitter.h \
+  /usr/include/yaml-cpp/exceptions.h \
+  /usr/include/yaml-cpp/mark.h \
+  /usr/include/yaml-cpp/noexcept.h \
+  /usr/include/yaml-cpp/traits.h \
+  /usr/include/yaml-cpp/node/node.h \
+  /usr/include/yaml-cpp/node/detail/iterator_fwd.h \
+  /usr/include/yaml-cpp/node/ptr.h \
+  /usr/include/yaml-cpp/node/type.h \
+  /usr/include/yaml-cpp/node/impl.h \
+  /usr/include/yaml-cpp/node/detail/memory.h \
+  /usr/include/yaml-cpp/node/detail/node.h \
+  /usr/include/yaml-cpp/node/detail/node_ref.h \
+  /usr/include/yaml-cpp/node/detail/node_data.h \
+  /usr/include/yaml-cpp/node/detail/node_iterator.h \
+  /usr/include/yaml-cpp/node/iterator.h \
+  /usr/include/yaml-cpp/node/detail/iterator.h \
+  /usr/include/yaml-cpp/node/convert.h \
+  /usr/include/yaml-cpp/node/detail/impl.h \
+  /usr/include/yaml-cpp/node/parse.h \
+  /usr/include/yaml-cpp/node/emit.h
 
+
+/usr/include/yaml-cpp/node/parse.h:
+
+/usr/include/yaml-cpp/node/detail/impl.h:
+
+/usr/include/yaml-cpp/node/convert.h:
+
+/usr/include/yaml-cpp/node/detail/node_iterator.h:
+
+/usr/include/yaml-cpp/node/detail/node_ref.h:
+
+/usr/include/yaml-cpp/node/impl.h:
+
+/usr/include/yaml-cpp/node/type.h:
+
+/usr/include/yaml-cpp/node/ptr.h:
+
+/usr/include/yaml-cpp/node/detail/iterator_fwd.h:
+
+/usr/include/yaml-cpp/mark.h:
+
+/usr/include/yaml-cpp/stlemitter.h:
+
+/usr/include/yaml-cpp/emitterstyle.h:
+
+/usr/include/yaml-cpp/ostream_wrapper.h:
+
+/usr/include/yaml-cpp/null.h:
+
+/usr/include/yaml-cpp/emittermanip.h:
+
+/usr/include/yaml-cpp/binary.h:
+
+/usr/include/yaml-cpp/dll.h:
+
+/usr/include/yaml-cpp/node/detail/node.h:
+
+/usr/include/yaml-cpp/parser.h:
+
+/usr/include/yaml-cpp/yaml.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
@@ -2836,6 +2909,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
 
+/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+
 /usr/include/x86_64-linux-gnu/sys/un.h:
 
 /usr/local/xsens/include/xstypes/xsstringoutputtype.h:
@@ -2927,6 +3002,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/local/xsens/include/xstypes/xsmessage.h:
+
+/usr/include/yaml-cpp/emitterdef.h:
 
 /usr/include/c++/11/cassert:
 
@@ -3046,6 +3123,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/domain/TDomainParticipant.hpp:
 
+/usr/include/yaml-cpp/emitter.h:
+
 /usr/local/xsens/include/xscontroller/xsalignmentframe.h:
 
 /usr/include/c++/11/bits/string_view.tcc:
@@ -3077,6 +3156,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/ddssub.hpp:
+
+/usr/include/yaml-cpp/node/emit.h:
 
 /usr/include/pwd.h:
 
@@ -3161,6 +3242,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/TStatusCondition.hpp:
+
+/usr/include/yaml-cpp/node/iterator.h:
 
 /usr/include/execinfo.h:
 
@@ -3488,11 +3571,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/type_traits:
 
-/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
-
-/usr/include/x86_64-linux-gnu/sys/sysinfo.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/Manipulators.hpp:
+/usr/include/yaml-cpp/node/node.h:
 
 /usr/include/c++/11/bits/locale_conv.h:
 
@@ -3503,6 +3582,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/asm-generic/socket.h:
+
+/usr/include/yaml-cpp/traits.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/Policy.hpp:
 
@@ -3617,6 +3698,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/InstanceHandle.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/StatusCondition.hpp:
+
+/usr/include/yaml-cpp/noexcept.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/GenerationCount.hpp:
 
@@ -4150,6 +4233,12 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/unitree/common/dds/dds_qos_policy.hpp:
 
+/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysinfo.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/Manipulators.hpp:
+
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/TWaitSet.hpp:
 
 /usr/include/linux/const.h:
@@ -4438,6 +4527,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/ddscore.hpp:
 
+/usr/include/yaml-cpp/node/detail/node_data.h:
+
 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/domain/DomainParticipant.hpp:
@@ -4652,6 +4743,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/status/detail/DataStateImpl.hpp:
 
+/usr/include/yaml-cpp/node/detail/memory.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/Sample.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/SampleInfo.hpp:
@@ -4844,6 +4937,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/StatusConditionDelegate.hpp:
 
+../include/config_loader.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/topic/AnyTopicListener.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/ddspub.hpp:
@@ -4959,6 +5054,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/endian.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/usr/include/yaml-cpp/node/detail/iterator.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
 
@@ -5094,6 +5191,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
+/usr/include/yaml-cpp/exceptions.h:
+
 /usr/include/eigen3/Eigen/src/Core/Select.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
@@ -5101,5 +5200,3 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/dds/ddsi/ddsi_guid.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:

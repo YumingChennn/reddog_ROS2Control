@@ -1,0 +1,32 @@
+[0.453s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller -- -j12 -l12
+[0.506s] [35m[1mConsolidate compiler generated dependencies of target rl_quadruped_controller[0m
+[0.594s] [100%] Built target rl_quadruped_controller
+[0.604s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller -- -j12 -l12
+[0.606s] Invoking command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller
+[0.614s] -- Install configuration: ""
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/lib/librl_quadruped_controller.so
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include/
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include//rl_quadruped_controller
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/include//rl_quadruped_controller/rl_quadruped_controller.hpp
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/rl_quadruped_controller.xml
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/launch
+[0.614s] -- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/launch/bringup.launch.py
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.xml
+[0.614s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/resource/rl_quadruped_controller.xml
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/package_run_dependencies/rl_quadruped_controller
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/parent_prefix_path/rl_quadruped_controller
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/ament_prefix_path.sh
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/ament_prefix_path.dsv
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/path.sh
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/environment/path.dsv
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.bash
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.sh
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.zsh
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/local_setup.dsv
+[0.615s] -- Installing: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.dsv
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/packages/rl_quadruped_controller
+[0.615s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/ament_index/resource_index/controller_interface__pluginlib__plugin/rl_quadruped_controller
+[0.616s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/cmake/rl_quadruped_controllerConfig.cmake
+[0.616s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/cmake/rl_quadruped_controllerConfig-version.cmake
+[0.616s] -- Up-to-date: /home/csl/reddog_ws/ros2_control/install/rl_quadruped_controller/share/rl_quadruped_controller/package.xml
+[0.618s] Invoked command in '/home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/csl/reddog_ws/ros2_control/build/rl_quadruped_controller

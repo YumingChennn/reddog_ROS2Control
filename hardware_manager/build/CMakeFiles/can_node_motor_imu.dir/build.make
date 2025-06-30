@@ -125,6 +125,7 @@ can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.
 can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o
 can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/build.make
 can_node_motor_imu: /opt/unitree_robotics/lib/libunitree_sdk2.a
+can_node_motor_imu: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0
 can_node_motor_imu: /opt/unitree_robotics/lib/libddsc.so
 can_node_motor_imu: /opt/unitree_robotics/lib/libddscxx.so
 can_node_motor_imu: CMakeFiles/can_node_motor_imu.dir/link.txt

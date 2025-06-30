@@ -46,6 +46,9 @@ int main(int argc, const char **argv) {
     CAN_ptr->DDS_Init();
     CAN_ptr->IMU_Init();
     CAN_ptr->StartIMUThread();
+    
+    CAN_ptr->LoadConfigFromYAML("/home/csl/reddog_ws/hardware_manager/config/config.yaml");
+
 
     std::unordered_map<std::string, std::function<void()>> command_map = {
         {"enable", []() {

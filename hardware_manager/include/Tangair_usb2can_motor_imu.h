@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include "usb_can.h"
+#include "config_loader.h"
 
 #include <math.h>
 #include <unitree/robot/channel/channel_publisher.hpp>
@@ -149,6 +150,11 @@ public:
 	void StartPositionLoop();
 	void StopAllThreads();
 	
+    bool LoadConfigFromYAML(const std::string& filepath);
+    bool CheckPositionAndGainValidity(const Matrix3x4d& positions,
+                                      const Matrix3x4d& kp_array,
+                                      const Matrix3x4d& kd_array);
+
 	void SetMotorTarget(Motor_CAN_Send_Struct &motor, double pos, double kp = 3.0, double kd = 0.1);
 	void SetTargetPosition(const Matrix3x4d& positions, 
 							const Matrix3x4d& kp_array, 
@@ -231,7 +237,7 @@ private:
 	Matrix3x4d kd_array_;
 	Matrix3x4d real_angles_;
 
-    unitree_go::msg::dds_::LowCmd_ low_cmd{};     // default init
+    unitree_go::msg::dds_::LowCmd_ low_cmd{};
 
     /*publisher*/
     ChannelPublisherPtr<unitree_go::msg::dds_::LowState_> lowstate_publisher;
@@ -240,6 +246,8 @@ private:
 
     /*LowCmd write thread*/
     ThreadPtr lowStatePuberThreadPtr;
+    ControlLimits control_limits_;
+    JointLimits joint_limits_;
 };
 
 #endif

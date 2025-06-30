@@ -229,6 +229,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /home/csl/reddog_ws/hardware_manager/can/usb_can.h \
+ /home/csl/reddog_ws/hardware_manager/include/config_loader.h \
  /usr/include/c++/11/math.h \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp \
  /opt/unitree_robotics/include/unitree/robot/channel/channel_factory.hpp \
@@ -1128,4 +1129,26 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: \
  /usr/local/xsens/include/xstypes/xsthread.h \
  /usr/local/xsens/include/xstypes/xstime.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/local/xsens/include/xstypes/xstimestamp.h
+ /usr/local/xsens/include/xstypes/xstimestamp.h \
+ /usr/include/yaml-cpp/yaml.h /usr/include/yaml-cpp/parser.h \
+ /usr/include/yaml-cpp/dll.h /usr/include/yaml-cpp/emitter.h \
+ /usr/include/yaml-cpp/binary.h /usr/include/yaml-cpp/emitterdef.h \
+ /usr/include/yaml-cpp/emittermanip.h /usr/include/yaml-cpp/null.h \
+ /usr/include/yaml-cpp/ostream_wrapper.h \
+ /usr/include/yaml-cpp/emitterstyle.h /usr/include/yaml-cpp/stlemitter.h \
+ /usr/include/yaml-cpp/exceptions.h /usr/include/yaml-cpp/mark.h \
+ /usr/include/yaml-cpp/noexcept.h /usr/include/yaml-cpp/traits.h \
+ /usr/include/yaml-cpp/node/node.h \
+ /usr/include/yaml-cpp/node/detail/iterator_fwd.h \
+ /usr/include/yaml-cpp/node/ptr.h /usr/include/yaml-cpp/node/type.h \
+ /usr/include/yaml-cpp/node/impl.h \
+ /usr/include/yaml-cpp/node/detail/memory.h \
+ /usr/include/yaml-cpp/node/detail/node.h \
+ /usr/include/yaml-cpp/node/detail/node_ref.h \
+ /usr/include/yaml-cpp/node/detail/node_data.h \
+ /usr/include/yaml-cpp/node/detail/node_iterator.h \
+ /usr/include/yaml-cpp/node/iterator.h \
+ /usr/include/yaml-cpp/node/detail/iterator.h \
+ /usr/include/yaml-cpp/node/convert.h \
+ /usr/include/yaml-cpp/node/detail/impl.h \
+ /usr/include/yaml-cpp/node/parse.h /usr/include/yaml-cpp/node/emit.h

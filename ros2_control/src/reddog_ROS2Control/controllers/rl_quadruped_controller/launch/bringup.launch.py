@@ -70,6 +70,20 @@ def launch_setup(context, *args, **kwargs):
                    "--controller-manager", "/controller_manager"],
     )
 
+    joystick = Node(
+        package="joystick",
+        executable="joy_controller",
+        name='joy_controller',
+        output='screen',
+    )
+
+    joy = Node(
+        package="joy",
+        executable="joy_node",
+        name='joy_node',
+        output='screen',
+    )
+
     return [
         robot_state_publisher,
         controller_manager,
@@ -86,6 +100,8 @@ def launch_setup(context, *args, **kwargs):
                 on_exit=[controller],
             )
         ),
+        joystick,
+        joy,
     ]
 
 

@@ -15,6 +15,9 @@
 #include <string>
 #include <cassert>
 
+#include <yaml-cpp/yaml.h>
+#include "config_loader.h"
+
 using namespace std::chrono;
 using namespace std;
 
@@ -254,6 +257,7 @@ void Tangair_usb2can::DDS_Init()
 
     /*loop publishing thread*/
     lowStatePuberThreadPtr = CreateRecurrentThreadEx("lowstate", UT_CPU_ID_NONE, 2000, &Tangair_usb2can::PublishLowState, this);
+    std::cout << "[DEBUG] "<< std::endl;
 }
 
 void Tangair_usb2can::LowCmdMessageHandler(const void *msg)
@@ -360,9 +364,81 @@ void Tangair_usb2can::SetMotorTarget(Motor_CAN_Send_Struct &motor, double pos, d
     motor.kd = kd;
 }
 
+bool Tangair_usb2can::LoadConfigFromYAML(const std::string& filepath) {
+    try {
+        YAML::Node config = YAML::LoadFile(filepath);
+
+        auto ctrl = config["controller_limits"];
+        control_limits_.kp_min = ctrl["kp_min"].as<double>();
+        control_limits_.kp_max = ctrl["kp_max"].as<double>();
+        control_limits_.kd_min = ctrl["kd_min"].as<double>();
+        control_limits_.kd_max = ctrl["kd_max"].as<double>();
+
+        auto joints = config["joint_limits"];
+        joint_limits_.hip.min = joints["hip"]["min"].as<double>();
+        joint_limits_.hip.max = joints["hip"]["max"].as<double>();
+        joint_limits_.thigh.min = joints["thigh"]["min"].as<double>();
+        joint_limits_.thigh.max = joints["thigh"]["max"].as<double>();
+        joint_limits_.calf.min = joints["calf"]["min"].as<double>();
+        joint_limits_.calf.max = joints["calf"]["max"].as<double>();
+
+        return true;
+    } catch (const std::exception& e) {
+        std::cerr << "[ERROR] Failed to load YAML config: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+bool Tangair_usb2can::CheckPositionAndGainValidity(const Matrix3x4d& positions, 
+                                                   const Matrix3x4d& kp_array, 
+                                                   const Matrix3x4d& kd_array) {
+    for (int row = 0; row < 3; ++row) {
+        for (int col = 0; col < 4; ++col) {
+            double pos = positions(row, col);
+            double kp = kp_array(row, col);
+            double kd = kd_array(row, col);
+
+            double pos_min, pos_max;
+            if (row == 2) { // hip
+                pos_min = joint_limits_.hip.min;
+                pos_max = joint_limits_.hip.max;
+            } else if (row == 1) { // thigh
+                pos_min = joint_limits_.thigh.min;
+                pos_max = joint_limits_.thigh.max;
+            } else { // calf
+                pos_min = joint_limits_.calf.min;
+                pos_max = joint_limits_.calf.max;
+            }
+
+            if (!std::isfinite(pos) || pos < pos_min || pos > pos_max) {
+                std::cerr << "[ERROR] Invalid position (" << pos << ") at [" << row << ", " << col
+                          << "], limit: [" << pos_min << ", " << pos_max << "]\n";
+                return false;
+            }
+
+            if (!std::isfinite(kp) || kp < control_limits_.kp_min || kp > control_limits_.kp_max) {
+                std::cerr << "[ERROR] Invalid kp (" << kp << ") at [" << row << ", " << col
+                          << "], limit: [" << control_limits_.kp_min << ", " << control_limits_.kp_max << "]\n";
+                return false;
+            }
+
+            if (!std::isfinite(kd) || kd < control_limits_.kd_min || kd > control_limits_.kd_max) {
+                std::cerr << "[ERROR] Invalid kd (" << kd << ") at [" << row << ", " << col
+                          << "], limit: [" << control_limits_.kd_min << ", " << control_limits_.kd_max << "]\n";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 void Tangair_usb2can::SetTargetPosition(const Matrix3x4d &positions, 
                                         const Matrix3x4d &kp_array, 
                                         const Matrix3x4d &kd_array) {
+    if (!CheckPositionAndGainValidity(positions, kp_array, kd_array)) {
+        std::cerr << "[SetTargetPosition] 檢查未通過，取消指令發送。\n";
+        return;
+    }    
     // FR
     SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_1_motor_send, positions(2, 0), kp_array(2, 0), kd_array(2, 0));
     SetMotorTarget(USB2CAN0_CAN_Bus_2.ID_2_motor_send, positions(1, 0), kp_array(1, 0), kd_array(1, 0));
