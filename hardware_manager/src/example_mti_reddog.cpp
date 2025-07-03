@@ -15,11 +15,7 @@ SensorData sensorData;  // ✅ 僅儲存一筆當前資料
 int init() {
     cout << "Creating XsControl object..." << endl;
     control = XsControl::construct();
-    assert(control != nullptr);
-
-    XsVersion version;
-    xdaVersion(&version);
-    cout << "Using XDA version: " << version.toString().toStdString() << endl;
+    assert(control != 0);
 
     cout << "Scanning for devices..." << endl;
     XsPortInfoArray portInfoArray = XsScanner::scanPorts();
@@ -44,13 +40,18 @@ int init() {
     }
 
     device = control->device(mtPort.deviceId());
-    assert(device != nullptr);
+    assert(device != 0);
     device->addCallbackHandler(&callback);
 
     if (!device->gotoConfig()) {
         cerr << "Failed to enter config mode." << endl;
         return -1;
     }
+
+
+	// Important for Public XDA!
+	// Call this function if you want to record a mtb file:
+	device->readEmtsAndDeviceConfiguration();
 
     XsOutputConfigurationArray configArray;
     configArray.push_back(XsOutputConfiguration(XDI_PacketCounter, 0));
@@ -112,14 +113,15 @@ int start() {
                 sensorData.acc = packet.calibratedAcceleration();
                 sensorData.gyr = packet.calibratedGyroscopeData();
                 sensorData.mag = packet.calibratedMagneticField();
+                // cout << "\r"
+				    // << "Acc X:" << sensorData.acc[0]
+					// << ", Acc Y:" << sensorData.acc[1]
+					// << ", Acc Z:" << sensorData.acc[2];
 
-				// cout << "Acc X:" << sensorData.acc[0]
-				// 	<< ", Acc Y:" << sensorData.acc[1]
-				// 	<< ", Acc Z:" << sensorData.acc[2];
-
-				// cout << " |Gyr X:" << sensorData.gyr[0]
-				// 	<< ", Gyr Y:" << sensorData.gyr[1]
-				// 	<< ", Gyr Z:" << sensorData.gyr[2];
+                cout << "\r"
+				    << " |Gyr X:" << sensorData.gyr[0]
+					<< ", Gyr Y:" << sensorData.gyr[1]
+					<< ", Gyr Z:" << sensorData.gyr[2];
 
 				// cout << " |Mag X:" << sensorData.mag[0]
 				// 	<< ", Mag Y:" << sensorData.mag[1]
@@ -149,7 +151,7 @@ int start() {
 
 			if (packet.containsAltitude())
                 sensorData.altitude = packet.altitude();
-				cout << " |Alt:" << sensorData.altitude;
+				// cout << " |Alt:" << sensorData.altitude;
 
 			if (packet.containsVelocity())
 			{   
@@ -163,6 +165,8 @@ int start() {
 		}
 		XsTime::msleep(0);
 	}
+    cout << "\n" << string(79, '-') << "\n";
+    cout << endl;
     return 0;
 }
 

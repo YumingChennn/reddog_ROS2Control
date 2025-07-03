@@ -68,11 +68,7 @@ int Tangair_usb2can::IMU_Init()
 {
     cout << "Creating XsControl object..." << endl;
     control = XsControl::construct();
-    assert(control != nullptr);
-
-    XsVersion version;
-    xdaVersion(&version);
-    cout << "Using XDA version: " << version.toString().toStdString() << endl;
+    assert(control != 0);
 
     cout << "Scanning for devices..." << endl;
     XsPortInfoArray portInfoArray = XsScanner::scanPorts();
@@ -104,6 +100,8 @@ int Tangair_usb2can::IMU_Init()
         cerr << "Failed to enter config mode." << endl;
         return -1;
     }
+
+    device->readEmtsAndDeviceConfiguration();
 
     XsOutputConfigurationArray configArray;
     configArray.push_back(XsOutputConfiguration(XDI_PacketCounter, 0));

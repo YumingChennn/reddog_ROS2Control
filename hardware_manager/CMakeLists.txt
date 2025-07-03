@@ -5,34 +5,43 @@ SET(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 設定 SDK 路徑（預設為 /usr/local/xsens，可透過 cmake -D 指定）
-set(XSENS_INSTALL_PREFIX "/usr/local/xsens" CACHE PATH "Path to Xsens SDK")
-
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/can
     /usr/include/eigen3
 )
 
-# include 與 lib 路徑
-include_directories(${XSENS_INSTALL_PREFIX}/include)
-include_directories(${XSENS_INSTALL_PREFIX}/include/xsensdeviceapi)
-link_directories(${XSENS_INSTALL_PREFIX}/lib)
+include_directories(
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/xspublic
+    ${CMAKE_SOURCE_DIR}/xspublic/xscontroller/include
+    ${CMAKE_SOURCE_DIR}/xspublic/xscommon/include
+    ${CMAKE_SOURCE_DIR}/xspublic/xstypes/include
+)
+
+add_custom_target(xspublic_build ALL
+    COMMAND ${CMAKE_MAKE_PROGRAM} -C ${CMAKE_SOURCE_DIR}/xspublic
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/xspublic
+    COMMENT "Building xspublic libraries with Makefile"
+)
+
+add_custom_target(clean-all
+    COMMAND ${CMAKE_MAKE_PROGRAM} -C ${CMAKE_SOURCE_DIR}/xspublic clean
+    COMMENT "Cleaning xspublic..."
+)
 
 # 設定 lib 搜尋路徑
 link_directories(${PROJECT_SOURCE_DIR}/can)
 
+link_directories(
+    ${CMAKE_SOURCE_DIR}/xspublic/xscontroller
+    ${CMAKE_SOURCE_DIR}/xspublic/xscommon
+    ${CMAKE_SOURCE_DIR}/xspublic/xstypes
+)
+
 list(APPEND CMAKE_PREFIX_PATH "/opt/unitree_robotics/lib/cmake")
 find_package(unitree_sdk2 REQUIRED)
 find_package(yaml-cpp REQUIRED)
-
-# 共用的 linker flags
-set(COMMON_LIBS
-    xsensdeviceapi
-    xstypes
-    pthread
-    m
-)
 
 # 主節點編譯
 add_executable(can_node_motor_imu
@@ -48,15 +57,22 @@ target_link_libraries(can_node_motor_imu
     usb_can
     unitree_sdk2
     yaml-cpp
-    ${COMMON_LIBS}
+    xscontroller 
+    xscommon 
+    xstypes
+    dl
 )
+add_dependencies(can_node_motor_imu xspublic_build)
 
 add_executable(example_mti_reddog
     src/example_mti_reddog.cpp
     src/callback_handler.cpp
 )
-target_include_directories(example_mti_reddog PRIVATE include)
-target_link_libraries(example_mti_reddog ${COMMON_LIBS})
+
+add_dependencies(example_mti_reddog xspublic_build)
+target_link_libraries(example_mti_reddog
+    xscontroller xscommon xstypes pthread rt dl
+)
 
 
 

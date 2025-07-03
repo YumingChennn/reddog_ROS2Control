@@ -5,6 +5,8 @@
 #include <string>
 #include <cassert>
 
+Journaller* gJournal = 0;
+
 using namespace std;
 
 CallbackHandler::CallbackHandler(size_t maxBufferSize)
@@ -29,7 +31,7 @@ XsDataPacket CallbackHandler::getNextPacket() {
 
 void CallbackHandler::onLiveDataAvailable(XsDevice*, const XsDataPacket* packet) {
     xsens::Lock locky(&m_mutex);
-    assert(packet != nullptr);
+    assert(packet != 0);
     while (m_numberOfPacketsInBuffer >= m_maxNumberOfPacketsInBuffer)
         (void)getNextPacket();
     m_packetBuffer.push_back(*packet);

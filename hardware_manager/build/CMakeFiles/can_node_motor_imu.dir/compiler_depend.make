@@ -4,8 +4,9 @@
 CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_handler.cpp \
   /usr/include/stdc-predef.h \
   ../include/callback_handler.h \
-  /usr/local/xsens/include/xsensdeviceapi.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
+  ../xspublic/xscontroller/xscontrol_def.h \
+  ../xspublic/xscontroller/xsdef.h \
+  ../xspublic/xscontroller/xscontrollerconfig.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
   /usr/include/limits.h \
@@ -25,16 +26,49 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdadll.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdainfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xstypesconfig.h \
-  /usr/include/assert.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xscontroller/xscallback.h \
+  ../xspublic/xscontroller/xscallbackplainc.h \
+  ../xspublic/xstypes/pstdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -44,25 +78,17 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xstypesconfig.h \
+  /usr/include/assert.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/pstdint.h \
+  ../xspublic/xstypes/xsinforequest.h \
+  ../xspublic/xscontroller/xsdevicestate.h \
+  ../xspublic/xstypes/xsarray.h \
   /usr/include/c++/11/iterator \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/bits/stringfwd.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -78,7 +104,6 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/bits/localefwd.h \
@@ -124,31 +149,13 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/cstdint \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -197,32 +204,8 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xshandid.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/include/c++/11/cstring \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xsbaudcode.h \
-  /usr/local/xsens/include/xstypes/xsbaudrate.h \
-  /usr/include/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xscontroller/xsdevicestate_enum.h \
+  ../xspublic/xscontroller/xsconnectivitystate.h \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/bits/basic_ios.h \
@@ -235,18 +218,49 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/local/xsens/include/xstypes/xsdatapacket.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xsbytearray.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifier.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifiervalue.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
+  ../xspublic/xscontroller/xsprotocoltype.h \
+  /usr/include/c++/11/atomic \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsarray.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  ../xspublic/xstypes/xshandid.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/cstring \
+  ../xspublic/xstypes/xsfilepos.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xstypes/xsbaudcode.h \
+  ../xspublic/xstypes/xsbaudrate.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsdataidentifier.h \
+  ../xspublic/xstypes/xsdataidentifiervalue.h \
+  ../xspublic/xstypes/xsxbusmessageid.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xscommon/xsens_mutex.h \
+  ../xspublic/xstypes/xsthread.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xstimeinfo.h \
   /usr/include/c++/11/memory \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -265,19 +279,30 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /usr/local/xsens/include/xstypes/xsushortvector.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xsscrdatafloat.h \
-  /usr/local/xsens/include/xstypes/xsfloatvector.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xsvector3.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsmath.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  ../xspublic/xstypes/xsresetmethod.h \
+  ../xspublic/xscontroller/devicefactory.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xscontroller/callbackmanagerxda.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xsvector.h \
+  ../xspublic/xstypes/xsmath.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -305,12 +330,8 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  /usr/local/xsens/include/xstypes/xsfloatmath.h \
-  /usr/local/xsens/include/xstypes/xsmath2.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xstypes/xsfloatmath.h \
+  ../xspublic/xstypes/xsmath2.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
@@ -323,150 +344,84 @@ CMakeFiles/can_node_motor_imu.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/xsens/include/xstypes/xspressure.h \
-  /usr/local/xsens/include/xstypes/xssdidata.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xseuler.h \
-  /usr/local/xsens/include/xstypes/xsanalogindata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h \
-  /usr/local/xsens/include/xstypes/xsrange.h \
-  /usr/local/xsens/include/xstypes/xstriggerindicationdata.h \
-  /usr/local/xsens/include/xstypes/xssnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovesnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovedata.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xssyncline.h \
-  /usr/local/xsens/include/xstypes/xssyncfunction.h \
-  /usr/local/xsens/include/xstypes/xssyncpolarity.h \
-  /usr/local/xsens/include/xstypes/xsversion.h \
-  /usr/local/xsens/include/xstypes/xssimpleversion.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscandataidentifier.h \
-  /usr/local/xsens/include/xstypes/xscanframeformat.h \
-  /usr/local/xsens/include/xstypes/xsintarray.h \
-  /usr/local/xsens/include/xstypes/xsmatrix3x3.h \
-  /usr/local/xsens/include/xstypes/xsdeviceidarray.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xssyncsettingarray.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsstringarray.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilearray.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilekind.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtypearray.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtype.h \
-  /usr/local/xsens/include/xstypes/xsexception.h \
-  /usr/local/xsens/include/xscontroller/xscallbackplainc.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsinforequest.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xscontroller/xsconnectivitystate.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsselftestresult.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameter.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xssyncrole.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsfilepos.h \
-  /usr/local/xsens/include/xstypes/xsdeviceoptionflag.h \
-  /usr/local/xsens/include/xstypes/xsresetmethod.h \
-  /usr/local/xsens/include/xstypes/xsoption.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptr.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xserrormode.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsrejectreason.h \
-  /usr/local/xsens/include/xscontroller/xsalignmentframe.h \
-  /usr/local/xsens/include/xscontroller/xsoperationalmode.h \
-  /usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallback.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xsensdeviceapi/xserrormode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsicccommand.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsscanner.h \
-  /usr/local/xsens/include/xstypes/xsportinfoarray.h \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
+  ../xspublic/xscontroller/lastresultmanager.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsoption.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xstypes/xssyncrole.h \
+  ../xspublic/xstypes/xsversion.h \
+  ../xspublic/xstypes/xssimpleversion.h \
+  ../xspublic/xscontroller/packetstamper.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xscontroller/xsdeviceconfiguration.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/xsexception.h \
+  ../xspublic/xscontroller/xserrormode.h \
+  ../xspublic/xscontroller/xsrejectreason.h \
+  ../xspublic/xscontroller/communicator.h \
+  ../xspublic/xscontroller/openportstage.h \
+  ../xspublic/xscontroller/protocolmanager.h \
+  ../xspublic/xscontroller/messagelocation.h \
+  ../xspublic/xscontroller/iprotocolmanager.h \
+  ../xspublic/xscontroller/replyobject.h \
+  ../xspublic/xscontroller/iointerfacefile.h \
+  ../xspublic/xstypes/xsplatform.h \
+  ../xspublic/xscontroller/iointerface.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsfile.h \
+  ../xspublic/xstypes/xsfilepos.h \
+  /usr/include/c++/11/stdlib.h \
+  ../xspublic/xscontroller/iprotocolhandler.h \
+  ../xspublic/xscontroller/serialinterface.h \
+  ../xspublic/xscontroller/streaminterface.h \
+  ../xspublic/xstypes/xscontrolline.h \
+  ../xspublic/xscontroller/xsalignmentframe.h \
+  ../xspublic/xscontroller/xsaccesscontrolmode.h \
+  ../xspublic/xscontroller/datapacketcache.h \
+  ../xspublic/xstypes/xsdeviceoptionflag.h \
+  ../xspublic/xstypes/xsoutputconfigurationarray.h \
+  ../xspublic/xstypes/xsoutputconfiguration.h \
+  ../xspublic/xscontroller/xsgnssplatform.h \
+  ../xspublic/xscontroller/xsubloxgnssplatform.h \
+  ../xspublic/xscontroller/xsoperationalmode.h \
+  ../xspublic/xscontroller/xsdevice_public.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xscontroller/xsscanner.h \
+  ../xspublic/xstypes/xsportinfoarray.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsintarray.h \
+  ../xspublic/xstypes/xsstringarray.h \
+  ../xspublic/xscontroller/xsusbhubinfo.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
-  /usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrol.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/local/xsens/include/xscommon/xsens_mutex.h \
-  /usr/include/c++/11/atomic \
-  /usr/local/xsens/include/xstypes/xsthread.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xstypes/xsdatapacket.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsushortvector.h \
+  ../xspublic/xstypes/xsscrdata.h \
+  ../xspublic/xstypes/xsscrdatafloat.h \
+  ../xspublic/xstypes/xsfloatvector.h \
+  ../xspublic/xstypes/xscalibrateddata.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xspressure.h \
+  ../xspublic/xstypes/xssdidata.h \
+  ../xspublic/xstypes/xsquaternion.h \
+  ../xspublic/xstypes/xsmatrix.h \
+  ../xspublic/xstypes/xseuler.h \
+  ../xspublic/xstypes/xsanalogindata.h \
+  ../xspublic/xstypes/xsrawgnsspvtdata.h \
+  ../xspublic/xstypes/xsrawgnsssatinfo.h \
+  ../xspublic/xstypes/xsrange.h \
+  ../xspublic/xstypes/xstriggerindicationdata.h \
+  ../xspublic/xstypes/xssnapshot.h \
+  ../xspublic/xstypes/xsglovesnapshot.h \
+  ../xspublic/xstypes/xsglovedata.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/iomanip \
   /usr/include/c++/11/locale \
@@ -2560,27 +2515,32 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
   /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
   /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
   ../include/callback_handler.h \
-  /usr/local/xsens/include/xsensdeviceapi.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdadll.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdainfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xstypesconfig.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xshandid.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xsbaudcode.h \
-  /usr/local/xsens/include/xstypes/xsbaudrate.h \
+  ../xspublic/xscontroller/xscontrol_def.h \
+  ../xspublic/xscontroller/xsdef.h \
+  ../xspublic/xscontroller/xscontrollerconfig.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  ../xspublic/xscontroller/xscallback.h \
+  ../xspublic/xscontroller/xscallbackplainc.h \
+  ../xspublic/xstypes/pstdint.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xstypesconfig.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/pstdint.h \
+  ../xspublic/xstypes/xsinforequest.h \
+  ../xspublic/xscontroller/xsdevicestate.h \
+  ../xspublic/xstypes/xsarray.h \
+  ../xspublic/xscontroller/xsdevicestate_enum.h \
+  ../xspublic/xscontroller/xsconnectivitystate.h \
+  ../xspublic/xscontroller/xsprotocoltype.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsarray.h \
+  ../xspublic/xstypes/xshandid.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  ../xspublic/xstypes/xsfilepos.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xstypes/xsbaudcode.h \
+  ../xspublic/xstypes/xsbaudrate.h \
   /usr/include/termios.h \
   /usr/include/x86_64-linux-gnu/bits/termios.h \
   /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
@@ -2593,153 +2553,102 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
   /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
   /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
   /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
-  /usr/local/xsens/include/xstypes/xsdatapacket.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xsbytearray.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifier.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifiervalue.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
-  /usr/local/xsens/include/xstypes/xsushortvector.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xsscrdatafloat.h \
-  /usr/local/xsens/include/xstypes/xsfloatvector.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xsvector3.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsmath.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  /usr/local/xsens/include/xstypes/xsfloatmath.h \
-  /usr/local/xsens/include/xstypes/xsmath2.h \
-  /usr/local/xsens/include/xstypes/xspressure.h \
-  /usr/local/xsens/include/xstypes/xssdidata.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xseuler.h \
-  /usr/local/xsens/include/xstypes/xsanalogindata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h \
-  /usr/local/xsens/include/xstypes/xsrange.h \
-  /usr/local/xsens/include/xstypes/xstriggerindicationdata.h \
-  /usr/local/xsens/include/xstypes/xssnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovesnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovedata.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xssyncline.h \
-  /usr/local/xsens/include/xstypes/xssyncfunction.h \
-  /usr/local/xsens/include/xstypes/xssyncpolarity.h \
-  /usr/local/xsens/include/xstypes/xsversion.h \
-  /usr/local/xsens/include/xstypes/xssimpleversion.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscandataidentifier.h \
-  /usr/local/xsens/include/xstypes/xscanframeformat.h \
-  /usr/local/xsens/include/xstypes/xsintarray.h \
-  /usr/local/xsens/include/xstypes/xsmatrix3x3.h \
-  /usr/local/xsens/include/xstypes/xsdeviceidarray.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xssyncsettingarray.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsstringarray.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilearray.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilekind.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtypearray.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtype.h \
-  /usr/local/xsens/include/xstypes/xsexception.h \
-  /usr/local/xsens/include/xscontroller/xscallbackplainc.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsinforequest.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xscontroller/xsconnectivitystate.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsselftestresult.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameter.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xssyncrole.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsfilepos.h \
-  /usr/local/xsens/include/xstypes/xsdeviceoptionflag.h \
-  /usr/local/xsens/include/xstypes/xsresetmethod.h \
-  /usr/local/xsens/include/xstypes/xsoption.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptr.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xserrormode.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsrejectreason.h \
-  /usr/local/xsens/include/xscontroller/xsalignmentframe.h \
-  /usr/local/xsens/include/xscontroller/xsoperationalmode.h \
-  /usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallback.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xsensdeviceapi/xserrormode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsicccommand.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsscanner.h \
-  /usr/local/xsens/include/xstypes/xsportinfoarray.h \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrol.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/local/xsens/include/xscommon/xsens_mutex.h \
-  /usr/local/xsens/include/xstypes/xsthread.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsdataidentifier.h \
+  ../xspublic/xstypes/xsdataidentifiervalue.h \
+  ../xspublic/xstypes/xsxbusmessageid.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xscommon/xsens_mutex.h \
+  ../xspublic/xstypes/xsthread.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xstimeinfo.h \
   /usr/include/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xsresetmethod.h \
+  ../xspublic/xscontroller/devicefactory.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xscontroller/callbackmanagerxda.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xsvector.h \
+  ../xspublic/xstypes/xsmath.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  ../xspublic/xstypes/xsfloatmath.h \
+  ../xspublic/xstypes/xsmath2.h \
+  ../xspublic/xscontroller/lastresultmanager.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsoption.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xstypes/xssyncrole.h \
+  ../xspublic/xstypes/xsversion.h \
+  ../xspublic/xstypes/xssimpleversion.h \
+  ../xspublic/xscontroller/packetstamper.h \
+  ../xspublic/xscontroller/xsdeviceconfiguration.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/xsexception.h \
+  ../xspublic/xscontroller/xserrormode.h \
+  ../xspublic/xscontroller/xsrejectreason.h \
+  ../xspublic/xscontroller/communicator.h \
+  ../xspublic/xscontroller/openportstage.h \
+  ../xspublic/xscontroller/protocolmanager.h \
+  ../xspublic/xscontroller/messagelocation.h \
+  ../xspublic/xscontroller/iprotocolmanager.h \
+  ../xspublic/xscontroller/replyobject.h \
+  ../xspublic/xscontroller/iointerfacefile.h \
+  ../xspublic/xstypes/xsplatform.h \
+  ../xspublic/xscontroller/iointerface.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsfile.h \
+  ../xspublic/xstypes/xsfilepos.h \
+  ../xspublic/xscontroller/iprotocolhandler.h \
+  ../xspublic/xscontroller/serialinterface.h \
+  ../xspublic/xscontroller/streaminterface.h \
+  ../xspublic/xstypes/xscontrolline.h \
+  ../xspublic/xscontroller/xsalignmentframe.h \
+  ../xspublic/xscontroller/xsaccesscontrolmode.h \
+  ../xspublic/xscontroller/datapacketcache.h \
+  ../xspublic/xstypes/xsdeviceoptionflag.h \
+  ../xspublic/xstypes/xsoutputconfigurationarray.h \
+  ../xspublic/xstypes/xsoutputconfiguration.h \
+  ../xspublic/xscontroller/xsgnssplatform.h \
+  ../xspublic/xscontroller/xsubloxgnssplatform.h \
+  ../xspublic/xscontroller/xsoperationalmode.h \
+  ../xspublic/xscontroller/xsdevice_public.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xscontroller/xsscanner.h \
+  ../xspublic/xstypes/xsportinfoarray.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsintarray.h \
+  ../xspublic/xstypes/xsstringarray.h \
+  ../xspublic/xscontroller/xsusbhubinfo.h \
+  ../xspublic/xstypes/xsdatapacket.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsushortvector.h \
+  ../xspublic/xstypes/xsscrdata.h \
+  ../xspublic/xstypes/xsscrdatafloat.h \
+  ../xspublic/xstypes/xsfloatvector.h \
+  ../xspublic/xstypes/xscalibrateddata.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xspressure.h \
+  ../xspublic/xstypes/xssdidata.h \
+  ../xspublic/xstypes/xsquaternion.h \
+  ../xspublic/xstypes/xsmatrix.h \
+  ../xspublic/xstypes/xseuler.h \
+  ../xspublic/xstypes/xsanalogindata.h \
+  ../xspublic/xstypes/xsrawgnsspvtdata.h \
+  ../xspublic/xstypes/xsrawgnsssatinfo.h \
+  ../xspublic/xstypes/xsrange.h \
+  ../xspublic/xstypes/xstriggerindicationdata.h \
+  ../xspublic/xstypes/xssnapshot.h \
+  ../xspublic/xstypes/xsglovesnapshot.h \
+  ../xspublic/xstypes/xsglovedata.h \
   /usr/include/yaml-cpp/yaml.h \
   /usr/include/yaml-cpp/parser.h \
   /usr/include/yaml-cpp/dll.h \
@@ -2805,6 +2714,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/yaml-cpp/binary.h:
 
+/usr/include/yaml-cpp/emitter.h:
+
 /usr/include/yaml-cpp/dll.h:
 
 /usr/include/yaml-cpp/node/detail/node.h:
@@ -2837,8 +2748,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Geometry/Transform.h:
 
-/usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
-
 /usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
@@ -2865,57 +2774,25 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
 
-/usr/include/eigen3/Eigen/Householder:
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
 
-/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
+/usr/include/fcntl.h:
 
-/usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
+/usr/include/x86_64-linux-gnu/sys/poll.h:
 
-/usr/include/eigen3/Eigen/Jacobi:
+/usr/include/x86_64-linux-gnu/bits/poll.h:
 
-/usr/include/eigen3/Eigen/Cholesky:
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
 
-/usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
+/usr/include/eigen3/Eigen/src/Core/Array.h:
 
-/usr/include/eigen3/Eigen/src/LU/InverseImpl.h:
+/usr/include/netdb.h:
 
-/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h:
+/usr/include/c++/11/tuple:
 
-/usr/include/eigen3/Eigen/src/LU/FullPivLU.h:
-
-/usr/include/eigen3/Eigen/src/misc/Kernel.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
-
-/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
-
-/usr/include/eigen3/Eigen/src/Core/StlIterators.h:
-
-/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
-/usr/include/eigen3/Eigen/src/Core/Reverse.h:
-
-/usr/include/eigen3/Eigen/src/Core/Replicate.h:
-
-/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
-
-/usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
-
-/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
-
-/usr/include/eigen3/Eigen/src/Core/BandMatrix.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
-
-/usr/include/x86_64-linux-gnu/sys/un.h:
-
-/usr/local/xsens/include/xstypes/xsstringoutputtype.h:
-
-/usr/include/c++/11/bits/stl_map.h:
+/usr/include/x86_64-linux-gnu/sys/resource.h:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
@@ -2929,23 +2806,47 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
 
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/signal.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/ddssub.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket2.h:
 
+/usr/include/asm-generic/posix_types.h:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd_64.h:
 
 /opt/unitree_robotics/include/dds/ddsc/dds_public_impl.h:
 
+/usr/include/c++/11/bits/exception_defines.h:
+
 /usr/include/netinet/in.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
-/usr/include/c++/11/stdlib.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/status/TStatus.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/yaml-cpp/node/emit.h:
+
+/usr/include/pwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
@@ -2963,23 +2864,15 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
-/usr/local/xsens/include/xstypes/xsbusid.h:
-
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/AnyDataReaderDelegate.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/GuardCondition.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
 /opt/unitree_robotics/include/dds/ddsrt/align.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
@@ -2989,9 +2882,15 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/rpc/netdb.h:
+
 /usr/include/x86_64-linux-gnu/bits/mman-linux.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/detail/ref_traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mman-map-flags-generic.h:
 
@@ -3001,21 +2900,35 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
-/usr/local/xsens/include/xstypes/xsmessage.h:
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/thread:
+
+/usr/include/dirent.h:
 
 /usr/include/yaml-cpp/emitterdef.h:
 
 /usr/include/c++/11/cassert:
 
-/usr/include/eigen3/Eigen/LU:
+../xspublic/xscontroller/lastresultmanager.h:
 
-/opt/unitree_robotics/include/dds/ddsrt/md5.h:
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/Manipulators.hpp:
 
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+/usr/include/yaml-cpp/node/node.h:
 
-/usr/local/xsens/include/xstypes/xssyncsetting.h:
+/usr/include/c++/11/bits/locale_conv.h:
+
+../xspublic/xstypes/xscalibrateddata.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/Publisher.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/Random.h:
 
 /opt/unitree_robotics/include/unitree/common/dds/dds_callback.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -3033,7 +2946,87 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/FunctorHolder.hpp:
 
+/usr/include/c++/11/ctime:
+
 /usr/include/c++/11/bits/locale_facets_nonio.h:
+
+../xspublic/xstypes/xstriggerindicationdata.h:
+
+/usr/include/x86_64-linux-gnu/sys/un.h:
+
+../xspublic/xstypes/xsversion.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+../xspublic/xstypes/xstime.h:
+
+../xspublic/xstypes/xsrange.h:
+
+/usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+
+../xspublic/xscontroller/xsusbhubinfo.h:
+
+../xspublic/xstypes/xsmatrix.h:
+
+../xspublic/xstypes/xsscrdatafloat.h:
+
+../xspublic/xstypes/xsscrdata.h:
+
+/usr/include/eigen3/Eigen/src/Core/Replicate.h:
+
+/usr/include/c++/11/istream:
+
+../xspublic/xstypes/xsintarray.h:
+
+../xspublic/xscontroller/xsscanner.h:
+
+../xspublic/xscontroller/xsoperationalmode.h:
+
+../xspublic/xscontroller/xsubloxgnssplatform.h:
+
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/topic/TTopicDescription.hpp:
+
+../xspublic/xstypes/xsoutputconfiguration.h:
+
+../xspublic/xstypes/xsdeviceoptionflag.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/policy/TQosPolicyCount.hpp:
+
+/usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
+
+/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
+
+../xspublic/xscontroller/xsalignmentframe.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/detail/InstanceHandle.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/StatusCondition.hpp:
+
+/usr/include/yaml-cpp/noexcept.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/GenerationCount.hpp:
+
+/usr/include/c++/11/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h:
+
+/usr/include/c++/11/bits/predefined_ops.h:
+
+/usr/include/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/GuardCondition.hpp:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/basic_cdr_ser.hpp:
+
+../xspublic/xstypes/xsplatform.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/discovery.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
 /usr/include/x86_64-linux-gnu/sys/mman.h:
 
@@ -3041,245 +3034,37 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/dds/ddsrt/retcode.h:
 
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/c++/11/tuple:
-
 /usr/include/c++/11/bits/list.tcc:
+
+../xspublic/xstypes/xsoutputconfigurationarray.h:
 
 /usr/include/c++/11/list:
 
-/usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
 
-/usr/local/xsens/include/xstypes/xsthread.h:
+../xspublic/xstypes/xsanalogindata.h:
 
-/usr/include/c++/11/atomic:
+../xspublic/xscontroller/packetstamper.h:
 
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/local/xsens/include/xstypes/xscanoutputconfiguration.h:
-
-/usr/include/c++/11/bits/regex_error.h:
-
-/usr/local/xsens/include/xscommon/xsens_mutex.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/c++/11/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/TWaitSetImpl.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/status/detail/Status.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/eigen3/Eigen/src/LU/Determinant.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/TSampleRef.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/domain/detail/DomainParticipant.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/status/TStatus.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/TReadConditionImpl.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/AnyDataWriterListener.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h:
-
-/usr/local/xsens/include/xscontroller/xsconnectivitystate.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xscallback.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/ForwardDeclarations.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h:
-
-/opt/unitree_robotics/include/unitree/common/lock/lock.hpp:
-
-/usr/include/linux/stat.h:
-
-/usr/include/c++/11/pstl/glue_memory_defs.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/domain/TDomainParticipant.hpp:
-
-/usr/include/yaml-cpp/emitter.h:
-
-/usr/local/xsens/include/xscontroller/xsalignmentframe.h:
-
-/usr/include/c++/11/bits/string_view.tcc:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/basic_cdr_ser.hpp:
-
-/usr/local/xsens/include/xscontroller/xsrejectreason.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/local/xsens/include/xscontroller/xserrormode.h:
-
-/usr/include/eigen3/Eigen/src/Core/StableNorm.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/local/xsens/include/xscontroller/xsdeviceptr.h:
-
-/usr/local/xsens/include/xstypes/xsfloatvector.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/TInstanceHandle.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
-
-/usr/include/signal.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/ddssub.hpp:
-
-/usr/include/yaml-cpp/node/emit.h:
-
-/usr/include/pwd.h:
-
-/usr/local/xsens/include/xstypes/xssyncrole.h:
-
-/usr/include/c++/11/ext/aligned_buffer.h:
-
-/usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h:
+../xspublic/xstypes/xssimpleversion.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/qos/detail/TopicQos.hpp:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/SampleInfoImpl.hpp:
 
-/usr/local/xsens/include/xscontroller/xsdeviceparameter.h:
+../xspublic/xstypes/xssyncrole.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/AnyDataReader.hpp:
+../xspublic/xscontroller/xsdevice_def.h:
 
-/usr/local/xsens/include/xscontroller/xsprotocoltype.h:
+/usr/include/linux/close_range.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/domain/ddsdomain.hpp:
+../xspublic/xscontroller/iointerfacefile.h:
 
-/usr/local/xsens/include/xscontroller/xsdevicestate_enum.h:
+../xspublic/xstypes/xsoption.h:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/QueryDelegate.hpp:
+/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
-/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
-
-/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
-
-/usr/include/c++/11/ratio:
-
-/usr/include/c++/11/thread:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
-
-/opt/unitree_robotics/include/dds/ddsc/dds_public_qosdefs.h:
-
-/usr/local/xsens/include/xstypes/xsexception.h:
-
-/usr/local/xsens/include/xstypes/xstime.h:
-
-/usr/local/xsens/include/xstypes/xsfilterprofilearray.h:
-
-/usr/local/xsens/include/xstypes/xsmatrix3x3.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/LoanedSamples.hpp:
-
-/usr/local/xsens/include/xstypes/xssimpleversion.h:
-
-/usr/local/xsens/include/xstypes/xsversion.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/find.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/AnyDataReaderListener.hpp:
-
-/usr/local/xsens/include/xstypes/xssyncpolarity.h:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/topic/detail/TopicInstanceImpl.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h:
-
-/usr/include/c++/11/bits/stl_multimap.h:
-
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/local/xsens/include/xstypes/xsoption.h:
-
-/usr/include/c++/11/map:
-
-/usr/include/c++/11/bits/deque.tcc:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/ScopedLock.hpp:
-
-/usr/local/xsens/include/xstypes/xsglovesnapshot.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/Condition.hpp:
-
-/usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/TStatusCondition.hpp:
-
-/usr/include/yaml-cpp/node/iterator.h:
-
-/usr/include/execinfo.h:
-
-/usr/include/libintl.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/local/xsens/include/xstypes/xstriggerindicationdata.h:
-
-/opt/unitree_robotics/include/unitree/common/log/log_store.hpp:
-
-/usr/include/asm-generic/sockios.h:
-
-/usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h:
-
-/usr/include/c++/11/ctime:
-
-/usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h:
-
-/usr/include/dirent.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h:
-
-/opt/unitree_robotics/include/dds/ddsrt/sockets/posix.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/detail/TInstanceHandleImpl.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/DataWriterListener.hpp:
-
-/usr/local/xsens/include/xstypes/xscalibrateddata.h:
-
-/usr/local/xsens/include/xstypes/xseuler.h:
-
-/usr/include/linux/posix_types.h:
-
-/usr/local/xsens/include/xstypes/xspressure.h:
+/opt/unitree_robotics/include/ddscxx/dds/sub/TCoherentAccess.hpp:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -3291,47 +3076,39 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/bits/hashtable_policy.h:
 
-/usr/include/c++/11/unordered_map:
+/usr/include/c++/11/bits/hashtable.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/c++/11/atomic:
+
+/usr/include/c++/11/bits/regex_error.h:
 
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/algorithm:
 
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/c++/11/bits/stl_vector.h:
-
-/opt/unitree_robotics/include/dds/ddsrt/log.h:
-
-/usr/local/xsens/include/xstypes/xsfloatmath.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
-
-/usr/include/limits.h:
-
-/usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/TopicDescription.hpp:
 
-/usr/include/c++/11/bits/memoryfwd.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
-/usr/include/c++/11/tr1/poly_hermite.tcc:
+../xspublic/xstypes/xspressure.h:
 
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
 
-/usr/include/c++/11/tr1/exp_integral.tcc:
+/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/WaitSetDelegate.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/TAnyDataWriter.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
-
-/usr/include/c++/11/tr1/bessel_function.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
+
+../xspublic/xscontroller/xsaccesscontrolmode.h:
 
 /usr/include/c++/11/bits/stl_list.h:
 
@@ -3341,75 +3118,69 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/TGenerationCount.hpp:
 
-/usr/include/c++/11/istream:
-
-/usr/local/xsens/include/xsensdeviceapi/xserrormode.h:
-
-/usr/include/c++/11/bits/localefwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/local/xsens/include/xscontroller/xsselftestresult.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/c++/11/complex:
+
+/usr/include/c++/11/math.h:
+
+/usr/include/asm-generic/sockios.h:
+
+../xspublic/xscontroller/callbackmanagerxda.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/cond/TQueryCondition.hpp:
+
+../xspublic/xstypes/xsvector.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
 
 /usr/include/c++/11/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
+../xspublic/xstypes/xseuler.h:
+
+../xspublic/xscontroller/xsconnectivitystate.h:
+
 /usr/include/c++/11/bits/node_handle.h:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+../xspublic/xstypes/xsrawgnsssatinfo.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/TSampleInfo.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/c++/11/bits/stl_tree.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h:
+/usr/include/c++/11/map:
 
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+/opt/unitree_robotics/include/unitree/common/dds/dds_qos.hpp:
 
-/usr/include/c++/11/math.h:
+/usr/include/c++/11/bits/deque.tcc:
 
-/usr/local/xsens/include/xstypes/xsvector.h:
-
-/usr/include/c++/11/tr1/hypergeometric.tcc:
-
-/usr/local/xsens/include/xstypes/xsscrdata.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/ReportUtils.hpp:
-
-/usr/local/xsens/include/xstypes/xsushortvector.h:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/ScopedLock.hpp:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/local/xsens/include/xstypes/xssyncfunction.h:
 
 /usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+/usr/include/c++/11/pstl/glue_memory_defs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+/usr/include/linux/stat.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+/opt/unitree_robotics/include/ddscxx/dds/domain/TDomainParticipant.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/Condition.hpp:
-
-/usr/local/xsens/include/xscontroller/xscallbackplainc.h:
-
-/usr/local/xsens/include/xscontroller/xscontrollerconfig.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/c++/11/bits/std_function.h:
-
-/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
-
-/usr/include/c++/11/bits/atomic_base.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/TWaitSetImpl.hpp:
 
 /usr/include/linux/stddef.h:
 
@@ -3417,59 +3188,61 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/dds/ddsi/q_protocol.h:
 
-/usr/include/c++/11/bits/locale_classes.h:
+/usr/include/c++/11/bits/allocated_ptr.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/assert.h:
 
-/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
 
-/usr/include/c++/11/pstl/pstl_config.h:
+/usr/include/asm-generic/socket.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/detail/conformance.hpp:
+/usr/include/c++/11/bits/invoke.h:
 
-/usr/include/c++/11/cmath:
+/usr/include/eigen3/Eigen/Cholesky:
 
-/usr/include/linux/limits.h:
+/usr/include/c++/11/tr1/beta_function.tcc:
 
-/usr/include/c++/11/bits/allocator.h:
+/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:
 
-/usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/c++/11/array:
 
-/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+/opt/unitree_robotics/include/dds/ddsi/ddsi_keyhash.h:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/AnyDataWriterDelegate.hpp:
+/usr/include/c++/11/bit:
 
-/usr/include/strings.h:
+../xspublic/xstypes/xsbusid.h:
 
-/usr/include/c++/11/ext/new_allocator.h:
+../xspublic/xstypes/xsportinfoarray.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/pub/detail/TCoherentSetImpl.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/Visitor.h:
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
 /opt/unitree_robotics/include/unitree/common/thread/thread.hpp:
 
-/usr/include/c++/11/cstdio:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/TConditionImpl.hpp:
-
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
+
+/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
 /usr/include/eigen3/Eigen/src/Core/Dot.h:
 
-/usr/include/pthread.h:
+/usr/include/c++/11/unordered_map:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/ReadCondition.hpp:
+../xspublic/xstypes/xsresultvalue.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/ifaddrs.h:
+
+/opt/unitree_robotics/include/dds/ddsc/dds_public_alloc.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
 /usr/include/c++/11/backward/auto_ptr.h:
 
@@ -3477,33 +3250,29 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/bits/ios_base.h:
 
-/opt/unitree_robotics/include/dds/ddsrt/threads.h:
-
-/usr/include/c++/11/set:
-
 /usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 ../can/usb_can.h:
 
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
 /usr/include/locale.h:
 
-/usr/include/x86_64-linux-gnu/bits/statx.h:
+/usr/include/c++/11/bits/localefwd.h:
 
-/usr/include/unistd.h:
+/usr/include/yaml-cpp/node/iterator.h:
 
-/usr/include/c++/11/bits/regex_scanner.tcc:
+/usr/include/execinfo.h:
 
-/usr/include/c++/11/bits/stl_algobase.h:
+/usr/include/c++/11/bits/streambuf_iterator.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+/opt/unitree_robotics/include/dds/ddsi/ddsi_xt_typemap.h:
 
-/usr/include/linux/errno.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+../xspublic/xstypes/xsfile.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h:
+../xspublic/xstypes/xsdeviceid.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
@@ -3511,221 +3280,31 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/domain/detail/DomainParticipant.hpp:
+
+/usr/include/linux/falloc.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
+../xspublic/xscontroller/xsdevice_public.h:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+../xspublic/xstypes/xstypesdef.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/linux/falloc.h:
-
-/usr/local/xsens/include/xstypes/xsdeviceoptionflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
-/usr/include/linux/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/Subscriber.hpp:
-
-../src/callback_handler.cpp:
-
-/usr/include/c++/11/ext/type_traits.h:
-
-/usr/include/c++/11/bits/locale_classes.tcc:
-
-/usr/include/c++/11/bits/cxxabi_init_exception.h:
-
-/usr/local/xsens/include/xstypes/xsquaternion.h:
-
-/usr/local/xsens/include/xstypes/xsdataidentifiervalue.h:
-
-/usr/include/c++/11/locale:
-
-/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
-
-/usr/include/ctype.h:
-
-/usr/include/arpa/inet.h:
-
-/usr/include/c++/11/tr1/gamma.tcc:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/x86_64-linux-gnu/asm/socket.h:
-
-../src/can_node_motor_imu.cpp:
-
-/usr/include/c++/11/bits/shared_ptr.h:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/c++/11/type_traits:
-
-/usr/include/yaml-cpp/node/node.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/include/eigen3/Eigen/src/Core/Random.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/Publisher.hpp:
-
-/usr/include/c++/11/ext/numeric_traits.h:
-
-/usr/include/asm-generic/socket.h:
-
-/usr/include/yaml-cpp/traits.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/Policy.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/c++/11/bits/invoke.h:
-
-/usr/include/x86_64-linux-gnu/bits/in.h:
-
-/opt/unitree_robotics/include/dds/ddsc/dds_public_error.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/domain/DomainParticipantListener.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/11/bits/postypes.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/topic/ContentFilteredTopic.hpp:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/qos/DataReaderQosDelegate.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/detail/Publisher.hpp:
-
-/usr/local/xsens/include/xstypes/xsinforequest.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/TCoherentAccess.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/policy/detail/TCorePolicyImpl.hpp:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/c++/11/bits/specfun.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/usr/include/assert.h:
-
-/usr/include/c++/11/bits/stl_relops.h:
-
-/usr/include/c++/11/debug/debug.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/c++/11/system_error:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/c++/11/bits/streambuf_iterator.h:
-
-/usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/PolicyDelegate.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/11/functional:
-
-/usr/local/xsens/include/xstypes/xsvector3.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/time.h:
-
-/usr/local/xsens/include/xstypes/xsstring.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/opt/unitree_robotics/include/dds/ddsi/ddsi_serdata.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h:
-
-/usr/include/eigen3/Eigen/src/Core/DenseBase.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdevice.h:
-
-/opt/unitree_robotics/include/unitree/common/block_queue.hpp:
-
-/usr/local/xsens/include/xsensdeviceapi/xdadll.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
-
-/usr/include/c++/11/deque:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdef.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-/usr/include/x86_64-linux-gnu/sys/statvfs.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/detail/InstanceHandle.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/StatusCondition.hpp:
-
-/usr/include/yaml-cpp/noexcept.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/GenerationCount.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsscanner.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/Macros.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
-
-/usr/include/c++/11/bits/nested_exception.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/qos/SubscriberQos.hpp:
-
-/opt/unitree_robotics/include/dds/ddsc/dds_public_listener.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/DataReader.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TopicListener.hpp:
-
-/usr/local/xsens/include/xstypes/xssnapshot.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
 
@@ -3733,113 +3312,143 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/datatopic.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/pub/qos/DataWriterQos.hpp:
+../xspublic/xscontroller/iointerface.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/CoherentSetDelegate.hpp:
+/usr/include/features-time64.h:
 
-/usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+/usr/include/c++/11/system_error:
 
-/usr/include/asm-generic/types.h:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/ProprietaryPolicyKind.hpp:
+/usr/include/c++/11/bits/vector.tcc:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/policy/QosPolicyCount.hpp:
+../xspublic/xstypes/xsinforequest.h:
 
-/usr/include/asm-generic/bitsperlong.h:
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/topic/TopicTraits.hpp:
+/usr/include/time.h:
 
-/usr/local/xsens/include/xstypes/xstypedefs.h:
+/usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h:
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
-/usr/local/xsens/include/xstypes/xsmath.h:
+/usr/include/x86_64-linux-gnu/asm/socket.h:
 
-/opt/unitree_robotics/include/dds/ddsrt/heap.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/opt/unitree_robotics/include/dds/ddsrt/atomics.h:
+../src/can_node_motor_imu.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+../xspublic/xscontroller/xsdevicestate.h:
 
-/usr/include/c++/11/string:
+/usr/include/c++/11/bits/shared_ptr.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+../xspublic/xstypes/xsquaternion.h:
 
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/eigen3/Eigen/src/Core/Ref.h:
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
 
-/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+/usr/include/c++/11/bits/locale_facets.tcc:
 
-/opt/unitree_robotics/include/dds/ddsi/ddsi_keyhash.h:
-
-/usr/include/c++/11/bit:
-
-/opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp:
-
-/usr/include/c++/11/cctype:
-
-/opt/unitree_robotics/include/unitree/idl/go2/IMUState_.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/local/xsens/include/xstypes/xsanalogindata.h:
-
-/usr/local/xsens/include/xstypes/xsportinfo.h:
-
-/usr/include/c++/11/bits/shared_ptr_atomic.h:
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 ../include/callback_handler.h:
 
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
+
 /usr/include/c++/11/iomanip:
 
-/usr/local/xsens/include/xstypes/xssdidata.h:
+/usr/include/c++/11/cctype:
 
-/opt/unitree_robotics/include/ddscxx/dds/domain/qos/DomainParticipantQos.hpp:
+/opt/unitree_robotics/include/unitree/robot/channel/channel_publisher.hpp:
 
-/usr/local/xsens/include/xstypes/xshandid.h:
+/opt/unitree_robotics/include/unitree/idl/go2/IMUState_.hpp:
 
-/usr/include/features.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/detail/ref_traits.hpp:
+../xspublic/xstypes/xsglovesnapshot.h:
 
-/usr/local/xsens/include/xstypes/xsoutputconfiguration.h:
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
 
-/usr/include/c++/11/bits/exception_ptr.h:
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/c++/11/bits/charconv.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+../xspublic/xstypes/xsmessage.h:
 
-/usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/enable_special_members.h:
 
-/usr/local/xsens/include/xstypes/xsdeviceidarray.h:
+../xspublic/xstypes/pstdint.h:
 
-/usr/include/c++/11/bits/stream_iterator.h:
+/usr/include/c++/11/bits/stl_relops.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/limits.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/TStatusCondition.hpp:
+
+../xspublic/xscontroller/xscallbackplainc.h:
+
+/usr/include/x86_64-linux-gnu/bits/statx.h:
+
+/usr/include/unistd.h:
+
+/opt/unitree_robotics/include/dds/ddsrt/sockets/posix.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/topic/detail/TopicInstanceImpl.hpp:
+
+/usr/include/c++/11/bits/stl_multiset.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/c++/11/set:
+
+/usr/include/c++/11/deque:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+/opt/unitree_robotics/include/dds/ddsrt/log.h:
+
+/usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
+
+/usr/include/x86_64-linux-gnu/sys/timerfd.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/x86_64-linux-gnu/bits/mman-shared.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/11/bits/string_view.tcc:
+
+/usr/include/c++/11/bits/functional_hash.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
-/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
+/usr/include/c++/11/bits/stream_iterator.h:
 
-/usr/include/c++/11/bits/streambuf.tcc:
+/usr/include/c++/11/bits/stl_algobase.h:
 
-/usr/include/c++/11/bits/unique_ptr.h:
+/usr/include/c++/11/bits/regex_scanner.tcc:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/TEntityQos.hpp:
+/usr/include/c++/11/locale:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/config.hpp:
+/usr/include/ctype.h:
 
-/usr/local/xsens/include/xstypes/pstdint.h:
+/usr/include/pthread.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+../xspublic/xscontroller/xsdef.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
+
+/usr/include/c++/11/ext/numeric_traits.h:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
@@ -3851,27 +3460,295 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
 
-/usr/local/xsens/include/xstypes/xsfilterprofile.h:
+../xspublic/xstypes/xstypedefs.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/c++/11/type_traits:
 
-/opt/unitree_robotics/include/dds/ddsrt/sockets.h:
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
+/usr/include/c++/11/bits/shared_ptr_base.h:
 
-/usr/local/xsens/include/xstypes/xsrange.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/policy/detail/TCorePolicyImpl.hpp:
+
+/usr/include/c++/11/bits/basic_string.h:
+
+/usr/include/x86_64-linux-gnu/bits/poll2.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+../xspublic/xscontroller/iprotocolhandler.h:
+
+/usr/include/c++/11/iosfwd:
+
+/usr/include/c++/11/initializer_list:
+
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+
+../xspublic/xstypes/xsvector3.h:
+
+../xspublic/xstypes/xstimeinfo.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/TEntityQos.hpp:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/c++/11/functional:
+
+../xspublic/xstypes/xstypesconfig.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/arpa/inet.h:
+
+/usr/include/c++/11/tr1/gamma.tcc:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/eigen3/Eigen/src/Core/DenseBase.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/eigen3/Eigen/src/Core/Fuzzy.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysinfo.h:
+
+/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/usr/include/c++/11/debug/debug.h:
+
+/usr/include/c++/11/bits/std_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/ReadCondition.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
+
+/usr/include/asm-generic/types.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/ProprietaryPolicyKind.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/policy/QosPolicyCount.hpp:
+
+../xspublic/xscontroller/messagelocation.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/topic/TopicTraits.hpp:
+
+../xspublic/xstypes/xsresetmethod.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+../xspublic/xscontroller/datapacketcache.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/CoherentSetDelegate.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+
+/usr/include/c++/11/pstl/pstl_config.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/detail/conformance.hpp:
+
+/usr/include/c++/11/cmath:
+
+/usr/include/linux/limits.h:
+
+/usr/include/c++/11/bits/allocator.h:
+
+/usr/include/c++/11/bits/stl_construct.h:
+
+/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
+
+/usr/include/x86_64-linux-gnu/sys/statvfs.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+
+/usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/errno.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
+
+/usr/include/features.h:
+
+/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
+/usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
+/usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TopicListener.hpp:
+
+../xspublic/xscontroller/iprotocolmanager.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/qos/DataWriterQos.hpp:
+
+/usr/include/c++/11/iterator:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/TRankImpl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+
+/usr/include/c++/11/bits/hash_bytes.h:
+
+/usr/include/c++/11/bits/move.h:
+
+/opt/unitree_robotics/include/unitree/common/log/log_keeper.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/eigen3/Eigen/src/Core/Ref.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/RankImpl.hpp:
+
+../xspublic/xscontroller/streaminterface.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/EntityRegistry.hpp:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+../xspublic/xstypes/xsstringarray.h:
+
+/usr/include/c++/11/ext/new_allocator.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/detail/TCoherentSetImpl.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/Visitor.h:
+
+/usr/include/c++/11/bits/std_thread.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/TBuiltinTopicKeyImpl.hpp:
 
-/usr/local/xsens/include/xstypes/xsarray.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
-/usr/include/c++/11/bits/unique_lock.h:
+/usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/c++/11/bits/charconv.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/status/StatusDelegate.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/TCoherentSet.hpp:
+
+/usr/include/c++/11/ext/alloc_traits.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/TWaitSet.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+../xspublic/xscontroller/protocolmanager.h:
+
+/opt/unitree_robotics/include/dds/ddsc/dds_basic_types.h:
+
+/opt/unitree_robotics/include/unitree/common/error.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/opt/unitree_robotics/include/dds/ddsrt/threads.h:
+
+/opt/unitree_robotics/include/unitree/common/dds/dds_qos_policy_parameter.hpp:
+
+/usr/include/poll.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/opt/unitree_robotics/include/dds/ddsi/ddsi_serdata.h:
+
+/usr/include/yaml-cpp/traits.h:
+
+../xspublic/xscontroller/xsgnssplatform.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/Policy.hpp:
+
+../xspublic/xscontroller/xsdevicestate_enum.h:
+
+/usr/include/c++/11/vector:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/SubscriberListener.hpp:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
+../xspublic/xstypes/xsglovedata.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
+
+/opt/unitree_robotics/include/unitree/common/dds/dds_topic_channel.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/extended_cdr_v2_ser.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/c++/11/bits/locale_classes.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/11/string:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/AnyDataReader.hpp:
-
-/usr/local/xsens/include/xstypes/xsresultvalue.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/DataWriter.hpp:
 
@@ -3879,11 +3756,11 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/TAnyTopic.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/c++/11/ext/alloc_traits.h:
-
 /usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
+/usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/stl_function.h:
 
@@ -3897,61 +3774,39 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/SampleInfo.hpp:
 
-/usr/local/xsens/include/xstypes/xsportinfoarray.h:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/TRankImpl.hpp:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/AnyDataWriterDelegate.hpp:
 
-/usr/include/c++/11/iterator:
+/usr/include/strings.h:
 
-/usr/include/c++/11/iosfwd:
+../xspublic/xstypes/xsbytearray.h:
 
-/usr/include/c++/11/initializer_list:
+../xspublic/xstypes/xsarray.h:
 
-/usr/include/c++/11/bits/alloc_traits.h:
+/opt/unitree_robotics/include/ddscxx/dds/sub/LoanedSamples.hpp:
 
-/usr/include/errno.h:
-
-/usr/include/c++/11/bits/functional_hash.h:
-
-/usr/local/xsens/include/xstypes/xsfilepos.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/detail/SuspendedPublication.hpp:
-
-/usr/local/xsens/include/xstypes/xsfilterprofilekind.h:
-
-/usr/include/c++/11/bitset:
-
-/usr/include/c++/11/bits/move.h:
-
-/opt/unitree_robotics/include/unitree/common/log/log_keeper.hpp:
-
-/usr/include/c++/11/bits/hash_bytes.h:
+../xspublic/xstypes/xssdidata.h:
 
 /usr/include/stdlib.h:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/QosProviderDelegate.hpp:
+../xspublic/xscontroller/openportstage.h:
 
-/usr/local/xsens/include/xstypes/xsintarray.h:
+/opt/unitree_robotics/include/ddscxx/dds/topic/detail/ddstopic.hpp:
 
-/usr/include/c++/11/bits/hashtable.h:
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
 
-/usr/local/xsens/include/xstypes/xstypesconfig.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+/usr/include/c++/11/ext/aligned_buffer.h:
 
-/usr/local/xsens/include/xstypes/xsbaudcode.h:
+/usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/bits/erase_if.h:
 
-/usr/local/xsens/include/xstypes/xsstringoutputtypearray.h:
-
 /opt/unitree_robotics/include/ddscxx/dds/sub/Sample.hpp:
-
-/usr/local/xsens/include/xstypes/xssyncline.h:
-
-/usr/include/stdint.h:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
@@ -3959,45 +3814,37 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/policy/CorePolicy.hpp:
 
+/usr/include/stdint.h:
+
 /opt/unitree_robotics/include/unitree/common/dds/dds_factory_model.hpp:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/BuiltinTopicKeyDelegate.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/detail/TPublisherImpl.hpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+../xspublic/xstypes/xstimestamp.h:
 
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h:
+../xspublic/xstypes/xsmath.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/BuiltinTopicKeyDelegate.hpp:
+
+../xspublic/xstypes/xssnapshot.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/CoherentAccessDelegate.hpp:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
-/usr/include/c++/11/stack:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/SuspendedPublicationDelegate.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/extended_cdr_v1_ser.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/eigen3/Eigen/src/Householder/Householder.h:
-
-/usr/include/semaphore.h:
+/opt/unitree_robotics/include/ddscxx/dds/domain/DomainParticipantListener.hpp:
 
 /usr/include/c++/11/cwctype:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
@@ -4005,25 +3852,27 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/TContentFilteredTopic.hpp:
 
-/usr/include/c++/11/complex:
+/usr/include/c++/11/cstdio:
 
-/usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/TConditionImpl.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/Exception.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/QosProvider.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/usr/include/x86_64-linux-gnu/bits/mman-shared.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+../xspublic/xscontroller/communicator.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/usr/local/xsens/include/xstypes/xsglovedata.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/opt/unitree_robotics/include/unitree/common/dds/dds_error.hpp:
 
 /usr/include/c++/11/cerrno:
+
+../xspublic/xstypes/xsfilepos.h:
+
+../xspublic/xstypes/xsmath2.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
 
@@ -4031,27 +3880,25 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/FilterDelegate.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+/usr/include/wctype.h:
 
-/usr/include/sched.h:
-
-/usr/include/netdb.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/poll.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
-/usr/include/c++/11/ios:
-
 /usr/include/c++/11/utility:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/status/detail/TStatusImpl.hpp:
+
+/usr/include/c++/11/ios:
+
+../xspublic/xstypes/xshandid.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/domain/detail/TDomainParticipantImpl.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/CoherentSet.hpp:
 
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
@@ -4061,43 +3908,65 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/typeinfo:
 
+../xspublic/xstypes/xsfloatmath.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/qos/DataReaderQos.hpp:
+
+/usr/include/c++/11/bits/nested_exception.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/qos/SubscriberQos.hpp:
+
+/opt/unitree_robotics/include/dds/ddsc/dds_public_listener.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/DataReader.hpp:
 
 /usr/include/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/environments.h:
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
-
-/usr/include/c++/11/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/x86_64-linux-gnu/bits/socket_type.h:
-
-/opt/unitree_robotics/include/unitree/common/dds/dds_error.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/local/xsens/include/xstypes/xsdeviceid.h:
-
-/usr/local/xsens/include/xstypes/xstypesdef.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/TSampleRefImpl.hpp:
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/Condition.hpp:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
-/usr/local/xsens/include/xscontroller/xsoperationalmode.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xscontrol.h:
-
 /opt/unitree_robotics/include/dds/ddsrt/types.h:
 
-/usr/local/xsens/include/xstypes/xsxbusmessageid.h:
+/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/WaitSet.hpp:
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/opt/unitree_robotics/include/unitree/common/any.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/BandMatrix.h:
+
+/usr/include/linux/types.h:
+
+../include/Tangair_usb2can_motor_imu.h:
+
+/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
+/usr/include/c++/11/bits/codecvt.h:
+
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
+/usr/include/linux/const.h:
+
+../xspublic/xscontroller/xsprotocoltype.h:
+
+/usr/include/c++/11/bits/std_abs.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+
+/usr/include/c++/11/ostream:
+
+/opt/unitree_robotics/include/unitree/idl/go2/LowState_.hpp:
+
+../xspublic/xstypes/xsstring.h:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
 
@@ -4105,29 +3974,15 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/cstring:
 
-/usr/include/c++/11/tr1/legendre_function.tcc:
+../xspublic/xstypes/xsbaud.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+../xspublic/xscontroller/xserrormode.h:
 
-/usr/include/eigen3/Eigen/src/Core/Fuzzy.h:
+../xspublic/xstypes/xsbaudcode.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/c++/11/bits/unique_ptr.h:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/local/xsens/include/xstypes/xsbaud.h:
-
-/opt/unitree_robotics/include/dds/dds.h:
-
-/usr/local/xsens/include/xstypes/xsscrdatafloat.h:
-
-/usr/local/xsens/include/xstypes/xsbaudrate.h:
+../xspublic/xstypes/xsbaudrate.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
@@ -4141,43 +3996,37 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/detail/DataWriterImpl.hpp:
 
-/usr/local/xsens/include/xstypes/xsdataidentifier.h:
-
-/usr/local/xsens/include/xstypes/xscanframeformat.h:
-
-/usr/include/x86_64-linux-gnu/sys/resource.h:
-
 /opt/unitree_robotics/include/unitree/common/dds/dds_parameter.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
 
-/usr/include/c++/11/bits/std_abs.h:
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+/opt/unitree_robotics/include/dds/ddsrt/md5.h:
 
-/usr/include/c++/11/ostream:
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
 
-/opt/unitree_robotics/include/unitree/idl/go2/LowState_.hpp:
+/usr/include/eigen3/Eigen/LU:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /opt/unitree_robotics/include/unitree/common/dds/dds_qos_parameter.hpp:
 
-/usr/local/xsens/include/xsensdeviceapi/xdaconfig.h:
-
 /opt/unitree_robotics/include/dds/ddsrt/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h:
-
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/TPublisher.hpp:
+
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h:
+
+/usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
 
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
@@ -4185,99 +4034,49 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/string_view:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
 
-/usr/include/c++/11/bits/exception.h:
-
-/opt/unitree_robotics/include/unitree/common/any.hpp:
-
-/usr/include/c++/11/bits/locale_facets.h:
-
-/opt/unitree_robotics/include/unitree/common/dds/dds_topic_channel.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/socket.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/extended_cdr_v2_ser.hpp:
-
-../include/Tangair_usb2can_motor_imu.h:
-
-/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
-
-/usr/include/c++/11/bits/codecvt.h:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/local/xsens/include/xstypes/xsdatapacket.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+../xspublic/xstypes/xsdataidentifier.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
 
-/usr/include/c++/11/tr1/beta_function.tcc:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/QosProviderDelegate.hpp:
 
-/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:
+../xspublic/xstypes/xsdataidentifiervalue.h:
 
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
+/usr/include/x86_64-linux-gnu/bits/in.h:
 
-/usr/include/c++/11/array:
+/opt/unitree_robotics/include/dds/ddsc/dds_public_error.h:
 
-/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/opt/unitree_robotics/include/unitree/common/dds/dds_qos_policy.hpp:
+/usr/include/c++/11/bits/postypes.h:
 
-/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+/opt/unitree_robotics/include/ddscxx/dds/topic/ContentFilteredTopic.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/sysinfo.h:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/qos/DataReaderQosDelegate.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/Manipulators.hpp:
+/opt/unitree_robotics/include/ddscxx/dds/pub/detail/Publisher.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/cond/TWaitSet.hpp:
+../xspublic/xstypes/xsxbusmessageid.h:
 
-/usr/include/linux/const.h:
+/usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
 
-/usr/include/x86_64-linux-gnu/bits/syscall.h:
+../xspublic/xscommon/xsens_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_rusage.h:
+../xspublic/xstypes/xsexception.h:
 
-/usr/include/rpc/netdb.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/stdio.h:
+/opt/unitree_robotics/include/dds/ddsrt/sockets.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/domain/find.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/detail/CoherentAccess.hpp:
+../xspublic/xstypes/xscontrolline.h:
 
-/usr/include/x86_64-linux-gnu/bits/netdb.h:
+/usr/include/c++/11/bits/stl_deque.h:
 
-/usr/include/eigen3/Eigen/src/Core/Array.h:
-
-/usr/include/x86_64-linux-gnu/sys/poll.h:
-
-/usr/include/fcntl.h:
-
-/usr/include/x86_64-linux-gnu/bits/poll.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/TCoherentSet.hpp:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/status/StatusDelegate.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/poll2.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/fcntl2.h:
-
-/usr/include/x86_64-linux-gnu/bits/dirent.h:
-
-/usr/local/xsens/include/xstypes/xscandataidentifier.h:
+../xspublic/xstypes/xsthread.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
@@ -4285,17 +4084,19 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/types.hpp:
 
-/usr/include/c++/11/bits/stl_set.h:
+../src/callback_handler.cpp:
 
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/c++/11/bits/stl_multiset.h:
+/opt/unitree_robotics/include/ddscxx/dds/sub/Subscriber.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
 /usr/include/c++/11/regex:
+
+/usr/include/c++/11/bitset:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/SuspendedPublicationDelegate.hpp:
+
+/usr/include/c++/11/stack:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/ConditionDelegate.hpp:
 
@@ -4333,11 +4134,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 ../src/usb2can_motor_imu.cpp:
 
-/usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h:
-
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
-
-/opt/unitree_robotics/include/unitree/common/dds/dds_qos_policy_parameter.hpp:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
 
@@ -4348,10 +4145,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/unitree/idl/go2/MotorCmd_.hpp:
 
 /usr/include/eigen3/Eigen/Core:
-
-/opt/unitree_robotics/include/dds/ddsc/dds_basic_types.h:
-
-/opt/unitree_robotics/include/unitree/common/error.hpp:
 
 /opt/unitree_robotics/include/dds/ddsi/ddsi_list_tmpl.h:
 
@@ -4373,10 +4166,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/Duration.hpp:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/cond/QueryConditionDelegate.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/find.hpp:
-
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/WeakReferenceSet.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
@@ -4386,6 +4175,10 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/core/InstanceHandle.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/qos/detail/DataReaderQos.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/DataWriterListener.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/detail/TInstanceHandleImpl.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/Value.hpp:
 
@@ -4399,6 +4192,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/InstanceHandleDelegate.hpp:
 
+/opt/unitree_robotics/include/dds/dds.h:
+
 /opt/unitree_robotics/include/dds/export.h:
 
 /opt/unitree_robotics/include/dds/features.h:
@@ -4411,23 +4206,25 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/dds/ddsrt/attributes.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
-/opt/unitree_robotics/include/dds/ddsc/dds_public_alloc.h:
-
 /opt/unitree_robotics/include/dds/ddsc/dds_opcodes.h:
 
 /opt/unitree_robotics/include/dds/ddsrt/static_assert.h:
 
 /opt/unitree_robotics/include/dds/ddsc/dds_public_qos.h:
 
+/opt/unitree_robotics/include/dds/ddsc/dds_public_qosdefs.h:
+
+/usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
+
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
 /opt/unitree_robotics/include/dds/ddsc/dds_public_status.h:
 
-/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/TInstanceHandle.hpp:
 
 /opt/unitree_robotics/include/unitree/common/decl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/Entity.hpp:
 
@@ -4445,9 +4242,13 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/refmacros.hpp:
 
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/ReportUtils.hpp:
+
 /opt/unitree_robotics/include/ddscxx/dds/core/TEntity.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/status/Status.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/status/detail/Status.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/policy/PolicyKind.hpp:
 
@@ -4459,9 +4260,9 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/policy/detail/CorePolicy.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/LengthUnlimited.hpp:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/PolicyDelegate.hpp:
 
-/usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h:
+/opt/unitree_robotics/include/ddscxx/dds/core/LengthUnlimited.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/policy/TCorePolicy.hpp:
 
@@ -4471,12 +4272,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/TSubscriber.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/core/policy/TQosPolicyCount.hpp:
-
-/usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
-
-/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/EntityDelegate.hpp:
@@ -4484,6 +4279,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/DDScObjectDelegate.hpp:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/Mutex.hpp:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/ForwardDeclarations.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/discovery.hpp:
 
@@ -4497,9 +4294,9 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/TGuardCondition.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/QueryCondition.hpp:
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/Condition.hpp:
 
-/usr/local/xsens/include/xsensdeviceapi/xdainfo.h:
+/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/QueryCondition.hpp:
 
 /opt/unitree_robotics/include/dds/ddsrt/atomics/gcc.h:
 
@@ -4509,19 +4306,19 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/GuardConditionDelegate.hpp:
 
-/usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h:
-
 /opt/unitree_robotics/include/ddscxx/dds/sub/TRank.hpp:
 
 /opt/unitree_robotics/include/unitree/idl/go2/BmsState_.hpp:
 
-/usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
+../xspublic/xscontroller/replyobject.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h:
+/usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/TStatusConditionImpl.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/WaitSet.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/core/cond/detail/WaitSet.hpp:
 
 /usr/include/c++/11/bits/quoted_string.h:
 
@@ -4531,23 +4328,27 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
 
+/opt/unitree_robotics/include/ddscxx/dds/domain/ddsdomain.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/CoherentAccess.hpp:
+
+/usr/include/stdio.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/domain/find.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/TSampleRefImpl.hpp:
+
 /opt/unitree_robotics/include/ddscxx/dds/domain/DomainParticipant.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/domain/detail/TDomainParticipantImpl.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/pub/CoherentSet.hpp:
+../xspublic/xscontroller/serialinterface.h:
 
 /opt/unitree_robotics/include/dds/ddsi/ddsi_config.h:
 
 /opt/unitree_robotics/include/dds/ddsrt/sched.h:
 
-/opt/unitree_robotics/include/unitree/idl/go2/BmsCmd_.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
-
-/opt/unitree_robotics/include/dds/ddsrt/random.h:
-
 /opt/unitree_robotics/include/dds/ddsi/ddsi_locator.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/domain/qos/DomainParticipantQos.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/domain/qos/detail/DomainParticipantQos.hpp:
 
@@ -4581,8 +4382,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/WeakReferenceImpl.hpp:
 
-/usr/local/xsens/include/xstypes/xsbytearray.h:
-
 /opt/unitree_robotics/include/ddscxx/dds/core/WeakReference.hpp:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/ObjectSet.hpp:
@@ -4607,8 +4406,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/domain/DomainParticipantRegistry.hpp:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/EntityRegistry.hpp:
-
 /opt/unitree_robotics/include/ddscxx/dds/domain/detail/ddsdomain.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/ddstopic.hpp:
@@ -4623,13 +4420,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/TTopicDescriptionImpl.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/topic/TTopicDescription.hpp:
-
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TopicDescriptionDelegate.hpp:
-
-/opt/unitree_robotics/include/dds/ddsi/ddsi_typewrap.h:
-
-/opt/unitree_robotics/include/ddscxx/dds/topic/Topic.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/Topic.hpp:
 
@@ -4658,6 +4449,10 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/c++/11/bits/regex_executor.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TopicTraits.hpp:
+
+/opt/unitree_robotics/include/dds/ddsrt/heap.h:
+
+/opt/unitree_robotics/include/dds/ddsrt/atomics.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
@@ -4701,21 +4496,17 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/dds/ddsi/ddsi_time.h:
 
-/usr/local/xsens/include/xstypes/xstimeinfo.h:
-
 /opt/unitree_robotics/include/dds/ddsi/q_log.h:
 
 /opt/unitree_robotics/include/dds/ddsrt/rusage.h:
 
 /opt/unitree_robotics/include/dds/ddsi/ddsi_xt_typeinfo.h:
 
-/usr/local/xsens/include/xstypes/xsmath2.h:
-
 /opt/unitree_robotics/include/dds/ddsrt/threads/posix.h:
 
-/opt/unitree_robotics/include/dds/ddsi/ddsi_xt_typemap.h:
+/opt/unitree_robotics/include/ddscxx/dds/topic/Topic.hpp:
 
-/usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h:
+/opt/unitree_robotics/include/dds/ddsi/ddsi_typewrap.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/cdr_enums.hpp:
 
@@ -4729,17 +4520,21 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/Filter.hpp:
 
+../xspublic/xscontroller/xscontrollerconfig.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/CoherentAccess.hpp:
 
 /usr/include/linux/kernel.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/TFilterImpl.hpp:
 
-/usr/include/c++/11/bits/istream.tcc:
-
 /usr/include/c++/11/clocale:
 
+/usr/include/c++/11/bits/istream.tcc:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/Query.hpp:
+
+../xspublic/xscontroller/devicefactory.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/status/detail/DataStateImpl.hpp:
 
@@ -4748,8 +4543,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/Sample.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/SampleInfo.hpp:
-
-/usr/local/xsens/include/xstypes/xsmatrix.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/TSampleInfoImpl.hpp:
 
@@ -4770,8 +4563,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/Rank.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/BuiltinTopicKey.hpp:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/RankImpl.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/TSample.hpp:
 
@@ -4803,12 +4594,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/BuiltinTopicDelegate.hpp:
 
-/usr/include/eigen3/Eigen/src/misc/Image.h:
-
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TBuiltinTopic.hpp:
-
-/usr/local/xsens/include/xstypes/xsresetmethod.h:
-
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/policy/TPolicy.hpp:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cdr/cdr_stream.hpp:
@@ -4819,11 +4604,11 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/find.hpp:
 
+../xspublic/xscontroller/xsrejectreason.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/topic/discovery.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/detail/find.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/topic/detail/ddstopic.hpp:
 
 /usr/include/linux/sysinfo.h:
 
@@ -4833,6 +4618,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/TQuery.hpp:
 
+/opt/unitree_robotics/include/ddscxx/dds/sub/AnyDataReader.hpp:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/TAnyDataReader.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/Subscriber.hpp:
@@ -4841,15 +4628,17 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/TSubscriberImpl.hpp:
 
-/usr/include/eigen3/Eigen/QR:
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/QueryDelegate.hpp:
 
-/opt/unitree_robotics/include/unitree/common/dds/dds_traits.hpp:
+/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/LoanedSamples.hpp:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/SampleRef.hpp:
 
-/usr/local/xsens/include/xsensdeviceapi/xsicccommand.h:
+/usr/include/eigen3/Eigen/src/Core/StlIterators.h:
+
+../xspublic/xstypes/xsrawgnsspvtdata.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/type_helpers.hpp:
 
@@ -4859,9 +4648,13 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/bits/std_mutex.h:
 
+/usr/include/c++/11/bits/unique_lock.h:
+
 /usr/include/c++/11/cstddef:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/hash.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/detail/LoanedSamples.hpp:
 
 /usr/include/c++/11/chrono:
 
@@ -4871,7 +4664,15 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/LoanedSamplesImpl.hpp:
 
+../xspublic/xscontroller/xscontrol_def.h:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/TDataReader.hpp:
+
+../xspublic/xscontroller/xsdeviceconfiguration.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/AnyDataReaderListener.hpp:
+
+../xspublic/xstypes/xsfloatvector.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/SharedSamples.hpp:
 
@@ -4883,19 +4684,23 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/TCoherentAccessImpl.hpp:
 
-/usr/include/c++/11/vector:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/SubscriberListener.hpp:
-
 /opt/unitree_robotics/include/ddscxx/dds/sub/DataReaderListener.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/timerfd.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/cond/ReadCondition.hpp:
 
+/opt/unitree_robotics/include/ddscxx/dds/sub/cond/detail/TReadConditionImpl.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/AnyDataWriterListener.hpp:
+
 /opt/unitree_robotics/include/ddscxx/dds/sub/cond/TReadCondition.hpp:
 
-/opt/unitree_robotics/include/ddscxx/dds/sub/cond/TQueryCondition.hpp:
+/opt/unitree_robotics/include/ddscxx/dds/sub/find.hpp:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/cond/QueryConditionDelegate.hpp:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/detail/SuspendedPublication.hpp:
 
 /opt/unitree_robotics/include/unitree/common/log/log.hpp:
 
@@ -4904,10 +4709,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/find.hpp:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/BuiltinSubscriberDelegate.hpp:
-
-/opt/unitree_robotics/include/ddscxx/dds/sub/discovery.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/sub/detail/ddssub.hpp:
 
@@ -4921,6 +4722,10 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/detail/TAnyDataWriterImpl.hpp:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/detail/TPublisherImpl.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/resource.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/qos/detail/DataWriterQos.hpp:
@@ -4929,21 +4734,23 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/qos/DataWriterQosDelegate.hpp:
 
-/usr/local/xsens/include/xstypes/xsstringarray.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/pub/PublisherDelegate.hpp:
 
-/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/StatusConditionDelegate.hpp:
-
 ../include/config_loader.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/core/cond/StatusConditionDelegate.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/topic/AnyTopicListener.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/ddspub.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/Redux.h:
+
+../xspublic/xstypes/xsushortvector.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/pub/find.hpp:
 
 /usr/include/c++/11/bits/align.h:
 
@@ -4954,6 +4761,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /opt/unitree_robotics/include/ddscxx/dds/pub/detail/TSuspendedPublicationImpl.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/pub/detail/CoherentSet.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/sub/SubscriberDelegate.hpp:
 
@@ -4977,7 +4786,7 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/unitree/common/os.hpp:
 
-/usr/local/xsens/include/xscontroller/xsdevicestate.h:
+/opt/unitree_robotics/include/unitree/common/lock/lock.hpp:
 
 /opt/unitree_robotics/include/unitree/common/thread/future.hpp:
 
@@ -4987,6 +4796,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/unitree/common/filesystem/filesystem.hpp:
 
+/opt/unitree_robotics/include/unitree/common/log/log_store.hpp:
+
 /opt/unitree_robotics/include/unitree/common/log/log_writer.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:
@@ -4995,11 +4806,11 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/unitree/common/log/log_logger.hpp:
 
+/opt/unitree_robotics/include/unitree/common/block_queue.hpp:
+
 /opt/unitree_robotics/include/unitree/common/time/sleep.hpp:
 
 /opt/unitree_robotics/include/unitree/common/dds/dds_exception.hpp:
-
-/opt/unitree_robotics/include/unitree/common/dds/dds_qos.hpp:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/cond/StatusCondition.hpp:
 
@@ -5007,13 +4818,21 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /opt/unitree_robotics/include/unitree/idl/go2/MotorState_.hpp:
 
+../xspublic/xstypes/xsdatapacket.h:
+
 /opt/unitree_robotics/include/unitree/idl/go2/LowCmd_.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/opt/unitree_robotics/include/dds/ddsrt/random.h:
+
+/opt/unitree_robotics/include/unitree/idl/go2/BmsCmd_.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/util/Macros.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
 
@@ -5025,15 +4844,13 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/util/Constants.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
-
 /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/Meta.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
-
-/usr/local/xsens/include/xsensdeviceapi.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
@@ -5043,6 +4860,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/NumTraits.h:
 
+../xspublic/xscontroller/xscallback.h:
+
 /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
@@ -5050,10 +4869,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
-
-/usr/include/endian.h:
-
-/usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
 
 /usr/include/yaml-cpp/node/detail/iterator.h:
 
@@ -5073,6 +4888,8 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
+/usr/include/eigen3/Eigen/src/LU/FullPivLU.h:
+
 /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
 /usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
@@ -5086,8 +4903,6 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
 
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
-
-/usr/local/xsens/include/xstypes/xssyncsettingarray.h:
 
 /usr/include/eigen3/Eigen/src/Core/IO.h:
 
@@ -5113,17 +4928,13 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
-/usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
-
 /usr/include/eigen3/Eigen/src/Core/Matrix.h:
-
-/usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h:
-
-/usr/local/xsens/include/xscontroller/xsdeviceptrarray.h:
 
 /usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
 
 /usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
+
+/usr/include/eigen3/Eigen/src/Core/StableNorm.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
@@ -5167,13 +4978,11 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/eigen3/Eigen/src/Core/Transpositions.h:
 
-/usr/include/x86_64-linux-gnu/sys/timerfd.h:
-
-/usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
-
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
+
+/usr/include/eigen3/Eigen/src/LU/InverseImpl.h:
 
 /opt/unitree_robotics/include/ddscxx/dds/core/detail/TEntityImpl.hpp:
 
@@ -5183,20 +4992,56 @@ CMakeFiles/can_node_motor_imu.dir/src/usb2can_motor_imu.cpp.o: ../src/usb2can_mo
 
 /usr/include/c++/11/bits/functexcept.h:
 
-/usr/local/xsens/include/xstypes/xstimestamp.h:
-
 /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
-/usr/include/yaml-cpp/exceptions.h:
+../xspublic/xstypes/xsportinfo.h:
 
-/usr/include/eigen3/Eigen/src/Core/Select.h:
+/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+
+/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
+
+/opt/unitree_robotics/include/unitree/common/dds/dds_qos_policy.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+
+/usr/include/yaml-cpp/exceptions.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /opt/unitree_robotics/include/dds/ddsi/ddsi_guid.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/usr/include/eigen3/Eigen/src/Core/Select.h:
+
+/usr/include/eigen3/Eigen/src/Core/Reverse.h:
+
+/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
+
+/usr/include/eigen3/Eigen/src/misc/Kernel.h:
+
+/opt/unitree_robotics/include/ddscxx/org/eclipse/cyclonedds/topic/TBuiltinTopic.hpp:
+
+/usr/include/eigen3/Eigen/src/misc/Image.h:
+
+/opt/unitree_robotics/include/ddscxx/dds/sub/TSampleRef.hpp:
+
+/usr/include/eigen3/Eigen/src/LU/Determinant.h:
+
+/usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
+
+/usr/include/eigen3/Eigen/Jacobi:
+
+/opt/unitree_robotics/include/unitree/common/dds/dds_traits.hpp:
+
+/usr/include/eigen3/Eigen/QR:
+
+/usr/include/eigen3/Eigen/Householder:
+
+/usr/include/semaphore.h:
+
+/usr/include/eigen3/Eigen/src/Householder/Householder.h:

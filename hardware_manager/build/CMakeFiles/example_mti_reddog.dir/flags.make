@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/csl/reddog_ws/hardware_manager/include -I/home/csl/reddog_ws/hardware_manager/can -I/usr/include/eigen3 -I/usr/local/xsens/include -I/usr/local/xsens/include/xsensdeviceapi
+CXX_INCLUDES = -I/home/csl/reddog_ws/hardware_manager/include -I/home/csl/reddog_ws/hardware_manager/can -I/usr/include/eigen3 -I/home/csl/reddog_ws/hardware_manager -I/home/csl/reddog_ws/hardware_manager/xspublic -I/home/csl/reddog_ws/hardware_manager/xspublic/xscontroller/include -I/home/csl/reddog_ws/hardware_manager/xspublic/xscommon/include -I/home/csl/reddog_ws/hardware_manager/xspublic/xstypes/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
 

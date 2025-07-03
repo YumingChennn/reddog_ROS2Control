@@ -4,8 +4,9 @@
 CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_handler.cpp \
   /usr/include/stdc-predef.h \
   ../include/callback_handler.h \
-  /usr/local/xsens/include/xsensdeviceapi.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
+  ../xspublic/xscontroller/xscontrol_def.h \
+  ../xspublic/xscontroller/xsdef.h \
+  ../xspublic/xscontroller/xscontrollerconfig.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
   /usr/include/limits.h \
@@ -25,16 +26,49 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdadll.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdainfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xstypesconfig.h \
-  /usr/include/assert.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xscontroller/xscallback.h \
+  ../xspublic/xscontroller/xscallbackplainc.h \
+  ../xspublic/xstypes/pstdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -44,25 +78,17 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xstypesconfig.h \
+  /usr/include/assert.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/pstdint.h \
+  ../xspublic/xstypes/xsinforequest.h \
+  ../xspublic/xscontroller/xsdevicestate.h \
+  ../xspublic/xstypes/xsarray.h \
   /usr/include/c++/11/iterator \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/bits/stringfwd.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -78,7 +104,6 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/bits/localefwd.h \
@@ -124,31 +149,13 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/cstdint \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -197,32 +204,8 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xshandid.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/include/c++/11/cstring \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xsbaudcode.h \
-  /usr/local/xsens/include/xstypes/xsbaudrate.h \
-  /usr/include/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xscontroller/xsdevicestate_enum.h \
+  ../xspublic/xscontroller/xsconnectivitystate.h \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/bits/basic_ios.h \
@@ -235,18 +218,49 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/local/xsens/include/xstypes/xsdatapacket.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xsbytearray.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifier.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifiervalue.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
+  ../xspublic/xscontroller/xsprotocoltype.h \
+  /usr/include/c++/11/atomic \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsarray.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  ../xspublic/xstypes/xshandid.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/cstring \
+  ../xspublic/xstypes/xsfilepos.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xstypes/xsbaudcode.h \
+  ../xspublic/xstypes/xsbaudrate.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsdataidentifier.h \
+  ../xspublic/xstypes/xsdataidentifiervalue.h \
+  ../xspublic/xstypes/xsxbusmessageid.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xscommon/xsens_mutex.h \
+  ../xspublic/xstypes/xsthread.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xstimeinfo.h \
   /usr/include/c++/11/memory \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -265,19 +279,30 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /usr/local/xsens/include/xstypes/xsushortvector.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xsscrdatafloat.h \
-  /usr/local/xsens/include/xstypes/xsfloatvector.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xsvector3.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsmath.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  ../xspublic/xstypes/xsresetmethod.h \
+  ../xspublic/xscontroller/devicefactory.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xscontroller/callbackmanagerxda.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xsvector.h \
+  ../xspublic/xstypes/xsmath.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -305,12 +330,8 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  /usr/local/xsens/include/xstypes/xsfloatmath.h \
-  /usr/local/xsens/include/xstypes/xsmath2.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xstypes/xsfloatmath.h \
+  ../xspublic/xstypes/xsmath2.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
@@ -323,150 +344,84 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/xsens/include/xstypes/xspressure.h \
-  /usr/local/xsens/include/xstypes/xssdidata.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xseuler.h \
-  /usr/local/xsens/include/xstypes/xsanalogindata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h \
-  /usr/local/xsens/include/xstypes/xsrange.h \
-  /usr/local/xsens/include/xstypes/xstriggerindicationdata.h \
-  /usr/local/xsens/include/xstypes/xssnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovesnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovedata.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xssyncline.h \
-  /usr/local/xsens/include/xstypes/xssyncfunction.h \
-  /usr/local/xsens/include/xstypes/xssyncpolarity.h \
-  /usr/local/xsens/include/xstypes/xsversion.h \
-  /usr/local/xsens/include/xstypes/xssimpleversion.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscandataidentifier.h \
-  /usr/local/xsens/include/xstypes/xscanframeformat.h \
-  /usr/local/xsens/include/xstypes/xsintarray.h \
-  /usr/local/xsens/include/xstypes/xsmatrix3x3.h \
-  /usr/local/xsens/include/xstypes/xsdeviceidarray.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xssyncsettingarray.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsstringarray.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilearray.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilekind.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtypearray.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtype.h \
-  /usr/local/xsens/include/xstypes/xsexception.h \
-  /usr/local/xsens/include/xscontroller/xscallbackplainc.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsinforequest.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xscontroller/xsconnectivitystate.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsselftestresult.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameter.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xssyncrole.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsfilepos.h \
-  /usr/local/xsens/include/xstypes/xsdeviceoptionflag.h \
-  /usr/local/xsens/include/xstypes/xsresetmethod.h \
-  /usr/local/xsens/include/xstypes/xsoption.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptr.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xserrormode.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsrejectreason.h \
-  /usr/local/xsens/include/xscontroller/xsalignmentframe.h \
-  /usr/local/xsens/include/xscontroller/xsoperationalmode.h \
-  /usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallback.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xsensdeviceapi/xserrormode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsicccommand.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsscanner.h \
-  /usr/local/xsens/include/xstypes/xsportinfoarray.h \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
+  ../xspublic/xscontroller/lastresultmanager.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsoption.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xstypes/xssyncrole.h \
+  ../xspublic/xstypes/xsversion.h \
+  ../xspublic/xstypes/xssimpleversion.h \
+  ../xspublic/xscontroller/packetstamper.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xscontroller/xsdeviceconfiguration.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/xsexception.h \
+  ../xspublic/xscontroller/xserrormode.h \
+  ../xspublic/xscontroller/xsrejectreason.h \
+  ../xspublic/xscontroller/communicator.h \
+  ../xspublic/xscontroller/openportstage.h \
+  ../xspublic/xscontroller/protocolmanager.h \
+  ../xspublic/xscontroller/messagelocation.h \
+  ../xspublic/xscontroller/iprotocolmanager.h \
+  ../xspublic/xscontroller/replyobject.h \
+  ../xspublic/xscontroller/iointerfacefile.h \
+  ../xspublic/xstypes/xsplatform.h \
+  ../xspublic/xscontroller/iointerface.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsfile.h \
+  ../xspublic/xstypes/xsfilepos.h \
+  /usr/include/c++/11/stdlib.h \
+  ../xspublic/xscontroller/iprotocolhandler.h \
+  ../xspublic/xscontroller/serialinterface.h \
+  ../xspublic/xscontroller/streaminterface.h \
+  ../xspublic/xstypes/xscontrolline.h \
+  ../xspublic/xscontroller/xsalignmentframe.h \
+  ../xspublic/xscontroller/xsaccesscontrolmode.h \
+  ../xspublic/xscontroller/datapacketcache.h \
+  ../xspublic/xstypes/xsdeviceoptionflag.h \
+  ../xspublic/xstypes/xsoutputconfigurationarray.h \
+  ../xspublic/xstypes/xsoutputconfiguration.h \
+  ../xspublic/xscontroller/xsgnssplatform.h \
+  ../xspublic/xscontroller/xsubloxgnssplatform.h \
+  ../xspublic/xscontroller/xsoperationalmode.h \
+  ../xspublic/xscontroller/xsdevice_public.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xscontroller/xsscanner.h \
+  ../xspublic/xstypes/xsportinfoarray.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsintarray.h \
+  ../xspublic/xstypes/xsstringarray.h \
+  ../xspublic/xscontroller/xsusbhubinfo.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
-  /usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrol.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/local/xsens/include/xscommon/xsens_mutex.h \
-  /usr/include/c++/11/atomic \
-  /usr/local/xsens/include/xstypes/xsthread.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xstypes/xsdatapacket.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsushortvector.h \
+  ../xspublic/xstypes/xsscrdata.h \
+  ../xspublic/xstypes/xsscrdatafloat.h \
+  ../xspublic/xstypes/xsfloatvector.h \
+  ../xspublic/xstypes/xscalibrateddata.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xspressure.h \
+  ../xspublic/xstypes/xssdidata.h \
+  ../xspublic/xstypes/xsquaternion.h \
+  ../xspublic/xstypes/xsmatrix.h \
+  ../xspublic/xstypes/xseuler.h \
+  ../xspublic/xstypes/xsanalogindata.h \
+  ../xspublic/xstypes/xsrawgnsspvtdata.h \
+  ../xspublic/xstypes/xsrawgnsssatinfo.h \
+  ../xspublic/xstypes/xsrange.h \
+  ../xspublic/xstypes/xstriggerindicationdata.h \
+  ../xspublic/xstypes/xssnapshot.h \
+  ../xspublic/xstypes/xsglovesnapshot.h \
+  ../xspublic/xstypes/xsglovedata.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/iomanip \
   /usr/include/c++/11/locale \
@@ -484,8 +439,9 @@ CMakeFiles/example_mti_reddog.dir/src/callback_handler.cpp.o: ../src/callback_ha
 CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_mti_reddog.cpp \
   /usr/include/stdc-predef.h \
   ../include/callback_handler.h \
-  /usr/local/xsens/include/xsensdeviceapi.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
+  ../xspublic/xscontroller/xscontrol_def.h \
+  ../xspublic/xscontroller/xsdef.h \
+  ../xspublic/xscontroller/xscontrollerconfig.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
   /usr/include/limits.h \
@@ -505,16 +461,49 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdadll.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdaconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xdainfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xstypesconfig.h \
-  /usr/include/assert.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xscontroller/xscallback.h \
+  ../xspublic/xscontroller/xscallbackplainc.h \
+  ../xspublic/xstypes/pstdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -524,25 +513,17 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xstypesconfig.h \
+  /usr/include/assert.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/pstdint.h \
+  ../xspublic/xstypes/xsinforequest.h \
+  ../xspublic/xscontroller/xsdevicestate.h \
+  ../xspublic/xstypes/xsarray.h \
   /usr/include/c++/11/iterator \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/include/c++/11/pstl/pstl_config.h \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/bits/stringfwd.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -558,7 +539,6 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/bits/localefwd.h \
@@ -604,31 +584,13 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/cstdint \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
   /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_construct.h \
   /usr/include/c++/11/string_view \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
   /usr/include/c++/11/cstdlib \
@@ -677,32 +639,8 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsstring.h \
-  /usr/local/xsens/include/xstypes/xshandid.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/include/c++/11/cstring \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xstypes/xsdeviceid.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xsbaudcode.h \
-  /usr/local/xsens/include/xstypes/xsbaudrate.h \
-  /usr/include/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
-  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
-  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xscontroller/xsdevicestate_enum.h \
+  ../xspublic/xscontroller/xsconnectivitystate.h \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
   /usr/include/c++/11/bits/basic_ios.h \
@@ -715,18 +653,49 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/bits/locale_facets.tcc \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
-  /usr/local/xsens/include/xstypes/xsdatapacket.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xsbytearray.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifier.h \
-  /usr/local/xsens/include/xstypes/xsdataidentifiervalue.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
+  ../xspublic/xscontroller/xsprotocoltype.h \
+  /usr/include/c++/11/atomic \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsarray.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  ../xspublic/xstypes/xshandid.h \
+  ../xspublic/xstypes/xstypesdef.h \
+  /usr/include/c++/11/cstring \
+  ../xspublic/xstypes/xsfilepos.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xstypes/xsbaudcode.h \
+  ../xspublic/xstypes/xsbaudrate.h \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsdataidentifier.h \
+  ../xspublic/xstypes/xsdataidentifiervalue.h \
+  ../xspublic/xstypes/xsxbusmessageid.h \
+  ../xspublic/xstypes/xsresultvalue.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xscommon/xsens_mutex.h \
+  ../xspublic/xstypes/xsthread.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  ../xspublic/xstypes/xstimeinfo.h \
   /usr/include/c++/11/memory \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_tempbuf.h \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
@@ -745,19 +714,30 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/pstl/glue_memory_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
-  /usr/local/xsens/include/xstypes/xsushortvector.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xsscrdatafloat.h \
-  /usr/local/xsens/include/xstypes/xsfloatvector.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xsvector3.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsmath.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  ../xspublic/xstypes/xstimestamp.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  ../xspublic/xstypes/xsresetmethod.h \
+  ../xspublic/xscontroller/devicefactory.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsdeviceid.h \
+  ../xspublic/xstypes/xsbaud.h \
+  ../xspublic/xscontroller/callbackmanagerxda.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xsvector.h \
+  ../xspublic/xstypes/xsmath.h \
   /usr/include/c++/11/math.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -785,12 +765,8 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
-  /usr/local/xsens/include/xstypes/xsfloatmath.h \
-  /usr/local/xsens/include/xstypes/xsmath2.h \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
+  ../xspublic/xstypes/xsfloatmath.h \
+  ../xspublic/xstypes/xsmath2.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
@@ -803,150 +779,84 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/local/xsens/include/xstypes/xspressure.h \
-  /usr/local/xsens/include/xstypes/xssdidata.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xseuler.h \
-  /usr/local/xsens/include/xstypes/xsanalogindata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h \
-  /usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h \
-  /usr/local/xsens/include/xstypes/xsrange.h \
-  /usr/local/xsens/include/xstypes/xstriggerindicationdata.h \
-  /usr/local/xsens/include/xstypes/xssnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovesnapshot.h \
-  /usr/local/xsens/include/xstypes/xsglovedata.h \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xssyncline.h \
-  /usr/local/xsens/include/xstypes/xssyncfunction.h \
-  /usr/local/xsens/include/xstypes/xssyncpolarity.h \
-  /usr/local/xsens/include/xstypes/xsversion.h \
-  /usr/local/xsens/include/xstypes/xssimpleversion.h \
-  /usr/local/xsens/include/xstypes/xsscrdata.h \
-  /usr/local/xsens/include/xstypes/xscalibrateddata.h \
-  /usr/local/xsens/include/xstypes/xstimeinfo.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h \
-  /usr/local/xsens/include/xstypes/xscanoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xscandataidentifier.h \
-  /usr/local/xsens/include/xstypes/xscanframeformat.h \
-  /usr/local/xsens/include/xstypes/xsintarray.h \
-  /usr/local/xsens/include/xstypes/xsmatrix3x3.h \
-  /usr/local/xsens/include/xstypes/xsdeviceidarray.h \
-  /usr/local/xsens/include/xstypes/xsmessage.h \
-  /usr/local/xsens/include/xstypes/xssyncsettingarray.h \
-  /usr/local/xsens/include/xstypes/xssyncsetting.h \
-  /usr/local/xsens/include/xstypes/xsmatrix.h \
-  /usr/local/xsens/include/xstypes/xsvector.h \
-  /usr/local/xsens/include/xstypes/xsstringarray.h \
-  /usr/local/xsens/include/xstypes/xsquaternion.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilearray.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofilekind.h \
-  /usr/local/xsens/include/xstypes/xsoutputconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtypearray.h \
-  /usr/local/xsens/include/xstypes/xsstringoutputtype.h \
-  /usr/local/xsens/include/xstypes/xsexception.h \
-  /usr/local/xsens/include/xscontroller/xscallbackplainc.h \
-  /usr/local/xsens/include/xstypes/pstdint.h \
-  /usr/local/xsens/include/xstypes/xsresultvalue.h \
-  /usr/local/xsens/include/xstypes/xsinforequest.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xsarray.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xscontroller/xsconnectivitystate.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsselftestresult.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameter.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xstypes/xsfilterprofile.h \
-  /usr/local/xsens/include/xstypes/xsbaud.h \
-  /usr/local/xsens/include/xstypes/xssyncrole.h \
-  /usr/local/xsens/include/xstypes/xsxbusmessageid.h \
-  /usr/local/xsens/include/xstypes/xsfilepos.h \
-  /usr/local/xsens/include/xstypes/xsdeviceoptionflag.h \
-  /usr/local/xsens/include/xstypes/xsresetmethod.h \
-  /usr/local/xsens/include/xstypes/xsoption.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceptr.h \
-  /usr/local/xsens/include/xscontroller/xsdevicestate.h \
-  /usr/local/xsens/include/xscontroller/xserrormode.h \
-  /usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xstypes/xsbusid.h \
-  /usr/local/xsens/include/xstypes/xstypedefs.h \
-  /usr/local/xsens/include/xscontroller/xsprotocoltype.h \
-  /usr/local/xsens/include/xscontroller/xsrejectreason.h \
-  /usr/local/xsens/include/xscontroller/xsalignmentframe.h \
-  /usr/local/xsens/include/xscontroller/xsoperationalmode.h \
-  /usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallback.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h \
-  /usr/local/xsens/include/xstypes/xstypesdef.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h \
-  /usr/local/xsens/include/xsensdeviceapi/xserrormode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsicccommand.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsscanner.h \
-  /usr/local/xsens/include/xstypes/xsportinfoarray.h \
-  /usr/local/xsens/include/xstypes/xsportinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
+  ../xspublic/xscontroller/lastresultmanager.h \
+  ../xspublic/xstypes/xsstring.h \
+  ../xspublic/xstypes/xsoption.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xstypes/xssyncrole.h \
+  ../xspublic/xstypes/xsversion.h \
+  ../xspublic/xstypes/xssimpleversion.h \
+  ../xspublic/xscontroller/packetstamper.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xscontroller/xsdeviceconfiguration.h \
+  ../xspublic/xstypes/xsbusid.h \
+  ../xspublic/xstypes/xstypedefs.h \
+  ../xspublic/xstypes/xsexception.h \
+  ../xspublic/xscontroller/xserrormode.h \
+  ../xspublic/xscontroller/xsrejectreason.h \
+  ../xspublic/xscontroller/communicator.h \
+  ../xspublic/xscontroller/openportstage.h \
+  ../xspublic/xscontroller/protocolmanager.h \
+  ../xspublic/xscontroller/messagelocation.h \
+  ../xspublic/xscontroller/iprotocolmanager.h \
+  ../xspublic/xscontroller/replyobject.h \
+  ../xspublic/xscontroller/iointerfacefile.h \
+  ../xspublic/xstypes/xsplatform.h \
+  ../xspublic/xscontroller/iointerface.h \
+  ../xspublic/xstypes/xstime.h \
+  ../xspublic/xstypes/xsbytearray.h \
+  ../xspublic/xstypes/xsfile.h \
+  ../xspublic/xstypes/xsfilepos.h \
+  /usr/include/c++/11/stdlib.h \
+  ../xspublic/xscontroller/iprotocolhandler.h \
+  ../xspublic/xscontroller/serialinterface.h \
+  ../xspublic/xscontroller/streaminterface.h \
+  ../xspublic/xstypes/xscontrolline.h \
+  ../xspublic/xscontroller/xsalignmentframe.h \
+  ../xspublic/xscontroller/xsaccesscontrolmode.h \
+  ../xspublic/xscontroller/datapacketcache.h \
+  ../xspublic/xstypes/xsdeviceoptionflag.h \
+  ../xspublic/xstypes/xsoutputconfigurationarray.h \
+  ../xspublic/xstypes/xsoutputconfiguration.h \
+  ../xspublic/xscontroller/xsgnssplatform.h \
+  ../xspublic/xscontroller/xsubloxgnssplatform.h \
+  ../xspublic/xscontroller/xsoperationalmode.h \
+  ../xspublic/xscontroller/xsdevice_public.h \
+  ../xspublic/xscontroller/xsdevice_def.h \
+  ../xspublic/xscontroller/xsscanner.h \
+  ../xspublic/xstypes/xsportinfoarray.h \
+  ../xspublic/xstypes/xsportinfo.h \
+  ../xspublic/xstypes/xsintarray.h \
+  ../xspublic/xstypes/xsstringarray.h \
+  ../xspublic/xscontroller/xsusbhubinfo.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
-  /usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h \
-  /usr/local/xsens/include/xsensdeviceapi/xsdevice.h \
-  /usr/local/xsens/include/xsensdeviceapi/xscontrol.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/local/xsens/include/xscommon/xsens_mutex.h \
-  /usr/include/c++/11/atomic \
-  /usr/local/xsens/include/xstypes/xsthread.h \
-  /usr/local/xsens/include/xstypes/xstime.h \
-  /usr/include/semaphore.h \
-  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
-  /usr/local/xsens/include/xstypes/xstimestamp.h \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
+  ../xspublic/xstypes/xsdatapacket.h \
+  ../xspublic/xstypes/xsmessage.h \
+  ../xspublic/xstypes/xsushortvector.h \
+  ../xspublic/xstypes/xsscrdata.h \
+  ../xspublic/xstypes/xsscrdatafloat.h \
+  ../xspublic/xstypes/xsfloatvector.h \
+  ../xspublic/xstypes/xscalibrateddata.h \
+  ../xspublic/xstypes/xsvector3.h \
+  ../xspublic/xstypes/xspressure.h \
+  ../xspublic/xstypes/xssdidata.h \
+  ../xspublic/xstypes/xsquaternion.h \
+  ../xspublic/xstypes/xsmatrix.h \
+  ../xspublic/xstypes/xseuler.h \
+  ../xspublic/xstypes/xsanalogindata.h \
+  ../xspublic/xstypes/xsrawgnsspvtdata.h \
+  ../xspublic/xstypes/xsrawgnsssatinfo.h \
+  ../xspublic/xstypes/xsrange.h \
+  ../xspublic/xstypes/xstriggerindicationdata.h \
+  ../xspublic/xstypes/xssnapshot.h \
+  ../xspublic/xstypes/xsglovesnapshot.h \
+  ../xspublic/xstypes/xsglovedata.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/iomanip \
   /usr/include/c++/11/locale \
@@ -968,6 +878,8 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/bits/quoted_string.h:
 
+/usr/include/c++/11/bits/locale_conv.h:
+
 /usr/include/c++/11/bits/locale_facets_nonio.tcc:
 
 /usr/include/libintl.h:
@@ -976,177 +888,107 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
+/usr/include/c++/11/ctime:
+
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
-/usr/include/c++/11/bits/list.tcc:
+../xspublic/xstypes/xstriggerindicationdata.h:
 
-/usr/include/c++/11/list:
+../xspublic/xstypes/xsrange.h:
 
-/usr/local/xsens/include/xstypes/xsthread.h:
+../xspublic/xstypes/xsrawgnsspvtdata.h:
 
-/usr/include/c++/11/atomic:
+../xspublic/xstypes/xsmatrix.h:
 
-/usr/local/xsens/include/xscommon/xsens_mutex.h:
+../xspublic/xstypes/xscalibrateddata.h:
 
-/usr/local/xsens/include/xstypes/xstime.h:
+../xspublic/xstypes/xsfloatvector.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscontrol.h:
+../xspublic/xstypes/xsscrdatafloat.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsselftestresult.h:
-
-/usr/include/c++/11/bits/istream.tcc:
+../xspublic/xstypes/xsscrdata.h:
 
 /usr/include/c++/11/istream:
 
 /usr/include/c++/11/sstream:
 
-/usr/local/xsens/include/xstypes/xsportinfoarray.h:
+../xspublic/xscontroller/xsusbhubinfo.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsprotocoltype.h:
+../xspublic/xstypes/xsstringarray.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsoperationalmode.h:
+../xspublic/xstypes/xsintarray.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsiccrepmotionresult.h:
+../xspublic/xscontroller/xsscanner.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsicccommand.h:
+../xspublic/xscontroller/xsoperationalmode.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsgnssplatform.h:
+../xspublic/xscontroller/xsubloxgnssplatform.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceptrarray.h:
+../xspublic/xscontroller/xsgnssplatform.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscallbackplainc.h:
+../xspublic/xstypes/xsoutputconfiguration.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsrejectreason.h:
+../xspublic/xstypes/xsdeviceoptionflag.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscallback.h:
+../xspublic/xscontroller/xsalignmentframe.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscalibrateddatamode.h:
+../xspublic/xstypes/xscontrolline.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsaccesscontrolmode.h:
+../xspublic/xscontroller/iprotocolhandler.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscontrollerconfig.h:
+/usr/include/c++/11/stdlib.h:
 
-/usr/include/c++/11/deque:
+../xspublic/xstypes/xsplatform.h:
 
-/usr/local/xsens/include/xscontroller/xsalignmentframe.h:
+../xspublic/xscontroller/iointerfacefile.h:
 
-/usr/local/xsens/include/xscontroller/xsrejectreason.h:
+../xspublic/xscontroller/messagelocation.h:
 
-/usr/local/xsens/include/xscontroller/xsdeviceconfiguration.h:
+../xspublic/xscontroller/xsrejectreason.h:
 
-/usr/local/xsens/include/xscontroller/xserrormode.h:
+../xspublic/xscontroller/xsdeviceconfiguration.h:
 
-/usr/local/xsens/include/xscontroller/xsdeviceptr.h:
+/usr/include/c++/11/bits/list.tcc:
 
-/usr/local/xsens/include/xscontroller/xsdeviceptrarray.h:
+/usr/include/c++/11/list:
 
-/usr/local/xsens/include/xstypes/xsresetmethod.h:
+../xspublic/xstypes/xsanalogindata.h:
 
-/usr/local/xsens/include/xstypes/xsdeviceoptionflag.h:
+../xspublic/xscontroller/packetstamper.h:
 
-/usr/local/xsens/include/xstypes/xssyncrole.h:
+../xspublic/xstypes/xssimpleversion.h:
 
-/usr/local/xsens/include/xscontroller/xsdeviceparameteridentifier.h:
+../xspublic/xstypes/xsversion.h:
 
-/usr/local/xsens/include/xscontroller/xsdeviceparameter.h:
+../xspublic/xstypes/xssyncrole.h:
 
-/usr/local/xsens/include/xscontroller/xsprotocoltype.h:
+../xspublic/xscontroller/xsdevice_def.h:
 
-/usr/local/xsens/include/xscontroller/xsdevicestate_enum.h:
-
-/usr/local/xsens/include/xscontroller/xscontrollerconfig.h:
-
-/usr/local/xsens/include/xscontroller/xsdevicestate.h:
-
-/usr/local/xsens/include/xstypes/xsexception.h:
-
-/usr/local/xsens/include/xstypes/xsstringoutputtype.h:
-
-/usr/local/xsens/include/xstypes/xsfilterprofilearray.h:
-
-/usr/local/xsens/include/xstypes/xsstringarray.h:
-
-/usr/local/xsens/include/xstypes/xsmatrix3x3.h:
-
-/usr/local/xsens/include/xstypes/xscanframeformat.h:
-
-/usr/local/xsens/include/xstypes/xsoutputconfigurationarray.h:
-
-/usr/local/xsens/include/xstypes/xssimpleversion.h:
-
-/usr/local/xsens/include/xstypes/xsversion.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsusbhubinfo.h:
-
-/usr/local/xsens/include/xstypes/xssyncpolarity.h:
-
-/usr/local/xsens/include/xstypes/xssyncline.h:
-
-/usr/include/c++/11/bits/stl_multimap.h:
-
-/usr/include/c++/11/bits/stl_map.h:
-
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/include/c++/11/map:
-
-/usr/include/c++/11/bits/deque.tcc:
-
-/usr/local/xsens/include/xstypes/xsglovedata.h:
-
-/usr/local/xsens/include/xstypes/xsglovesnapshot.h:
-
-/usr/local/xsens/include/xscontroller/xsubloxgnssplatform.h:
-
-/usr/local/xsens/include/xstypes/xssnapshot.h:
-
-/usr/local/xsens/include/xstypes/xsstringoutputtypearray.h:
-
-/usr/local/xsens/include/xstypes/xstriggerindicationdata.h:
-
-/usr/local/xsens/include/xstypes/xsrawgnsssatinfo.h:
-
-/usr/local/xsens/include/xstypes/xsrawgnsspvtdata.h:
-
-/usr/local/xsens/include/xstypes/xsanalogindata.h:
-
-/usr/local/xsens/include/xstypes/xseuler.h:
-
-/usr/local/xsens/include/xstypes/xsmatrix.h:
-
-/usr/local/xsens/include/xstypes/xsquaternion.h:
-
-/usr/local/xsens/include/xstypes/xscandataidentifier.h:
-
-/usr/local/xsens/include/xstypes/xspressure.h:
+../xspublic/xstypes/xsoption.h:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
 
-/usr/include/c++/11/unordered_map:
+/usr/include/c++/11/bits/hashtable.h:
 
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/c++/11/algorithm:
 
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/c++/11/bits/stl_vector.h:
-
-/usr/include/c++/11/vector:
-
-/usr/local/xsens/include/xstypes/xsfloatmath.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+../xspublic/xstypes/xspressure.h:
 
 /usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
@@ -1160,23 +1002,15 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/bits/specfun.h:
 
-/usr/include/c++/11/bits/stl_list.h:
+../xspublic/xscontroller/xsaccesscontrolmode.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xserrormode.h:
+/usr/include/c++/11/bits/stl_list.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/usr/local/xsens/include/xscontroller/xsselftestresult.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/c++/11/iostream:
-
-/usr/include/c++/11/bits/node_handle.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -1184,21 +1018,31 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/math.h:
 
-/usr/local/xsens/include/xstypes/xsoption.h:
+../xspublic/xstypes/xsmath.h:
 
-/usr/local/xsens/include/xstypes/xsmath.h:
+../xspublic/xscontroller/callbackmanagerxda.h:
 
-/usr/local/xsens/include/xstypes/xsvector.h:
+../xspublic/xstypes/xsvector.h:
 
-/usr/local/xsens/include/xstypes/xscalibrateddata.h:
+/usr/include/c++/11/bits/stl_multimap.h:
 
-/usr/local/xsens/include/xstypes/xsfloatvector.h:
+/usr/include/c++/11/bits/stl_map.h:
 
-/usr/include/c++/11/tr1/hypergeometric.tcc:
+/usr/include/c++/11/iostream:
 
-/usr/local/xsens/include/xstypes/xsscrdata.h:
+../xspublic/xstypes/xseuler.h:
 
-/usr/local/xsens/include/xstypes/xsushortvector.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/c++/11/bits/node_handle.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
+
+../xspublic/xscontroller/devicefactory.h:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /usr/include/c++/11/bits/algorithmfwd.h:
 
@@ -1208,65 +1052,43 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/backward/auto_ptr.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-/usr/local/xsens/include/xscontroller/xscallbackplainc.h:
-
-/usr/include/c++/11/bits/atomic_base.h:
-
-/usr/include/c++/11/bits/shared_ptr_atomic.h:
-
 /usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/c++/11/bits/refwrap.h:
 
-/usr/include/c++/11/bits/locale_classes.h:
+/usr/include/c++/11/bits/allocated_ptr.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/c++/11/bits/invoke.h:
 
-/usr/include/c++/11/pstl/pstl_config.h:
+/usr/include/c++/11/tr1/beta_function.tcc:
 
-/usr/include/c++/11/cmath:
+/usr/include/c++/11/array:
 
-/usr/include/c++/11/bits/allocator.h:
+/usr/include/c++/11/tuple:
 
-/usr/local/xsens/include/xscontroller/xsaccesscontrolmode.h:
+/usr/include/c++/11/bit:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/c++/11/bits/align.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+../xspublic/xstypes/xsrawgnsssatinfo.h:
 
-/usr/include/strings.h:
+../xspublic/xstypes/xsportinfoarray.h:
 
-/usr/include/c++/11/ext/new_allocator.h:
-
-/usr/include/c++/11/bits/stl_pair.h:
-
-/usr/local/xsens/include/xstypes/xsfilterprofile.h:
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/11/ext/atomicity.h:
 
-/usr/local/xsens/include/xstypes/xstimeinfo.h:
+/usr/include/c++/11/bits/stl_pair.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/pthread.h:
+/usr/include/c++/11/unordered_map:
+
+../xspublic/xstypes/xsresultvalue.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
-/usr/include/c++/11/bits/functexcept.h:
-
-/usr/include/c++/11/streambuf:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
-
 /usr/include/c++/11/bits/ios_base.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/c++/11/bits/stl_deque.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
@@ -1274,15 +1096,15 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/c++/11/bits/stl_algobase.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
 /usr/include/c++/11/bits/localefwd.h:
+
+../xspublic/xscontroller/communicator.h:
+
+/usr/include/c++/11/bits/streambuf_iterator.h:
+
+../xspublic/xstypes/xsdatapacket.h:
+
+../xspublic/xstypes/xsfile.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -1292,79 +1114,139 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceptr.h:
-
-/usr/include/c++/11/bits/stringfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/local/xsens/include/xstypes/xsmath2.h:
+../xspublic/xscontroller/xsdevice_public.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 ../src/callback_handler.cpp:
 
 /usr/include/wchar.h:
 
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
+
+../xspublic/xstypes/xstypesdef.h:
+
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-/usr/local/xsens/include/xstypes/xsdataidentifiervalue.h:
+/usr/include/c++/11/bits/stringfwd.h:
+
+/usr/include/c++/11/ostream:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
+
+../xspublic/xscontroller/iointerface.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+../xspublic/xscontroller/xsdevicestate.h:
+
+/usr/include/c++/11/bits/vector.tcc:
+
+../xspublic/xstypes/xsinforequest.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+../xspublic/xstypes/xsquaternion.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/c++/11/iomanip:
+
+/usr/include/c++/11/cctype:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+../xspublic/xstypes/xsglovesnapshot.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+../xspublic/xstypes/xsoutputconfigurationarray.h:
+
+../xspublic/xstypes/xsmessage.h:
+
+../xspublic/xstypes/pstdint.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
+
+/usr/include/limits.h:
+
+../xspublic/xstypes/xsdeviceid.h:
+
+../xspublic/xscontroller/xscallbackplainc.h:
+
+/usr/include/c++/11/bits/stl_algobase.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/c++/11/deque:
+
+../xspublic/xscontroller/xscallback.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/c++/11/bits/locale_facets.tcc:
+
+/usr/include/assert.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/11/cstdlib:
+
+/usr/include/c++/11/bits/string_view.tcc:
+
+/usr/include/c++/11/bits/functional_hash.h:
+
+/usr/include/c++/11/vector:
 
 /usr/include/c++/11/bits/stream_iterator.h:
 
 /usr/include/c++/11/locale:
 
-/usr/local/xsens/include/xstypes/xssyncsettingarray.h:
-
 /usr/include/ctype.h:
 
-/usr/include/c++/11/tr1/gamma.tcc:
+/usr/include/pthread.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+../xspublic/xscontroller/xsdef.h:
 
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
+../xspublic/xscontroller/datapacketcache.h:
 
-/usr/local/xsens/include/xstypes/xscanoutputconfigurationarray.h:
+/usr/include/c++/11/clocale:
 
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+/usr/include/c++/11/bits/ostream.tcc:
 
-/usr/local/xsens/include/xstypes/xstimestamp.h:
+../xspublic/xstypes/xsportinfo.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
+../xspublic/xstypes/xstypedefs.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceref.h:
+/usr/include/c++/11/bits/sstream.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
-/usr/local/xsens/include/xstypes/xsvector3.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xdainfo.h:
-
-/usr/include/c++/11/bits/invoke.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/11/bits/postypes.h:
-
-/usr/local/xsens/include/xstypes/xsinforequest.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/usr/include/c++/11/new:
 
 /usr/include/c++/11/bits/shared_ptr_base.h:
 
@@ -1372,29 +1254,33 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/linux/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xscoordinatesystem.h:
+../xspublic/xstypes/xsushortvector.h:
 
-/usr/include/c++/11/bits/allocated_ptr.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
-/usr/include/c++/11/bits/stl_relops.h:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/usr/include/limits.h:
+/usr/include/c++/11/iosfwd:
 
-/usr/include/c++/11/debug/debug.h:
+/usr/include/c++/11/initializer_list:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/include/features-time64.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/c++/11/bits/streambuf_iterator.h:
+../xspublic/xscontroller/serialinterface.h:
 
-/usr/local/xsens/include/xsensdeviceapi.h:
+../xspublic/xscontroller/xserrormode.h:
 
-/usr/local/xsens/include/xscontroller/xsiccrepmotionresult.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
 
 /usr/include/c++/11/tr1/legendre_function.tcc:
+
+../xspublic/xstypes/xsvector3.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
@@ -1404,67 +1290,81 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/linux/errno.h:
 
-/usr/local/xsens/include/xscontroller/xsconnectivitystate.h:
+../xspublic/xstypes/xstypesconfig.h:
 
-/usr/local/xsens/include/xstypes/xscanoutputconfiguration.h:
+/usr/include/c++/11/tr1/gamma.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-
-/usr/include/time.h:
-
-/usr/local/xsens/include/xstypes/xsstring.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsalignmentframe.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/usr/include/c++/11/ctime:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdevice.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xdadll.h:
+/usr/include/c++/11/debug/debug.h:
+
+/usr/include/features-time64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
 /usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdef.h:
+/usr/include/c++/11/streambuf:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+/usr/include/c++/11/bits/functexcept.h:
+
+../xspublic/xstypes/xsresetmethod.h:
+
+/usr/include/c++/11/bits/concept_check.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/c++/11/pstl/pstl_config.h:
+
+/usr/include/c++/11/cmath:
+
+/usr/include/c++/11/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+../xspublic/xscontroller/replyobject.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/c++/11/bits/alloc_traits.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsscanner.h:
+/usr/include/stdc-predef.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+/usr/include/features.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsconnectivitystate.h:
+../xspublic/xscontroller/xscontrol_def.h:
+
+/usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+../xspublic/xscontroller/xscontrollerconfig.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
-/usr/include/c++/11/bits/nested_exception.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
-
-/usr/include/c++/11/ostream:
+../xspublic/xscontroller/iprotocolmanager.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -1472,123 +1372,115 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/debug/assertions.h:
 
-/usr/local/xsens/include/xstypes/xstypedefs.h:
+/usr/include/c++/11/ext/type_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-/usr/include/c++/11/bits/concept_check.h:
+/usr/include/c++/11/iterator:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdevicestate_enum.h:
+/usr/include/c++/11/bits/range_access.h:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/c++/11/string:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/c++/11/bits/exception_defines.h:
+
+/usr/include/c++/11/atomic:
+
+/usr/include/c++/11/bits/hash_bytes.h:
+
+/usr/include/c++/11/bits/move.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/11/type_traits:
 
-/usr/include/c++/11/tuple:
-
-/usr/include/assert.h:
-
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
-
-/usr/include/c++/11/cstdlib:
-
-/usr/include/c++/11/bit:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/local/xsens/include/xstypes/xsportinfo.h:
+../xspublic/xscontroller/streaminterface.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/usr/include/c++/11/bits/stl_uninitialized.h:
 
-/usr/include/c++/11/iomanip:
+../xspublic/xstypes/xstimestamp.h:
 
-/usr/local/xsens/include/xstypes/xssdidata.h:
+/usr/include/c++/11/ext/new_allocator.h:
 
-/usr/include/c++/11/cctype:
-
-/usr/include/c++/11/ext/numeric_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
-
-/usr/local/xsens/include/xstypes/xshandid.h:
-
-/usr/include/features.h:
-
-/usr/local/xsens/include/xstypes/xsoutputconfiguration.h:
-
-/usr/include/c++/11/ext/string_conversions.h:
-
-/usr/include/c++/11/bits/exception_ptr.h:
-
-/usr/include/c++/11/ext/type_traits.h:
-
-/usr/local/xsens/include/xstypes/xsdeviceidarray.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
-/usr/include/c++/11/bits/unique_ptr.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/local/xsens/include/xstypes/pstdint.h:
+/usr/include/c++/11/bits/predefined_ops.h:
 
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+../xspublic/xscontroller/xsconnectivitystate.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/c++/11/ext/alloc_traits.h:
+
+/usr/include/c++/11/bits/cxxabi_forced.h:
+
+../xspublic/xscontroller/protocolmanager.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+../xspublic/xstypes/xsfloatmath.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+/usr/include/c++/11/system_error:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+../xspublic/xscontroller/xsdevicestate_enum.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
-/usr/include/c++/11/bits/sstream.tcc:
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
+../xspublic/xstypes/xsglovedata.h:
 
-/usr/include/c++/11/new:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceparameteridentifier.h:
+/usr/include/c++/11/bits/locale_classes.h:
 
-/usr/include/c++/11/clocale:
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/usr/include/c++/11/bits/ostream.tcc:
+/usr/include/c++/11/string:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/local/xsens/include/xstypes/xsrange.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/local/xsens/include/xstypes/xsarray.h:
-
-/usr/include/c++/11/bits/predefined_ops.h:
+/usr/include/c++/11/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/11/cstdint:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/local/xsens/include/xstypes/xsresultvalue.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
-
-/usr/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
 
@@ -1600,43 +1492,21 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
+/usr/include/strings.h:
 
-/usr/include/c++/11/iterator:
+../xspublic/xstypes/xsbytearray.h:
 
-/usr/include/c++/11/bits/range_access.h:
+/usr/include/c++/11/ext/string_conversions.h:
 
-/usr/include/c++/11/iosfwd:
+/usr/include/c++/11/bits/exception_ptr.h:
 
-/usr/include/c++/11/initializer_list:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/c++/11/bits/alloc_traits.h:
-
-/usr/include/c++/11/bits/functional_hash.h:
-
-/usr/local/xsens/include/xstypes/xsfilepos.h:
-
-/usr/local/xsens/include/xstypes/xsfilterprofilekind.h:
-
-/usr/include/c++/11/bits/move.h:
-
-/usr/include/c++/11/bits/hash_bytes.h:
-
-/usr/include/c++/11/bits/string_view.tcc:
+../xspublic/xstypes/xsarray.h:
 
 /usr/include/stdlib.h:
 
-/usr/local/xsens/include/xstypes/xsintarray.h:
+../xspublic/xscontroller/openportstage.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/11/bits/hashtable.h:
-
-/usr/local/xsens/include/xstypes/xstypesconfig.h:
-
-/usr/local/xsens/include/xstypes/xsbaudcode.h:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
 
@@ -1644,19 +1514,13 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/bits/erase_if.h:
 
-/usr/include/stdint.h:
-
 /usr/include/c++/11/bits/ptr_traits.h:
+
+/usr/include/stdint.h:
 
 /usr/include/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/bits/semaphore.h:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/c++/11/bits/shared_ptr.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -1666,31 +1530,27 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdevicestate.h:
-
 /usr/include/alloca.h:
+
+../xspublic/xstypes/xssnapshot.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
-
 /usr/include/semaphore.h:
 
-/usr/local/xsens/include/xstypes/xssyncfunction.h:
-
 /usr/include/c++/11/cwctype:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
 /usr/include/c++/11/bits/std_abs.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsorientationmode.h:
 
 /usr/include/c++/11/cstdio:
 
@@ -1698,19 +1558,21 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/c++/11/bits/locale_facets.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
+../xspublic/xstypes/xstimeinfo.h:
+
 /usr/include/c++/11/cerrno:
+
+../xspublic/xstypes/xsfilepos.h:
+
+../xspublic/xstypes/xsmath2.h:
 
 /usr/include/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
+
+../xspublic/xstypes/xssdidata.h:
 
 /usr/include/sched.h:
 
@@ -1724,97 +1586,43 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/local/xsens/include/xsensdeviceapi/xsubloxgnssplatform.h:
-
 /usr/include/c++/11/bits/charconv.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
-/usr/include/c++/11/system_error:
+/usr/include/c++/11/utility:
 
 /usr/include/c++/11/ios:
 
-/usr/include/c++/11/utility:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
+
+/usr/include/c++/11/bits/istream.tcc:
+
+../xspublic/xstypes/xshandid.h:
 
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/11/stdexcept:
 
-/usr/local/xsens/include/xsensdeviceapi/xsprocessingflag.h:
-
 /usr/include/c++/11/exception:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/local/xsens/include/xstypes/xsbusid.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/c++/11/typeinfo:
 
+/usr/include/c++/11/bits/nested_exception.h:
+
 /usr/include/string.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
-/usr/include/c++/11/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/local/xsens/include/xstypes/xsdeviceid.h:
-
-/usr/local/xsens/include/xstypes/xstypesdef.h:
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
-/usr/local/xsens/include/xstypes/xsxbusmessageid.h:
-
 /usr/include/c++/11/bits/basic_ios.h:
-
-/usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/11/cstring:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/local/xsens/include/xstypes/xsbaud.h:
-
-/usr/local/xsens/include/xstypes/xsscrdatafloat.h:
-
-/usr/local/xsens/include/xstypes/xsbaudrate.h:
-
-/usr/include/termios.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios.h:
-
-/usr/local/xsens/include/xstypes/xsdataidentifier.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceparameter.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xdaconfig.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/11/string_view:
-
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
 
 /usr/include/c++/11/bits/exception.h:
 
@@ -1828,34 +1636,74 @@ CMakeFiles/example_mti_reddog.dir/src/example_mti_reddog.cpp.o: ../src/example_m
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
-/usr/local/xsens/include/xsensdeviceapi/xsdeviceconfiguration.h:
+/usr/include/asm-generic/errno-base.h:
 
-/usr/local/xsens/include/xstypes/xsdatapacket.h:
+../xspublic/xscontroller/xsprotocoltype.h:
 
-/usr/local/xsens/include/xstypes/xssyncsetting.h:
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
 
-/usr/include/c++/11/bits/char_traits.h:
+/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
-/usr/local/xsens/include/xstypes/xsmessage.h:
+../xspublic/xstypes/xsstring.h:
 
-/usr/local/xsens/include/xstypes/xsbytearray.h:
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/11/cstring:
+
+../xspublic/xstypes/xsbaud.h:
+
+../xspublic/xscontroller/lastresultmanager.h:
+
+../xspublic/xstypes/xsbaudcode.h:
+
+/usr/include/c++/11/bits/unique_ptr.h:
+
+../xspublic/xstypes/xsbaudrate.h:
+
+/usr/include/termios.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/c++/11/string_view:
+
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
+
+../xspublic/xstypes/xsdataidentifier.h:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+../xspublic/xstypes/xsdataidentifiervalue.h:
+
+../xspublic/xstypes/xsbusid.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/c++/11/bits/postypes.h:
+
+../xspublic/xstypes/xsxbusmessageid.h:
+
+../xspublic/xscommon/xsens_mutex.h:
+
+../xspublic/xstypes/xsexception.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+../xspublic/xstypes/xsthread.h:
+
+../xspublic/xstypes/xstime.h:
 
 /usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
 /usr/include/c++/11/memory:
-
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/local/xsens/include/xsensdeviceapi/xsfloatformat.h:
-
-/usr/local/xsens/include/xscontroller/xsoperationalmode.h:
-
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
-
-/usr/include/c++/11/bits/align.h:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/c++/11/tr1/beta_function.tcc:
-
-/usr/include/c++/11/array:

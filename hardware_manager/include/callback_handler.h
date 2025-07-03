@@ -1,7 +1,12 @@
 #ifndef CALLBACK_HANDLER_H
 #define CALLBACK_HANDLER_H
 
-#include <xsensdeviceapi.h>
+#include <xscontroller/xscontrol_def.h>
+#include <xscontroller/xsdevice_def.h>
+#include <xscontroller/xsscanner.h>
+#include <xstypes/xsoutputconfigurationarray.h>
+#include <xstypes/xsdatapacket.h>
+
 #include <xstypes/xstime.h>
 #include <xscommon/xsens_mutex.h>
 #include <list>

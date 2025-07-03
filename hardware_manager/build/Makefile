@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named xspublic_build
+
+# Build rule for target.
+xspublic_build: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xspublic_build
+.PHONY : xspublic_build
+
+# fast build rule for target.
+xspublic_build/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/xspublic_build.dir/build.make CMakeFiles/xspublic_build.dir/build
+.PHONY : xspublic_build/fast
+
+#=============================================================================
+# Target rules for targets named clean-all
+
+# Build rule for target.
+clean-all: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean-all
+.PHONY : clean-all
+
+# fast build rule for target.
+clean-all/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/build
+.PHONY : clean-all/fast
+
+#=============================================================================
 # Target rules for targets named can_node_motor_imu
 
 # Build rule for target.
@@ -249,6 +275,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... clean-all"
+	@echo "... xspublic_build"
 	@echo "... can_node_motor_imu"
 	@echo "... example_mti_reddog"
 	@echo "... src/callback_handler.o"

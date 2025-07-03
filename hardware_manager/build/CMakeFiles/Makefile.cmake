@@ -58,6 +58,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/xspublic_build.dir/DependInfo.cmake"
+  "CMakeFiles/clean-all.dir/DependInfo.cmake"
   "CMakeFiles/can_node_motor_imu.dir/DependInfo.cmake"
   "CMakeFiles/example_mti_reddog.dir/DependInfo.cmake"
   )
