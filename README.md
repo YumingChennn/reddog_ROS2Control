@@ -22,10 +22,39 @@ This repository provides ROS 2 control integration for the **Reddog** quadruped 
 
 Follow install guide ref [unitree_sdk2](https://github.com/unitreerobotics/unitree_sdk2)
 
+Follow install guideline in SOULDE Studio USB2CAN manual (hardware_manager/lib/DingLab)
+
+Please use the C++ download method in the xsens mti's website.
+
 ## Quick start
 ```
-git clone git@github.com:YumingChennn/reddog_ROS2Control.git
+git clone https://github.com/YumingChennn/reddog_ROS2Control.git
 ```
+
+### Hardware Manager
+```
+mkdir build
+cd build
+cmake ..
+make -j4
+./can_node_motor_imu
+```
+### Functionality of Each Command
+
+| Command     | Functionality |
+|-------------|----------------|
+| `"enable"`  | Enables all motors with a default delay (`kDefaultDelayUs`). |
+| `"disable"` | Disables all motors. |
+| `"passive"` | Sets all motors to passive mode (usually torque-free or relaxed state). |
+| `"set"`     | Zeros the position of all motors (sets current position as origin). |
+| `"reset"`   | Stops all internal threads and resets motor positions to specific angle. |
+| `"position"`| Stops all threads and starts the motor position control loop. |
+| `"stop"`    | Stops all threads (terminates current motor actions). |
+| `"exit"`    | Stops all threads and exits the program safely. |
+
+> Please set to 'reset' mode before you set to 'position' mode
+
+### ROS2 control
 ```
 open descriptions/reddog_description/config/robot_control.yaml
 ```
